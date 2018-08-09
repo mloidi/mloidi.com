@@ -9,52 +9,45 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="./css/style.css">
-
-	<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Pacifico" rel="stylesheet">
+	<!-- Googel Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Corben|Karla|Montserrat|Open+Sans+Condensed:300|Playfair+Display|Quicksand|Source+Code+Pro|Source+Serif+Pro" rel="stylesheet">
 </head>
 <body>
-	<nav class="navbar navbar-light bg-light">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 		<a class="navbar-brand" href="#">
-			<img class="avatar" src="https://gravatar.com/avatar/ea73d5165de7e303ce8a17dc9d7c3524?s=200d=retro" width="30" height="30" class="d-inline-block align-top" alt="">
-			Mikel Loidi
+				<img class="avatar" src="https://gravatar.com/avatar/ea73d5165de7e303ce8a17dc9d7c3524?s=200d=retro" width="30" height="30" class="d-inline-block align-top" alt="">
 		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+				<a class="nav-item nav-link" data-toggle="collapse" href="#aboutMe" role="button" aria-expanded="false" aria-controls="aboutMe">ABOUT ME</a>
+				<a class="nav-item nav-link" data-toggle="collapse" href="#myWork" role="button" aria-expanded="false" aria-controls="myWork">MY WORK</a>
+				<a class="nav-item nav-link" href="#">CONTACT</a>
+			</div>
+		</div>
 	</nav>
 	<div class="container">
-		<div class="jumbotron title titleRight">
-			<h1 class="display-4">Hello, world!</h1>
-			<p class="lead">I'm a developer</p>
-			<hr class="my-4">
-			<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-			<a target="_blank" href="https://mloidi-app-jskauyrogh.now.sh/">Now that's delicious!</a>
+		<div class="collapse.show multi-collapse" id="aboutMe">
+			<div class="jumbotron title titleRight">
+				<h1 class="display-4"> About me</h1>
+				<hr class="my-4">
+				<p>
+					Hey!! My name is Mikel Loidi and I'm a web developer.
+				</p>
+			</div>
 		</div>
 		<br>
-		<div class="jumbotron title titleLeft">
-			<h1 class="display-4">Hello, world!</h1>
-			<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-			<hr class="my-4">
-			<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-			<a target="_blank" href="https://mloidi-app-jskauyrogh.now.sh/">Sample 1</a>
-		</div>
-	</div>
-	<div class="container">
-		<p>
-			<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle second element</button>
-			<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle both elements</button>
-		</p>
-		<div class="row">
-			<div class="col">
-				<div class="collapse multi-collapse" id="multiCollapseExample1">
-					<div class="card card-body">
-						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-					</div>
-				</div>
-			</div>
-			<div class="col">
-				<div class="collapse multi-collapse" id="multiCollapseExample2">
-					<div class="card card-body">
-						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-					</div>
-				</div>
+		<div class="collapse multi-collapse" id="myWork">
+			<div class="jumbotron title titleLeft">
+				<h1 class="display-4">My work</h1>
+				<hr class="my-4">
+				<p>
+					Here you can see some things I did
+				</p>
+				<a target="_blank" href="https://mloidi-app-jskauyrogh.now.sh/">Now that's delicious!</a>
 			</div>
 		</div>
 	</div>
