@@ -4,3 +4,23 @@
   border-radius: 50%;
   align-self: center;
  }
+
+ body {
+   background-color: #d5e0e0;
+   font-family: 'Source Code Pro', monospace;
+ }
+
+ a:hover {
+   color: #ff5252!important;
+ }
+
+ /*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Karla', sans-serif;
+font-family: 'Source Serif Pro', serif;
+font-family: 'Corben', cursive;
+font-family: 'Source Code Pro', monospace;
+ */
