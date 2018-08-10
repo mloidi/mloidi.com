@@ -36,21 +36,21 @@
 	<!--Navbar-->
 <nav class="mb-1 navbar navbar-dark navbar-expand-lg lighten-5">
                 <a class="navbar-brand navbar_color" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-5" aria-controls="navbarSupportedContent-5" aria-expanded="false" aria-label="Toggle navigation" style="">
+                <button class="navbar-toggler navbar_color" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-5" aria-controls="navbarSupportedContent-5" aria-expanded="false" aria-label="Toggle navigation" style="">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent-5">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link waves-effect waves-light navbar_color" href="#">HOME
+                            <a class="nav-link waves-effect waves-light navbar_color active" data-toggle="tab" href="#home" role="tab">HOME
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
                         <li class="nav-item">
-				<a class="nav-link waves-effect waves-light navbar_color" data-toggle="collapse" href="#aboutMe" role="button" aria-expanded="false" aria-controls="aboutMe">ABOUT ME</a>
+				<a class="nav-link waves-effect waves-light navbar_color" data-toggle="tab" href="#aboutMe" role="tab">ABOUT ME</a>
                         </li>
                         <li class="nav-item">
-				<a class="nav-link waves-effect waves-light navbar_color" data-toggle="collapse" href="#myWork" role="button" aria-expanded="false" aria-controls="myWork">MY WORK</a>
+				<a class="nav-link waves-effect waves-light navbar_color" data-toggle="tab" href="#myWork" role="tab">MY WORK</a>
                         </li>
 			<!--
                         <li class="nav-item dropdown">
@@ -78,15 +78,69 @@
             </nav>
 <!--/.Navbar-->
 	<div class="container">
+		<!-- Tab panels -->
+<div class="tab-content card">	
+    <!--Home-->
+    <div class="tab-pane fade in show active" id="home" role="tabpanel">
+        <br>
+        <h1 class="display-4"> Home</h1>
+	<hr class="my-4">
+	<p>
+		Working on it!!
+	</p>
+    </div>
+    <!--/.Hom-->
+    <!--About me-->
+    <div class="tab-pane fade" id="aboutMe" role="tabpanel">
+        <br>
+        <h1 class="display-4"> About me</h1>
+	<hr class="my-4">
+	<p>
+		Working on it!!
+		<!--
+		Hey!! My name is Mikel Loidi and I'm a web developer.
+		-->
+	</p>
+    </div>
+    <!--/.About me-->
+    <!--My work-->
+    <div class="tab-pane fade" id="myWork" role="tabpanel">
+        <br>
+        <h1 class="display-4">My work</h1>
+		<hr class="my-4">
+		<p>
+			Here you can see some things I did
+		</p>
+		<div class="row">
+			<div class="col">
+					<a target="_blank" href="https://mloidi-app-jskauyrogh.now.sh/">Now that's delicious!</a>
+					<i class="fas fa-arrow-right"></i>
+					<i class="fab fa-node-js"></i>
+					<i class="fab fa-js"></i>
+					<i class="fab fa-css3"></i>
+					<i class="fab fa-html5"></i>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+					<a target="_blank" href="https://worldwideimporters.netlify.com">Worldwide Importes</a>
+					<i class="fas fa-arrow-right"></i>
+					<i class="fab fa-angular"></i>
+					<i class="fab fa-js"></i>
+					<i class="fab fa-css3"></i>
+					<i class="fab fa-html5"></i>
+			</div>
+		</div>
+    </div>
+    <!--/.My work-->
+</div>
+		<!--
 		<div class="collapse multi-collapse" id="aboutMe">
 			<div class="jumbotron title titleRight">
 				<h1 class="display-4"> About me</h1>
 				<hr class="my-4">
 				<p>
-					Working on it!!
-					<!--
 					Hey!! My name is Mikel Loidi and I'm a web developer.
-					-->
 				</p>
 			</div>
 		</div>
@@ -96,10 +150,7 @@
 				<h1 class="display-4">My work</h1>
 				<hr class="my-4">
 				<p>
-					Working on it!!
-					<!--
 					Here you can see some things I did
-						-->
 				</p>
 				<div class="row">
 					<div class="col">
@@ -123,6 +174,7 @@
 				</div>
 			</div>
 		</div>
+		-->
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
