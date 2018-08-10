@@ -1,17 +1,21 @@
 .avatar {
-  min-width: 50px;
-  height: 50px;
+  min-width: 35px;
+  height: 35px;
   border-radius: 50%;
-  align-self: center;
  }
 
+.navbar_color {
+  color: #afb42b !important;
+}
+
  body {
-   background-color: #d6d0e0;
+   background-color: #f9fbe7;
    font-family: 'Source Code Pro', monospace;
  }
 
  a:hover {
-   color: #ff5252!important;
+   color: #827717 !important;
+   background-color: #9e9d24 !important;
  }
 
  /*
