@@ -6,12 +6,12 @@
  }
 
  body {
-   background-color: #d6d0e0;
+   background-color: #ffebee;
    font-family: 'Source Code Pro', monospace;
  }
 
  a:hover {
-   color: #ff5252!important;
+   color: #e57373!important;
  }
 
  /*
