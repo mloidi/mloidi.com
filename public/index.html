@@ -14,94 +14,116 @@
 	<!-- Googel Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Corben|Karla|Montserrat|Open+Sans+Condensed:300|Playfair+Display|Quicksand|Source+Code+Pro|Source+Serif+Pro" rel="stylesheet">
 </head>
-<body>
+<body ng-app="app" ng-controller="ctrl">
 	<nav class="mb-1 navbar navbar-dark navbar-expand-lg lighten-5">
-		<a class="navbar-brand navbar_color" href="#">Navbar</a>
-		<button class="navbar-toggler navbar_color" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-5" aria-controls="navbarSupportedContent-5" aria-expanded="false" aria-label="Toggle navigation" style="">
-			<i class="fas fa-bars"></i>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent-5">
-			<ul class="nav mr-auto navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link active navbar_color" data-toggle="tab" href="#home" role="tab">HOME</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link navbar_color" data-toggle="tab" href="#aboutMe" role="tab">ABOUT ME</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link navbar_color" data-toggle="tab" href="#myWork" role="tab">MY WORK</a>
-				</li>
-			</ul>
-			<ul class="navbar-nav ml-auto nav-flex-icons">
-				<li class="nav-item">
-					<a class="nav-link waves-effect waves-light navbar_color" href="mailto:mikel.loidi@outlook.com" target="_top"><i class="fa fa-envelope"></i></a>
-				</li>
-				<li class="nav-item avatar">
-					<a class="nav-link waves-effect waves-light" id="navbarDropdownMenuLink-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<img class="avatar d-inline-block align-top" src="https://gravatar.com/avatar/ea73d5165de7e303ce8a17dc9d7c3524?s=200d=retro" width="30" height="30" alt="avatar">
-					</a>
-				</li>
-			</ul>
+		<div class="container">
+				<button class="navbar-toggler navbar_color" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="collapse navbar-collapse justify-content-center" id="navbarMenu">
+					<ul class="nav navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link active" ng-class="classNav[0]" ng-click="clickMenu(0)" data-toggle="tab" href="#home" role="tab">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" ng-class="classNav[1]" ng-click="clickMenu(1)" data-toggle="tab" href="#aboutMe" role="tab">Resume</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" ng-class="classNav[2]" ng-click="clickMenu(2)" data-toggle="tab" href="#myWork" role="tab">My work</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link waves-effect waves-light navbar_color" href="mailto:mikel.loidi@outlook.com" target="_top"><i class="fa fa-envelope"></i></a>
+						</li>
+					</ul>
+				</div>
 		</div>
 	</nav>
-	<div class="container">
-		<div class="tab-content card">	
-			<!--Home-->
-			<div class="tab-pane fade in show active mx-5 mb-5" id="home" role="tabpanel">
-				<br>
-				<h1 class="display-4"> Home</h1>
-			<hr class="my-4">
-			<p>
-				Working on it!!
-			</p>
+	<div class="container pt-2">
+		<div class="row">
+			<div class="col tab-content card">
+				<!--Home-->
+				<div class="tab-pane fade in show active mx-5 mb-5" id="home" role="tabpanel">
+					<br>
+					<h1 class="display-4"> Home</h1>
+					<hr class="my-4">
+					<p>
+						Working on it!!
+					</p>
+				</div>
+				<!--/.Hom-->
+				<!--About me-->
+				<div class="tab-pane fade mx-5 mb-5" id="aboutMe" role="tabpanel">
+					<br>
+					<h1 class="display-4"> Resume</h1>
+					<h3 class="display-5"> Experience</h3>
+					<div ng-repeat="job in aJobs">
+						<p><strong>{{job.position}}</strong></p>
+						<p>{{job.company}}</p>
+						<p>{{job.fromDate | date:'dd/MM/yyyy'}} - {{job.untilDate | date:'dd/MM/yyyy'}}</p>
+						<div ng-repeat="description in job.description">
+							<p>{{description}}</p>
+						</div>
+						<p>Skills</p>
+						<ul>
+							<div ng-repeat="skill in job.skills">
+								<li>{{skill}}</li>
+							</div>
+						</ul>
+						<hr class="my-2">
+					</div>
+				</div>
+				<!--/.About me-->
+				<!--My work-->
+				<div class="tab-pane fade mx-5 mb-5" id="myWork" role="tabpanel">
+					<br>
+					<h1 class="display-4">My work</h1>
+					<hr class="my-4">
+					<p>
+						Here you can see some things I did
+					</p>
+					<div class="row">
+						<div class="col">
+								<a target="_blank" href="https://mloidi-app-jskauyrogh.now.sh/">Now that's delicious!</a>
+								<i class="fas fa-arrow-right"></i>
+								<i class="fab fa-node-js"></i>
+								<i class="fab fa-js"></i>
+								<i class="fab fa-css3"></i>
+								<i class="fab fa-html5"></i>
+						</div>
+					</div>
+					<div class="row">
+							<div class="col">
+									<a target="_blank" href="https://worldwideimporters.netlify.com">Worldwide Importes</a>
+									<i class="fas fa-arrow-right"></i>
+									<i class="fab fa-angular"></i>
+									<i class="fab fa-js"></i>
+									<i class="fab fa-css3"></i>
+									<i class="fab fa-html5"></i>
+							</div>
+					</div>
+				</div>
+				<!--/.My work-->
 			</div>
-			<!--/.Hom-->
-			<!--About me-->
-			<div class="tab-pane fade mx-5 mb-5" id="aboutMe" role="tabpanel">
+			<div class="col-2 tab-content card ml-3">
 				<br>
-				<h1 class="display-4"> About me</h1>
-			<hr class="my-4">
-			<p>
-				Working on it!!
-			</p>
-			</div>
-			<!--/.About me-->
-			<!--My work-->
-			<div class="tab-pane fade mx-5 mb-5" id="myWork" role="tabpanel">
-				<br>
-				<h1 class="display-4">My work</h1>
+				<img class="avatar d-inline-block align-top" src="https://gravatar.com/avatar/ea73d5165de7e303ce8a17dc9d7c3524?s=200d=retro" alt="avatar">				
+				<h2 class="display-5"> About me</h2>
 				<hr class="my-4">
 				<p>
-					Here you can see some things I did
+					Working on it!!
 				</p>
-				<div class="row">
-					<div class="col">
-							<a target="_blank" href="https://mloidi-app-jskauyrogh.now.sh/">Now that's delicious!</a>
-							<i class="fas fa-arrow-right"></i>
-							<i class="fab fa-node-js"></i>
-							<i class="fab fa-js"></i>
-							<i class="fab fa-css3"></i>
-							<i class="fab fa-html5"></i>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col">
-							<a target="_blank" href="https://worldwideimporters.netlify.com">Worldwide Importes</a>
-							<i class="fas fa-arrow-right"></i>
-							<i class="fab fa-angular"></i>
-							<i class="fab fa-js"></i>
-							<i class="fab fa-css3"></i>
-							<i class="fab fa-html5"></i>
-					</div>
-				</div>
+				<hr class="my-4">
 			</div>
-			<!--/.My work-->
 		</div>
 	</div>
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.8/js/mdb.min.js"></script>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+
+	<script src="./app/app.config.js"></script>
 </body>
 </html>
