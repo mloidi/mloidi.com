@@ -5,7 +5,7 @@
  }
 
 .navbar_color {
-  color: #dce775
+  color: #dce775 !important;
 }
 
  body {
