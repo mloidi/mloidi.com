@@ -4,6 +4,10 @@
   border-radius: 50%;
  }
 
+.navbar_color {
+  color: #dce775
+}
+
  body {
    background-color: #f9fbe7;
    font-family: 'Source Code Pro', monospace;
