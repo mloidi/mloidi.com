@@ -4,18 +4,26 @@
   border-radius: 50%;
  }
 
-.navbar_color {
-  color: #afb42b !important;
+ .navbar_color {
+  color: #d7ccc8 !important;
+}
+
+.menuNoSelected {
+  color: #d7ccc8 !important;
+}
+
+.menuSelected {
+  color: #a1887f !important;
 }
 
  body {
-   background-color: #f9fbe7;
+   /*background-color: #f9fbe7;*/
    font-family: 'Source Code Pro', monospace;
  }
 
  a:hover {
-   color: #827717 !important;
-   background-color: #9e9d24 !important;
+   color: #a1887f !important;
+   /*background-color: #9e9d24 !important;*/
  }
 
  /*
