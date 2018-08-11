@@ -2,9 +2,17 @@
   width: 160px !important;
   height: 200px !important;
   border-radius: 50%;
- }
+}
 
- .navbar_color {
+.listSkills {
+  display:inline !important;
+}
+
+.skillLogo {
+  width: 80px;
+  background-color: #42494f;
+}
+.navbar_color {
   color: #d7ccc8 !important;
 }
 
@@ -16,17 +24,15 @@
   color: #a1887f !important;
 }
 
- body {
-   /*background-color: #f9fbe7;*/
-   font-family: 'Source Code Pro', monospace;
- }
+body {
+  font-family: 'Source Code Pro', monospace;
+}
 
- a:hover {
-   color: #a1887f !important;
-   /*background-color: #9e9d24 !important;*/
- }
+a:hover {
+  color: #a1887f !important;
+}
 
- /*
+/*
 font-family: 'Montserrat', sans-serif;
 font-family: 'Open Sans Condensed', sans-serif;
 font-family: 'Playfair Display', serif;
@@ -35,4 +41,4 @@ font-family: 'Karla', sans-serif;
 font-family: 'Source Serif Pro', serif;
 font-family: 'Corben', cursive;
 font-family: 'Source Code Pro', monospace;
- */
+*/
