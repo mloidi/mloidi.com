@@ -22,6 +22,7 @@ var app = angular.module('app', [])
 
     const spanish = 'Es';
     const english = 'En';
+    const basque = 'Eu';
     const englishText = {
       spanish: spanish,
       english: english,
