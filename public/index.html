@@ -1,170 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Mikel Loidi | Web Developer</title>
-	<!-- Bootstrap core CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-	<!-- Material Design Bootstrap -->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.8/css/mdb.min.css" rel="stylesheet">
-	<!-- Custom CSS -->
-	<link rel="stylesheet" href="./css/style.css">
-	<!-- Googel Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Corben|Karla|Montserrat|Open+Sans+Condensed:300|Playfair+Display|Quicksand|Source+Code+Pro|Source+Serif+Pro" rel="stylesheet">
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <title>Mikel Loidi | Web Developer</title>
 </head>
-<body ng-app="app" ng-controller="ctrl">
-	<nav class="mb-1 navbar navbar-dark navbar-expand-lg lighten-5p">
-		<div class="container">
-				<button class="navbar-toggler navbar_color" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
-					<i class="fas fa-bars"></i>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarMenu">
-					<ul class="nav navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link active" ng-class="classNav[0]" ng-click="clickMenu(0)" data-toggle="tab" href="#home" role="tab">{{text.home}}</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" ng-class="classNav[1]" ng-click="clickMenu(1)" data-toggle="tab" href="#aboutMe" role="tab">{{text.experience}}</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" ng-class="classNav[2]" ng-click="clickMenu(2)" data-toggle="tab" href="#myWork" role="tab">{{text.myWork}}</a>
-						</li>
-					</ul>
-					<form class="form-inline my-2 my-lg-0 ml-auto">
-						<ul class="navbar-nav nav">
-								<li class="nav-item">
-									<a class="nav-link waves-effect waves-light navbar_color" href="mailto:mikel@mloidi.com" target="_top"><i class="fa fa-envelope"></i></a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" ng-class="classNavLanguage[0]" ng-click="changeLanguage(text.english)">{{text.english}}</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" ng-class="classNavLanguage[1]" ng-click="changeLanguage(text.spanish)">{{text.spanish}}</a>
-								</li>
-						</ul>
-					</form>
-				</div>
-		</div>
-	</nav>
-	<main>
-			<div class="container mt-5">
-				<div class="row">
-					<div class="col tab-content card">
-						<!--Home-->
-						<div class="tab-pane fade in show active mx-5 mb-5" id="home" role="tabpanel">
-							<br>
-							<img class="avatar d-inline-block align-top" src="https://gravatar.com/avatar/ea73d5165de7e303ce8a17dc9d7c3524?s=200d=retro" alt="avatar">				
-							<h2 class="display-5"> {{text.aboutMe}}</h2>
-							<hr class="my-4">
-							<p>
-								{{text.workingOnIt}}
-							</p>
-								<hr class="my-4">
-						</div>
-						<!--/.Hom-->
-						<!--About me-->
-						<div class="tab-pane fade mx-5 mb-5" id="aboutMe" role="tabpanel">
-							<br>
-							<h1 class="display-4"> {{text.resume}}</h1>
-							<h3 class="display-5"> {{text.experience}}</h3>
-							<div ng-repeat="job in aJobs">
-								<div class="row">
-									<div class="col">
-										<h3 class="font-weight-bold mb-3"><strong>{{job.position}}</strong></h3>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-lg-3">
-										<!--
-										<div class="view overlay rounded z-depth-2 mb-lg-0 mb-4" ng-style="job.companyStyle">
-											<img class="img-fluid" ng-src="./images/{{job.companyImage}}" alt="{{job.company}}">
-											<a>
-												<div class="mask rgba-white-slight"></div>
-											</a>
-										</div>
-										-->
-										<p>{{job.company}}</p>
-										<p>{{job.fromDate | date:'MM/yyyy'}} - {{job.untilDate | date:'MM/yyyy'}}</p>
-									</div>
-									<div class="col-lg-9">
-										<div ng-repeat="description in job.description">
-											<p>{{description}}</p>
-										</div>
-										<br>
-										<br>
-										<br>
-										<div class="row">
-											<div ng-repeat="skill in job.skills">
-												<div class="col">
-													<div ng-if="skill.imageType === typeClass">
-														<i ng-class="skill.image"></i>
-													</div>
-													<div ng-if="skill.imageType === typeImage">
-														<img ng-style="skill.imageStyle" ng-src="./images/{{skill.image}}" alt="{{skill.description}}">
-													</div>
-													<div ng-if="skill.imageType === typeText">
-														<p>{{skill.image}}</p>
-													</div>
-												</div>
-											</div>
-										</div>
-										<!--
-										<ul class='listSkills'>
-											<li ng-repeat="skill in job.skills">
-												<i ng-class="skill.image"></i>
-											</li>
-										</ul>
-										-->
-									</div>
-								</div>
-								<hr class="my-2">
-							</div>
-						</div>
-						<!--/.About me-->
-						<!--My work-->
-						<div class="tab-pane fade mx-5 mb-5" id="myWork" role="tabpanel">
-							<br>
-							<h1 class="display-4">{{text.myWork}}</h1>
-							<hr class="my-4">
-							<p>
-								{{text.myWorkDescription}}
-							</p>
-							<div class="row">
-								<div class="col">
-										<a target="_blank" href="https://mloidi-app-jskauyrogh.now.sh/">Now that's delicious!</a>
-										<i class="fas fa-arrow-right"></i>
-										<i class="fab fa-node-js"></i>
-										<i class="fab fa-js"></i>
-										<i class="fab fa-css3"></i>
-										<i class="fab fa-html5"></i>
-								</div>
-							</div>
-							<div class="row">
-									<div class="col">
-											<a target="_blank" href="https://worldwideimporters.netlify.com">Worldwide Importes</a>
-											<i class="fas fa-arrow-right"></i>
-											<i class="fab fa-angular"></i>
-											<i class="fab fa-js"></i>
-											<i class="fab fa-css3"></i>
-											<i class="fab fa-html5"></i>
-									</div>
-							</div>
-						</div>
-						<!--/.My work-->
-					</div>
-				</div>
-			</div>
-	</main>
 
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.8/js/mdb.min.js"></script>
-
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
-
-	<script src="./app/app.config.js"></script>
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root"></div>
 </body>
+
 </html>
