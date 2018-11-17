@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavMenu from './Components/NavMenu';
 import About from './Components/About';
 import Resume from './Components/Resume';
+import Education  from './Components/Education';
 import Projects from './Components/Projects';
 import NotFound from './Components/NotFound';
 
@@ -18,6 +19,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={About} />
               <Route exact path="/resume" component={Resume} />
+              <Route exact path="/education" component={Education} />
               <Route exact path="/projects" component={Projects} />
               <Route component={NotFound} />
             </Switch>

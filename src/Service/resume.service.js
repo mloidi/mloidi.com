@@ -3,8 +3,9 @@ const resume = [
     position: 'Software Engineer',
     company: 'Tracasa Intrumental',
     companyImage:
-      'https://res.cloudinary.com/mloidi/image/upload/v1542456321/mloidi/iTracasa.png',
-    companyStyle: '',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_50/v1542456321/mloidi/iTracasa.png',
+    companyURL: 'http://itracasa.es',
+    location: 'Pamplona, Navarre (Spain)',
     fromDate: new Date(2018, 3, 10),
     untilDate: null,
     description: [],
@@ -16,15 +17,17 @@ const resume = [
       'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:092da9/v1542456321/mloidi/angular.png',
       'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100/v1542456321/mloidi/angularjs.png',
       'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/react.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/bootstrap.png'
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/bootstrap.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:000000/v1542456321/mloidi/mongodb.png'
     ]
   },
   {
     position: 'Project Manager',
     company: 'Universidad de Navarra',
     companyImage:
-      'https://res.cloudinary.com/mloidi/image/upload/b_rgb:aa0d0f/v1542458512/mloidi/unav.png',
-    companyStyle: { background: '#aa0d0f' },
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_50,b_rgb:aa0d0f/v1542458512/mloidi/unav.png',
+    companyURL: 'https://www.unav.edu/',
+    location: 'Pamplona, Navarre (Spain)',
     fromDate: new Date(2014, 0, 1),
     untilDate: new Date(2018, 3, 9),
     description: [
@@ -40,15 +43,17 @@ const resume = [
       'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:092da9/v1542456321/mloidi/angular.png',
       'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100/v1542456321/mloidi/angularjs.png',
       'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/react.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/bootstrap.png'
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/bootstrap.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:000000/v1542456321/mloidi/mongodb.png'
     ]
   },
   {
     position: 'Project Manager / Senior Developer',
     company: 'CONASA',
     companyImage:
-      'https://res.cloudinary.com/mloidi/image/upload/v1542456321/mloidi/conasa.png',
-    companyStyle: '',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_50/v1542456321/mloidi/conasa.png',
+    companyURL: 'http://www.conasa.es',
+    location: 'Pamplona, Navarre (Spain)',
     fromDate: new Date(2011, 6, 1),
     untilDate: new Date(2013, 11, 31),
     description: [
@@ -68,8 +73,9 @@ const resume = [
     position: 'Senior Developer',
     company: 'AVALON Tecnologias de la Informacion',
     companyImage:
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100/v1542456321/mloidi/avalon.png',
-    companyStyle: '',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_50/v1542456321/mloidi/avalon.png',
+    companyURL: 'https://grupoavalon.es/index.html',
+    location: 'Pamplona, Navarre (Spain)',
     fromDate: new Date(2009, 5, 1),
     untilDate: new Date(2011, 6, 31),
     description: [
@@ -87,8 +93,9 @@ const resume = [
     position: 'Senior Developer',
     company: 'Ibermatica',
     companyImage:
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100/v1542456321/mloidi/ibermatica.png',
-    companyStyle: '',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_50/v1542456321/mloidi/ibermatica.png',
+    companyURL: 'http://ibermatica.com',
+    location: 'Donostia, Gipuzkoa (Spain)',
     fromDate: new Date(2007, 1, 8),
     untilDate: new Date(2009, 4, 30),
     description: [
@@ -106,8 +113,9 @@ const resume = [
     position: 'Developer',
     company: 'TB-Solutions',
     companyImage:
-      'https://res.cloudinary.com/mloidi/image/upload/c_thumb,h_50,w_100/v1542456340/mloidi/tbs.png',
-    companyStyle: '',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_50/v1542456340/mloidi/tbs.png',
+    companyURL: null,
+    location: 'Pamplona, Navarre (Spain)',
     fromDate: new Date(2006, 5, 1),
     untilDate: new Date(2007, 1, 7),
     description: [
@@ -123,8 +131,9 @@ const resume = [
   {
     position: 'Developer',
     company: 'Freelance',
-    companyImage: 'noImage.png',
-    companyStyle: '',
+    companyImage: null,
+    companyURL: null,
+    location: 'Pamplona, Navarre (Spain)',
     fromDate: new Date(2002, 6, 1),
     untilDate: new Date(2006, 5, 30),
     description: ['Development and maintenance of web applications.'],

@@ -59,7 +59,8 @@ class NavMenu extends Component {
           </Logo>
           <NavStyles>
             <Link to={'/'}>About me</Link>
-            <Link to={'/resume'}>Resume</Link>
+            <Link to={'/resume'}>Work Experience</Link>
+            <Link to={'/education'}>Education</Link>
             <Link to={'/projects'}>My projects</Link>
           </NavStyles>
         </div>

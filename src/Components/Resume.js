@@ -5,7 +5,6 @@ import { Helmet } from 'react-helmet';
 import { ResumeService } from '../Service/resume.service';
 import Job from './Job';
 
-
 class Resume extends Component {
   constructor(props) {
     super(props);
@@ -26,9 +25,9 @@ class Resume extends Component {
         <Helmet>
           <title>Resume | Mikel Loidi | Web Developer</title>
         </Helmet>
-          {Object.keys(this.state.resume).map(key => (
-            <Job key={key} job={this.state.resume[key]} />
-          ))}
+        {Object.keys(this.state.resume).map(key => (
+          <Job key={key} job={this.state.resume[key]} />
+        ))}
       </div>
     );
   }
