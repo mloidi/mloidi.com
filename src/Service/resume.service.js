@@ -8,7 +8,10 @@ const work = [
     location: 'Pamplona, Navarre (Spain)',
     fromDate: new Date(2018, 3, 10),
     untilDate: null,
-    description: [],
+    description: [
+      'Technical design and construction of an integrated file management tool with workflow tools. Integration with third-party information systems.',
+      'Functional analysis of BPM processes, applications and integration between information systems.'
+    ],
     skills: [
       'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png',
       'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png',
@@ -178,18 +181,13 @@ const education = [
     location: 'San Sebastian, Gipuzkoa (Spain)',
     description: [
       'These are the main competences that I have acquired with this degree:',
-      '• Ability to analyze and assess the social and environmental impact of technical solutions, including the ethical and professional responsibility of the activity of the Technical Engineer in Computing.',
       '• Ability to conceive and develop centralized or distributed computer systems or architectures integrating hardware, software and networks.',
       '• Ability to conceive, develop and maintain computer systems, services and applications using software engineering methods as an instrument for quality assurance.',
       '• Ability to conceive, write, organize, plan, develop and sign projects in the field of computer engineering with the purpose of designing, developing or operating systems, services and computer applications.',
-      '• Ability to know, understand and apply the necessary legislation during the development of the profession of Technical Engineer in Computing and handle specifications, regulations and mandatory rules.',
       '• Ability to define, evaluate and select hardware and software platforms for the development and execution of systems, services and computer applications.',
-      '• Ability to direct the activities that are the subject of projects in the field of information technology.',
       '• Ability to design, develop, evaluate and ensure the accessibility, ergonomics, usability and security of the systems, services and computer applications, as well as the information they manage.',
-      '• Ability to solve problems with initiative, decision making, autonomy and creativity.Ability to know how to communicate and transmit the knowledge, skills and abilities of the profession of Technical Engineer in Computing.',
-      '• Knowledge of basic subjects and technologies, which enable the learning and development of new methods and technologies, as well as those that provide them with great versatility to adapt to new situations.',
-      '• Knowledge and application of basic elements of economics and human resources management, organization and project planning, as well as legislation, regulation and standardization in the field of computer projects.',
-      '• Knowledge for the realization of measurements, calculations, valuations, appraisals, surveys, studies, reports, task planning and other analogous computer work.'
+      '• Ability to solve problems with initiative, decision making, autonomy and creativity.',
+      '• Knowledge of basic subjects and technologies, which enable the learning and development of new methods and technologies, as well as those that provide them with great versatility to adapt to new situations.'
     ]
   },
   {
@@ -214,11 +212,94 @@ const education = [
     ]
   }
 ];
+
+const courses = [
+  {
+    title: 'Fullstack Advanced React & GraphQL',
+    description: [
+      'It’s GraphQL API with Node.js on the backend and React and Apollo on the front end. The course cover everything from authentication and sending email to uploading photos and caching data. The entire front - end is built in modern React.js and GraphQL. '
+    ],
+    url: 'https://advancedreact.com/',
+    urlText: 'AdvancedReact.com',
+    finishDate: '2018',
+    appUrl: 'https://mloidi-store-prod.herokuapp.com',
+    appUrlText: 'Sick Fits',
+    skills: [
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+    ]
+  },
+  {
+    title: 'React For Beginners',
+    description: [
+      'A premium step-by-step training course to get you building real world React.js + Firebase apps and website components. '
+    ],
+    url: 'https://reactforbeginners.com/',
+    urlText: 'ReactForBeginners.com',
+    finishDate: '2018',
+    appUrl: 'https://cotd.mloidi.com',
+    appUrlText: 'Catch Of The Day',
+    skills: [
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+    ]
+  },
+  {
+    title: 'Learn Node',
+    description: [
+      'A premium training course to learn to build apps with Node.js, Express and MongoDB. '
+    ],
+    url: 'https://learnnode.com/',
+    urlText: 'LearnNode.com',
+    finishDate: '2018',
+    appUrl: 'https://mloidi-app-jskauyrogh.now.sh',
+    appUrlText: "Now That's Delicious!",
+    skills: [
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+    ]
+  },
+  {
+    title: 'Microsoft Professional Program for Front-End Web Development',
+    description: [
+      'I learn To:',
+      '• Get started with web development',
+      '• Create a Basic Web Application',
+      '• Use a Scripting Language to Build Dynamic Web Apps',
+      '• Use CSS to Simplify UI Management',
+      '• Use CSS to Build a Powerful Web UI',
+      '• Use UI Frameworks to Build a Responsive Web UI',
+      '• Use a Framework to Build a Dynamic Web UI',
+      '• Use a Framework to Simplify and Manage Data Binding',
+      '• Use a Framework to Build a Complex Single - Page Application',
+      '• Use Cloud Services to Create Web Apps with High Availability and Scale',
+      '• Use DevOps Tools and Processes to Manage Web Application Projects'
+    ],
+    url:
+      'https://academy.microsoft.com/en-us/professional-program/tracks/front-end-development/',
+    urlText: 'Front-End Web Development',
+    finishDate: '2018',
+    appUrl: 'https://worldwideimporters.mloidi.com',
+    appUrlText: 'World Wide Importers',
+    skills: [
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+    ]
+  }
+];
+
 export const ResumeService = {
   getWorks: () => {
     return work;
   },
   getEducations: () => {
     return education;
+  },
+  getCourses: () => {
+    return courses;
   }
 };

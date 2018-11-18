@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { NavLink as Link } from 'react-router-dom';
-import styled from 'styled-components';
 
 // My components
 import { NavStyles, StyledHeader, Logo} from './Styles/NavStyles';
-
 
 class NavMenu extends Component {
   render() {
@@ -30,7 +28,7 @@ class NavMenu extends Component {
               <Link to={'/education'}>Education</Link>
             </li>
             <li>
-              <Link to={'/coursesprojects'}>Courses & projects</Link>
+              <Link to={'/courses'}>Courses</Link>
             </li>
           </NavStyles>
         </div>

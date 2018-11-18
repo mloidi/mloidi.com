@@ -14,6 +14,13 @@ export const Styles = styled.div`
   a {
     color: black;
     text-decoration: none;
+    border-bottom: 2px solid #ecd018;
+  }
+  .coursesLink {
+    border-bottom: 2px solid #ecd018;
+  }
+  .coursesDetail {
+    margin: 0 0 40px 0;
   }
   .imgLogo {
     object-fit: cover;
@@ -79,9 +86,8 @@ export const Header = styled.div`
 export const SubHeader = styled.div`
   display: grid;
   grid-template-columns: auto auto;
-  margin: 0px 0 30px 0;
-  padding: 0px 0 20px 0;
-  border-bottom: 1px solid;
+  margin: 0 0 30px 0;
+  /* border-bottom: 1px solid; */
   @media (max-width: 700px) {
     grid-template-columns: auto;
   }
