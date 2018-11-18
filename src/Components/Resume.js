@@ -15,7 +15,7 @@ class Resume extends Component {
 
   componentDidMount() {
     this.setState({
-      resume: ResumeService.getResume()
+      resume: ResumeService.getWorks()
     });
   }
 

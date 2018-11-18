@@ -1,4 +1,4 @@
-const resume = [
+const work = [
   {
     position: 'Software Engineer',
     company: 'Tracasa Intrumental',
@@ -145,8 +145,12 @@ const resume = [
   }
 ];
 
+const education = [];
 export const ResumeService = {
-  getResume: () => {
-    return resume;
+  getWorks: () => {
+    return work;
+  },
+  getEducations: () => {
+    return education;
   }
 };
