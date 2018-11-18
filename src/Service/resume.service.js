@@ -35,7 +35,7 @@ const work = [
     untilDate: new Date(2018, 3, 9),
     description: [
       'Lead, coordinate and supervise the evolution and maintenance plan of the technological solutions of different functional areas',
-      'Participating in gathering requirements, definition and improvement of processes, functional analysis, approval of offers, risk analysis, definition of integrations.',
+      'Gathered requirements, definition and improvement of processes, functional analysis, approval of offers, risk analysis, definition of integrations.',
       'Coordination of multidisciplinary teams and project management.'
     ],
     skills: [
@@ -273,7 +273,7 @@ const courses = [
   },
   {
     title: 'Microsoft Professional Program for Front-End Web Development',
-    description: ['I learn To:'],
+    description: ['Knowledge acquired:'],
     descriptionDetails: [
       'Get started with web development',
       'Create a Basic Web Application',
@@ -305,7 +305,7 @@ const about = [
   {
     name: 'Mikel Loidi',
     profile:
-      'Advanced developer with 15 years of experience in structuring, developing and implementing applications and innovative use of technology. Able to complete projects efficiently and satisfy customers.',
+      'Advanced developer with 15 years of experience in structuring, developing and implementing applications and innovative use of technology. Able to complete projects efficiently and satisfy clients.',
     areas: [
       'Advanced programming and design skills',
       'Excellent problem solving skills',
