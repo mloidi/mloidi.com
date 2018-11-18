@@ -5,9 +5,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavMenu from './Components/NavMenu';
 import About from './Components/About';
 import Resume from './Components/Resume';
-import Education  from './Components/Education';
+import Education from './Components/Education';
 import Courses from './Components/Courses';
 import NotFound from './Components/NotFound';
+
 
 class App extends Component {
   render() {

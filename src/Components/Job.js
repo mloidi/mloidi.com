@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 import {
   Styles,
@@ -47,8 +49,9 @@ class Job extends Component {
           <Detail>
             <div>
               {job.description.map(description => (
-                <div className="textDescription" key={description}>
-                  {description}
+                <div className="textDescriptionDetails" key={description}>
+                  <FontAwesomeIcon className="icon" icon={faCaretRight} />{' '}
+                  <p>{description}</p>
                 </div>
               ))}
             </div>

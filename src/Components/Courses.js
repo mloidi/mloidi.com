@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretRight, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 import { ResumeService } from '../Service/resume.service';
 import { Header, Styles, Detail } from './Styles/Styles';
@@ -43,23 +45,39 @@ class Courses extends Component {
               <Detail>
                 <div className="textLeft coursesDetail">
                   <p>
-                    {this.state.courses[key].description.map(description => (
-                      <p>{description}</p>
-                    ))}
+                    {this.state.courses[key].description &&
+                      this.state.courses[key].description.map(description => (
+                        <p>{description}</p>
+                      ))}
+                    {this.state.courses[key].descriptionDetails &&
+                      this.state.courses[key].descriptionDetails.map(
+                        descriptionDetails => (
+                          <p>
+                            <FontAwesomeIcon
+                              className="icon"
+                              icon={faCaretRight}
+                            />{' '}
+                            {descriptionDetails}
+                          </p>
+                        )
+                      )}
                   </p>
                 </div>
                 <p />
                 <div className="textLeft coursesDetail">
-                  {this.state.courses[key].appUrl && (
-                    <a
-                      className="coursesLink"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={this.state.courses[key].appUrl}
-                    >
-                      {this.state.courses[key].appUrlText}
-                    </a>
-                  )}
+                  <p>
+                    My project <FontAwesomeIcon icon={faArrowRight} />{' '}
+                    {this.state.courses[key].appUrl && (
+                      <a
+                        className="coursesLink"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={this.state.courses[key].appUrl}
+                      >
+                        {this.state.courses[key].appUrlText}
+                      </a>
+                    )}
+                  </p>
                 </div>
               </Detail>
               <hr />

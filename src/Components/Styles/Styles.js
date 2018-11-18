@@ -48,8 +48,33 @@ export const Styles = styled.div`
     flex-grow: 1;
     padding: 0 3rem;
     font-size: 1rem;
+    grid-template-columns: 1% auto;
     @media (max-width: 768px) {
       font-size: 0.5rem;
+    }
+    p {
+      margin: 0 0 0 5px;
+    }
+    .icon {
+      margin: 7px 0 0 0;
+    }
+  }
+  .textDescriptionDetails {
+    line-height: 2;
+    font-weight: 300;
+    flex-grow: 1;
+    padding: 0 3rem;
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: 1% auto;
+    @media (max-width: 768px) {
+      font-size: 0.5rem;
+    }
+    p {
+      margin: 0 0 0 5px;
+    }
+    .icon {
+      margin: 7px 0 0 0;
     }
   }
   .skill {
@@ -125,5 +150,19 @@ export const SkillsDetail = styled.div`
       max-width: 50%;
       height: auto;
     }
+  }
+`;
+
+export const Social = styled.div`
+  border-top: solid 1px;
+  margin: 50px 0 0 0;
+  text-align: center;
+  a {
+    border-bottom: none;
+    margin: 0 10px 0 10px;
+    font-size: 2rem;
+  }
+  .socialBody {
+    margin: 10px 0 0 0;
   }
 `;
