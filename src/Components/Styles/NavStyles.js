@@ -22,9 +22,10 @@ const NavStyles = styled.ul`
     background: none;
     border: 0;
     cursor: pointer;
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
       font-size: 10px;
       padding: 0 10px;
+      font-size: 0.5rem;
     }
     &:before {
       content: '';

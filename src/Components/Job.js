@@ -47,7 +47,7 @@ class Job extends Component {
           <JobsDetail>
             <div>
               {job.description.map(description => (
-                <div className="text" key={description}>
+                <div className="textDescription" key={description}>
                   {description}
                 </div>
               ))}
