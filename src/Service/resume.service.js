@@ -145,7 +145,75 @@ const work = [
   }
 ];
 
-const education = [];
+const education = [
+  {
+    title: 'Master in Project Management PMP',
+    titleURL:
+      'https://www.unir.net/ingenieria/master-project-management/549200001441/',
+    center: 'Universidad Internacional de la Rioja',
+    centerImage:
+      'https://res.cloudinary.com/mloidi/image/upload//v1542535895/mloidi/unir.png',
+    url: 'https://www.unir.net',
+    finishDate: '2016',
+    location: 'Logroño, La Rioja (Spain)',
+    description: [
+      'With the Master in PMP I have acquired the knowledge and skills to:',
+      '• Generate added value to the business cycle by adequately managing knowledge.',
+      '• Make important decisions in pressure environments.',
+      '• Develop a global strategic vision and its impact on the business.',
+      '• Optimize the management of scarce resources (Time, money, personnel, etc.)',
+      '• Manage conflicts and work teams.',
+      '• Manage properly and minimize situations of uncertainty and risk.',
+      '• Design efficient business strategies and achieve different business objectives (costs, margins, etc.)'
+    ]
+  },
+  {
+    title: 'Undergraduate in Informatics Engineering',
+    titleURL: 'https://www.ehu.eus/es/grado-ingenieria-informatica',
+    center: 'University of Basque Country',
+    centerImage:
+      'https://res.cloudinary.com/mloidi/image/upload/v1542536210/mloidi/ehu2.png',
+    url: 'https://www.ehu.eus/en/en-home',
+    finishDate: '2010',
+    location: 'San Sebastian, Gipuzkoa (Spain)',
+    description: [
+      'These are the main competences that I have acquired with this degree:',
+      '• Ability to analyze and assess the social and environmental impact of technical solutions, including the ethical and professional responsibility of the activity of the Technical Engineer in Computing.',
+      '• Ability to conceive and develop centralized or distributed computer systems or architectures integrating hardware, software and networks.',
+      '• Ability to conceive, develop and maintain computer systems, services and applications using software engineering methods as an instrument for quality assurance.',
+      '• Ability to conceive, write, organize, plan, develop and sign projects in the field of computer engineering with the purpose of designing, developing or operating systems, services and computer applications.',
+      '• Ability to know, understand and apply the necessary legislation during the development of the profession of Technical Engineer in Computing and handle specifications, regulations and mandatory rules.',
+      '• Ability to define, evaluate and select hardware and software platforms for the development and execution of systems, services and computer applications.',
+      '• Ability to direct the activities that are the subject of projects in the field of information technology.',
+      '• Ability to design, develop, evaluate and ensure the accessibility, ergonomics, usability and security of the systems, services and computer applications, as well as the information they manage.',
+      '• Ability to solve problems with initiative, decision making, autonomy and creativity.Ability to know how to communicate and transmit the knowledge, skills and abilities of the profession of Technical Engineer in Computing.',
+      '• Knowledge of basic subjects and technologies, which enable the learning and development of new methods and technologies, as well as those that provide them with great versatility to adapt to new situations.',
+      '• Knowledge and application of basic elements of economics and human resources management, organization and project planning, as well as legislation, regulation and standardization in the field of computer projects.',
+      '• Knowledge for the realization of measurements, calculations, valuations, appraisals, surveys, studies, reports, task planning and other analogous computer work.'
+    ]
+  },
+  {
+    title: 'Development of Computer Applications',
+    titleURL: null,
+    center: 'Instituto María Ana Sanz',
+    centerImage:
+      'https://res.cloudinary.com/mloidi/image/upload/b_rgb:706b6b/v1542536953/mloidi/marianasanz.png',
+    url: 'http://www.mariaanasanz.es/',
+    finishDate: '2002',
+    location: 'Pamplona, Navarra (Spain)',
+    description: [
+      'These are the main competences that I have acquired with this study:',
+      '• Configure and exploit computer systems.',
+      '• Program relational databases.',
+      '• Develop software components in structured programming languages.',
+      '• Develop software components in object - oriented programming languages.',
+      '• Install and configure business resource planning and customer relationship management systems.',
+      '• Develop software elements in the client environment.',
+      '• Develop software elements in the server environment.',
+      '• Implement, verify and document web applications in Internet, intranet and extranet environments.'
+    ]
+  }
+];
 export const ResumeService = {
   getWorks: () => {
     return work;

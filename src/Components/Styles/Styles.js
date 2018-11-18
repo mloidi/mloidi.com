@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const JobStyles = styled.div`
+export const Styles = styled.div`
   background: white;
   box-shadow: 0px 12px 31px 0px rgba(0, 0, 0, 0.62);
   position: relative;
@@ -10,6 +10,10 @@ export const JobStyles = styled.div`
   padding: 20px;
   @media (max-width: 768px) {
     margin: 20px 10px 20px 10px;
+  }
+  a {
+    color: black;
+    text-decoration: none;
   }
   .imgLogo {
     object-fit: cover;
@@ -26,7 +30,7 @@ export const JobStyles = styled.div`
     font-weight: 300;
     flex-grow: 1;
     padding: 0 3rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     @media (max-width: 768px) {
       font-size: 0.5rem;
     }
@@ -44,6 +48,11 @@ export const JobStyles = styled.div`
   .skill {
     margin: 5px;
   }
+  .textTitle {
+    font-weight: 900;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
   .textRigth {
     text-align: end;
     @media (max-width: 700px) {
@@ -58,7 +67,7 @@ export const JobStyles = styled.div`
   }
 `;
 
-export const JobsHeader = styled.div`
+export const Header = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   margin: 0;
@@ -67,7 +76,7 @@ export const JobsHeader = styled.div`
   }
 `;
 
-export const JobsSubHeader = styled.div`
+export const SubHeader = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   margin: 0px 0 30px 0;
@@ -78,7 +87,7 @@ export const JobsSubHeader = styled.div`
   }
 `;
 
-export const JobsDetail = styled.div`
+export const Detail = styled.div`
   display: grid;
   grid-template-columns: 90% 10%;
   margin: 0;

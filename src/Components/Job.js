@@ -2,29 +2,29 @@ import React, { Component } from 'react';
 import moment from 'moment';
 
 import {
-  JobStyles,
-  JobsHeader,
-  JobsSubHeader,
-  JobsDetail,
+  Styles,
+  Header,
+  SubHeader,
+  Detail,
   SkillsDetail
-} from './Styles/JobStyles';
+} from './Styles/Styles';
 
 class Job extends Component {
   render() {
     const { job } = this.props;
     return (
       <React.Fragment>
-        <JobStyles>
-          <JobsHeader>
-            <div className="text textLeft">{job.position}</div>
+        <Styles>
+          <Header>
+            <div className="text textLeft textTitle">{job.position}</div>
             <div className="text textRigth">
               {moment(job.fromDate).format('MMM YYYY')} to{' '}
               {job.untilDate
                 ? moment(job.untilDate).format('MMM YYYY')
                 : 'Current'}
             </div>
-          </JobsHeader>
-          <JobsSubHeader>
+          </Header>
+          <SubHeader>
             {job.companyImage ? (
               <div className="imgLogo textLeft">
                 {job.companyURL ? (
@@ -43,8 +43,8 @@ class Job extends Component {
               <div className="text textLeft">{job.company}</div>
             )}
             <div className="text textRigth">{job.location}</div>
-          </JobsSubHeader>
-          <JobsDetail>
+          </SubHeader>
+          <Detail>
             <div>
               {job.description.map(description => (
                 <div className="textDescription" key={description}>
@@ -59,8 +59,8 @@ class Job extends Component {
                 </div>
               ))}
             </SkillsDetail>
-          </JobsDetail>
-        </JobStyles>
+          </Detail>
+        </Styles>
       </React.Fragment>
     );
   }
