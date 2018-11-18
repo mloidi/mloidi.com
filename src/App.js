@@ -6,7 +6,7 @@ import NavMenu from './Components/NavMenu';
 import About from './Components/About';
 import Resume from './Components/Resume';
 import Education  from './Components/Education';
-import Projects from './Components/Projects';
+import Courses from './Components/Courses';
 import NotFound from './Components/NotFound';
 
 class App extends Component {
@@ -20,7 +20,7 @@ class App extends Component {
               <Route exact path="/" component={About} />
               <Route exact path="/resume" component={Resume} />
               <Route exact path="/education" component={Education} />
-              <Route exact path="/coursesprojects" component={Projects} />
+              <Route exact path="/courses" component={Courses} />
               <Route component={NotFound} />
             </Switch>
           </div>
