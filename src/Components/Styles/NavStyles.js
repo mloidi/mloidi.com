@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const NavStyles = styled.ul`
+export const NavStyles = styled.ul`
   margin: 0;
   padding: 10px;
   display: flex;
@@ -66,4 +66,45 @@ const NavStyles = styled.ul`
   }
 `;
 
-export default NavStyles;
+export const Logo = styled.h1`
+  font-size: 0.5rem;
+  margin-left: 2rem;
+  position: relative;
+  z-index: 2;
+  transform: skew(-7deg);
+  img {
+    max-width: 50%;
+    height: auto;
+  }
+  a {
+    padding: 0.5rem 1rem;
+    background: green;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  @media (max-width: 1300px) {
+    margin: 0;
+    text-align: center;
+  }
+`;
+
+export const StyledHeader = styled.header`
+  .bar {
+    border-bottom: 10px solid black;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: space-between;
+    align-items: stretch;
+    @media (max-width: 1300px) {
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+  }
+
+  .sub-bar {
+    display: grid;
+    grid-auto-columns: 1fr auto;
+    border-bottom: 1px solid #e1e1e1;
+  }
+`;
