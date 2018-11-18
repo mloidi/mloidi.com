@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 import { Styles, Header, SubHeader, Detail } from './Styles/Styles';
 
@@ -36,7 +38,7 @@ class EducationFormal extends Component {
                     <img src={education.centerImage} alt={education.center} />
                   </a>
                 ) : (
-                    <img src={education.centerImage} alt={education.center} />
+                  <img src={education.centerImage} alt={education.center} />
                 )}
               </div>
             ) : (
@@ -50,6 +52,13 @@ class EducationFormal extends Component {
                 education.description.map(description => (
                   <div className="textDescription" key={description}>
                     {description}
+                  </div>
+                ))}
+              {education.descriptionDetails &&
+                education.descriptionDetails.map(descriptionDetails => (
+                <div className="textDescriptionDetails" key={descriptionDetails}>
+                    <FontAwesomeIcon className="icon" icon={faCaretRight} />{' '}
+                    {descriptionDetails}
                   </div>
                 ))}
             </div>
