@@ -67,7 +67,7 @@ export const NavStyles = styled.ul`
 `;
 
 export const Logo = styled.h1`
-  font-size: 0.5rem;
+  font-size: 2rem;
   margin-left: 2rem;
   position: relative;
   z-index: 2;
