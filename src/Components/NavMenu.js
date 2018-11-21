@@ -11,10 +11,7 @@ class NavMenu extends Component {
         <div className="bar">
           <Logo>
             <Link to={'/'}>
-              <img
-                src="https://gravatar.com/avatar/ea73d5165de7e303ce8a17dc9d7c3524?s=100d=retro"
-                alt="avatar"
-              />
+              ml
             </Link>
           </Logo>
           <NavStyles>
