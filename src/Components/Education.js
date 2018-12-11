@@ -20,7 +20,7 @@ class Education extends Component {
     return (
       <div>
         {Object.keys(this.state.education).map(key => (
-          <EducationFormal education={this.state.education[key]} />
+          <EducationFormal key={key} education={this.state.education[key]} />
         ))}
       </div>
     );

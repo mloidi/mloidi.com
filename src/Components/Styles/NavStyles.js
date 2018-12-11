@@ -91,7 +91,8 @@ export const Logo = styled.h1`
 
 export const StyledHeader = styled.header`
   .bar {
-    border-bottom: 10px solid black;
+    /* border-bottom: 10px solid black; */
+    box-shadow: 0px 12px 31px 0px rgba(0, 0, 0, 0.62);
     display: grid;
     grid-template-columns: auto 1fr;
     justify-content: space-between;

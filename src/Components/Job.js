@@ -47,6 +47,13 @@ class Job extends Component {
             <div className="text textRigth">{job.location}</div>
           </SubHeader>
           <Detail>
+            <SkillsDetail>
+              {job.skills.map(skill => (
+                <div className="skill" key={skill.id}>
+                  <img src={skill.url} alt={skill.id} />
+                </div>
+              ))}
+            </SkillsDetail>
             <div>
               {job.description.map(description => (
                 <div className="textDescriptionDetails" key={description}>
@@ -55,13 +62,6 @@ class Job extends Component {
                 </div>
               ))}
             </div>
-            <SkillsDetail>
-              {job.skills.map(skill => (
-                <div className="skill" key={skill}>
-                  <img src={skill} alt="a" />
-                </div>
-              ))}
-            </SkillsDetail>
           </Detail>
         </Styles>
       </React.Fragment>

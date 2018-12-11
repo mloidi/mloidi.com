@@ -27,7 +27,7 @@ class Courses extends Component {
         </Helmet>
         <Styles>
           {Object.keys(this.state.courses).map(key => (
-            <div>
+            <div key={key}>
               <Header>
                 <div className="textTitle">
                   {this.state.courses[key].url && (
@@ -44,15 +44,15 @@ class Courses extends Component {
               </Header>
               <Detail>
                 <div className="textLeft coursesDetail">
-                  <p>
+                  <div>
                     {this.state.courses[key].description &&
                       this.state.courses[key].description.map(description => (
-                        <p>{description}</p>
+                        <p key={description}>{description}</p>
                       ))}
                     {this.state.courses[key].descriptionDetails &&
                       this.state.courses[key].descriptionDetails.map(
                         descriptionDetails => (
-                          <p>
+                          <p key={descriptionDetails}>
                             <FontAwesomeIcon
                               className="icon"
                               icon={faCaretRight}
@@ -61,7 +61,7 @@ class Courses extends Component {
                           </p>
                         )
                       )}
-                  </p>
+                  </div>
                 </div>
                 <p />
                 <div className="textLeft coursesDetail">

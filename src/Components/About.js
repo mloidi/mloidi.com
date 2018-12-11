@@ -32,7 +32,7 @@ class About extends Component {
         </Helmet>
         <Styles>
           {Object.keys(this.state.about).map(key => (
-            <div>
+            <div key={key}>
               <Header>
                 <div className="textTitle">{this.state.about[key].name}</div>
               </Header>
@@ -46,7 +46,7 @@ class About extends Component {
                 <div className="textLeft aboutDetail">
                   {this.state.about[key].areas &&
                     this.state.about[key].areas.map(areas => (
-                      <p>
+                      <p key={areas}>
                         <FontAwesomeIcon className="icon" icon={faCaretRight} />{' '}
                         {areas}
                       </p>

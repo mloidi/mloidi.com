@@ -1,4 +1,4 @@
-const work = [
+const works = [
   {
     position: 'Software Engineer',
     company: 'Tracasa Intrumental',
@@ -13,15 +13,51 @@ const work = [
       'Functional analysis of BPM processes, applications and integration between information systems.'
     ],
     skills: [
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:092da9/v1542456321/mloidi/angular.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100/v1542456321/mloidi/angularjs.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/react.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/bootstrap.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:000000/v1542456321/mloidi/mongodb.png'
+      {
+        id: 'java',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png'
+      },
+      {
+        id: 'html',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png'
+      },
+      {
+        id: 'css',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png'
+      },
+      {
+        id: 'js',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      },
+      {
+        id: 'angular',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:092da9/v1542456321/mloidi/angular.png'
+      },
+      {
+        id: 'angularjs',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100/v1542456321/mloidi/angularjs.png'
+      },
+      {
+        id: 'react',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/react.png'
+      },
+      {
+        id: 'bootstrap',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/bootstrap.png'
+      },
+      {
+        id: 'mongodb',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:000000/v1542456321/mloidi/mongodb.png'
+      }
     ]
   },
   {
@@ -39,15 +75,51 @@ const work = [
       'Coordination of multidisciplinary teams and project management.'
     ],
     skills: [
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:092da9/v1542456321/mloidi/angular.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100/v1542456321/mloidi/angularjs.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/react.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/bootstrap.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:000000/v1542456321/mloidi/mongodb.png'
+      {
+        id: 'java',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png'
+      },
+      {
+        id: 'html',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png'
+      },
+      {
+        id: 'css',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png'
+      },
+      {
+        id: 'js',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      },
+      {
+        id: 'angular',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:092da9/v1542456321/mloidi/angular.png'
+      },
+      {
+        id: 'angularjs',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100/v1542456321/mloidi/angularjs.png'
+      },
+      {
+        id: 'react',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/react.png'
+      },
+      {
+        id: 'bootstrap',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/bootstrap.png'
+      },
+      {
+        id: 'mongodb',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:000000/v1542456321/mloidi/mongodb.png'
+      }
     ]
   },
   {
@@ -64,12 +136,36 @@ const work = [
       'Development of reports in BI Publisher, development of web applications and evolutionary and corrective maintenance of the applications of the University of Navarre.'
     ],
     skills: [
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/spring.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:000000/v1542456321/mloidi/mongodb.png'
+      {
+        id: 'java',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png'
+      },
+      {
+        id: 'html',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png'
+      },
+      {
+        id: 'css',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png'
+      },
+      {
+        id: 'js',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      },
+      {
+        id: 'spring',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/spring.png'
+      },
+      {
+        id: 'mongodb',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:000000/v1542456321/mloidi/mongodb.png'
+      }
     ]
   },
   {
@@ -85,11 +181,31 @@ const work = [
       'Analysis and development of web applications for the Education Department of the Government of Navarre'
     ],
     skills: [
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:000000/v1542456321/mloidi/mongodb.png'
+      {
+        id: 'java',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png'
+      },
+      {
+        id: 'html',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png'
+      },
+      {
+        id: 'css',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png'
+      },
+      {
+        id: 'js',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      },
+      {
+        id: 'mongodb',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:000000/v1542456321/mloidi/mongodb.png'
+      }
     ]
   },
   {
@@ -106,17 +222,33 @@ const work = [
       'Analysis and development of core applications of Kutxabank bank.'
     ],
     skills: [
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      {
+        id: 'java',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png'
+      },
+      {
+        id: 'html',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png'
+      },
+      {
+        id: 'css',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png'
+      },
+      {
+        id: 'js',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      }
     ]
   },
   {
     position: 'Developer',
     company: 'TB-Solutions',
     companyImage:
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_50/v1542456340/mloidi/tbs.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_150/v1542456340/mloidi/tbs.png',
     companyURL: null,
     location: 'Pamplona, Navarre (Spain)',
     fromDate: new Date(2006, 5, 1),
@@ -125,10 +257,26 @@ const work = [
       'Development of electronic banking, with J2EE technology, applying the MVC architecture. Specifically, analysis and development of the web module of collections and payments.'
     ],
     skills: [
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      {
+        id: 'java',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png'
+      },
+      {
+        id: 'html',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png'
+      },
+      {
+        id: 'css',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png'
+      },
+      {
+        id: 'js',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      }
     ]
   },
   {
@@ -141,9 +289,21 @@ const work = [
     untilDate: new Date(2006, 5, 30),
     description: ['Development and maintenance of web applications.'],
     skills: [
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      {
+        id: 'html',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png'
+      },
+      {
+        id: 'css',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png'
+      },
+      {
+        id: 'js',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      }
     ]
   }
 ];
@@ -232,9 +392,21 @@ const courses = [
     appUrl: 'https://mloidi-store-prod.herokuapp.com',
     appUrlText: 'Sick Fits',
     skills: [
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      {
+        id: 'html',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png'
+      },
+      {
+        id: 'css',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png'
+      },
+      {
+        id: 'js',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      }
     ]
   },
   {
@@ -249,9 +421,21 @@ const courses = [
     appUrl: 'https://cotd.mloidi.com',
     appUrlText: 'Catch Of The Day',
     skills: [
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      {
+        id: 'html',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png'
+      },
+      {
+        id: 'css',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png'
+      },
+      {
+        id: 'js',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      }
     ]
   },
   {
@@ -266,9 +450,21 @@ const courses = [
     appUrl: 'https://mloidi-app-jskauyrogh.now.sh',
     appUrlText: "Now That's Delicious!",
     skills: [
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      {
+        id: 'html',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png'
+      },
+      {
+        id: 'css',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png'
+      },
+      {
+        id: 'js',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      }
     ]
   },
   {
@@ -294,9 +490,21 @@ const courses = [
     appUrl: 'https://worldwideimporters.mloidi.com',
     appUrlText: 'World Wide Importers',
     skills: [
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png',
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      {
+        id: 'html',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png'
+      },
+      {
+        id: 'css',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png'
+      },
+      {
+        id: 'js',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      }
     ]
   }
 ];
@@ -319,9 +527,33 @@ const about = [
   }
 ];
 
+const checkSkill = (skills, workSkill) => {
+  let isSkill = false;
+  skills.forEach(skill => {
+    if (isSkill) return isSkill;
+    return (isSkill = skill.id === workSkill.id && skill.status === 'selected');
+  });
+  return isSkill;
+};
+
 export const ResumeService = {
   getWorks: () => {
-    return work;
+    return works;
+  },
+  getWorksBySkill: skills => {
+    let worksFilterBySkill = [];
+    works.map(work => {
+      let isSkill = false;
+      work.skills.forEach(workSkill => {
+        if (isSkill) return isSkill;
+        return (isSkill = checkSkill(skills, workSkill));
+      });
+      if (isSkill) {
+        worksFilterBySkill.push(work);
+      }
+      return worksFilterBySkill;
+    });
+    return worksFilterBySkill;
   },
   getEducations: () => {
     return education;

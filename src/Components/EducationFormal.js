@@ -1,10 +1,28 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCaretRight,
+  faAngleDoubleDown,
+  faAngleDoubleUp
+} from '@fortawesome/free-solid-svg-icons';
 
 import { Styles, Header, SubHeader, Detail } from './Styles/Styles';
 
+const hidden = 'hidden';
+const visible = 'visible';
 class EducationFormal extends Component {
+  state = {
+    detailVisible: hidden
+  };
+
+  showDetail = () => {
+    if (this.state.detailVisible === visible) {
+      this.setState({ detailVisible: hidden });
+    } else {
+      this.setState({ detailVisible: visible });
+    }
+  };
+
   render() {
     const { education } = this.props;
     return (
@@ -46,7 +64,18 @@ class EducationFormal extends Component {
             )}
             <div className="textRigth">{education.location}</div>
           </SubHeader>
-          <Detail>
+          <button
+            className="showDetailButton"
+            onClick={() => this.showDetail()}
+          >
+            {this.state.detailVisible === hidden && (
+              <FontAwesomeIcon className="icon" icon={faAngleDoubleDown} />
+            )}
+            {this.state.detailVisible === visible && (
+              <FontAwesomeIcon className="icon" icon={faAngleDoubleUp} />
+            )}
+          </button>
+          <Detail className={this.state.detailVisible}>
             <div>
               {education.description &&
                 education.description.map(description => (
@@ -56,7 +85,10 @@ class EducationFormal extends Component {
                 ))}
               {education.descriptionDetails &&
                 education.descriptionDetails.map(descriptionDetails => (
-                <div className="textDescriptionDetails" key={descriptionDetails}>
+                  <div
+                    className="textDescriptionDetails"
+                    key={descriptionDetails}
+                  >
                     <FontAwesomeIcon className="icon" icon={faCaretRight} />{' '}
                     {descriptionDetails}
                   </div>

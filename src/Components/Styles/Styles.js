@@ -6,7 +6,7 @@ export const Styles = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 20px 80px 20px 80px;
+  margin: 20px 15% 20px 15%;
   padding: 20px;
   @media (max-width: 768px) {
     margin: 20px 10px 20px 10px;
@@ -97,6 +97,32 @@ export const Styles = styled.div`
   .textCenter {
     text-align: center;
   }
+  .hidden {
+    display: none;
+  }
+  .visible {
+    display: inline;
+  }
+  .showDetailButton {
+    border: none;
+    background: white;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+  .skillBar {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
+  }
+  /* .skillButton {
+    border: none;
+    background: white;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+  .skillButton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  } */
 `;
 
 export const Header = styled.div`
@@ -111,7 +137,7 @@ export const Header = styled.div`
 export const SubHeader = styled.div`
   display: grid;
   grid-template-columns: auto auto;
-  margin: 0 0 30px 0;
+  margin: 20px 0 30px 0;
   /* border-bottom: 1px solid; */
   @media (max-width: 700px) {
     grid-template-columns: auto;
@@ -120,7 +146,7 @@ export const SubHeader = styled.div`
 
 export const Detail = styled.div`
   display: grid;
-  grid-template-columns: 90% 10%;
+  grid-template-columns: auto;
   margin: 0;
   @media (max-width: 768px) {
     grid-template-columns: auto;
@@ -129,10 +155,12 @@ export const Detail = styled.div`
 
 export const SkillsDetail = styled.div`
   display: grid;
-  grid-template-columns: auto;
-  margin: 0;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+  margin: 20px 0 20px 0;
+  border: 1px solid black;
+  align-items: center;
   img {
-    max-width: 40%;
+    max-width: 100%;
     height: auto;
   }
   @media (max-width: 768px) {
