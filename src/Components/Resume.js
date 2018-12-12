@@ -41,7 +41,7 @@ class Resume extends Component {
         <Helmet>
           <title>Resume | Mikel Loidi | Web Developer</title>
         </Helmet>
-        <Styles>
+        {/* <Styles>
           <div className="skillBar">
             {Object.keys(this.state.skills).map(key => (
               <SkillsCheckbox
@@ -51,7 +51,7 @@ class Resume extends Component {
               />
             ))}
           </div>
-        </Styles>
+        </Styles> */}
         {Object.keys(this.state.resume).map(key => (
           <Job key={key} job={this.state.resume[key]}/>
         ))}

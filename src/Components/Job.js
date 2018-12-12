@@ -47,13 +47,13 @@ class Job extends Component {
             <div className="text textRigth">{job.location}</div>
           </SubHeader>
           <Detail>
-            <SkillsDetail>
+            {/* <SkillsDetail>
               {job.skills.map(skill => (
                 <div className="skill" key={skill.id}>
                   <img src={skill.url} alt={skill.id} />
                 </div>
               ))}
-            </SkillsDetail>
+            </SkillsDetail> */}
             <div>
               {job.description.map(description => (
                 <div className="textDescriptionDetails" key={description}>
