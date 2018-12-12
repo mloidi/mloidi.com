@@ -25,65 +25,62 @@ class Courses extends Component {
         <Helmet>
           <title>Projects | Mikel Loidi | Web Developer</title>
         </Helmet>
-        <Styles>
-          {Object.keys(this.state.courses).map(key => (
-            <div key={key}>
-              <Header>
-                <div className="textTitle">
-                  {this.state.courses[key].url && (
+        {Object.keys(this.state.courses).map(key => (
+          <Styles key={key}>
+            <Header>
+              <div className="textTitle">
+                {this.state.courses[key].url && (
+                  <a
+                    className="coursesLink"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={this.state.courses[key].url}
+                  >
+                    {this.state.courses[key].title}
+                  </a>
+                )}
+              </div>
+            </Header>
+            <Detail>
+              <div className="textLeft coursesDetail">
+                <div>
+                  {this.state.courses[key].description &&
+                    this.state.courses[key].description.map(description => (
+                      <p key={description}>{description}</p>
+                    ))}
+                  {this.state.courses[key].descriptionDetails &&
+                    this.state.courses[key].descriptionDetails.map(
+                      descriptionDetails => (
+                        <p key={descriptionDetails}>
+                          <FontAwesomeIcon
+                            className="icon"
+                            icon={faCaretRight}
+                          />{' '}
+                          {descriptionDetails}
+                        </p>
+                      )
+                    )}
+                </div>
+              </div>
+              <p />
+              <div className="textLeft coursesDetail">
+                <p>
+                  My project <FontAwesomeIcon icon={faArrowRight} />{' '}
+                  {this.state.courses[key].appUrl && (
                     <a
                       className="coursesLink"
                       target="_blank"
                       rel="noopener noreferrer"
-                      href={this.state.courses[key].url}
+                      href={this.state.courses[key].appUrl}
                     >
-                      {this.state.courses[key].title}
+                      {this.state.courses[key].appUrlText}
                     </a>
                   )}
-                </div>
-              </Header>
-              <Detail>
-                <div className="textLeft coursesDetail">
-                  <div>
-                    {this.state.courses[key].description &&
-                      this.state.courses[key].description.map(description => (
-                        <p key={description}>{description}</p>
-                      ))}
-                    {this.state.courses[key].descriptionDetails &&
-                      this.state.courses[key].descriptionDetails.map(
-                        descriptionDetails => (
-                          <p key={descriptionDetails}>
-                            <FontAwesomeIcon
-                              className="icon"
-                              icon={faCaretRight}
-                            />{' '}
-                            {descriptionDetails}
-                          </p>
-                        )
-                      )}
-                  </div>
-                </div>
-                <p />
-                <div className="textLeft coursesDetail">
-                  <p>
-                    My project <FontAwesomeIcon icon={faArrowRight} />{' '}
-                    {this.state.courses[key].appUrl && (
-                      <a
-                        className="coursesLink"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={this.state.courses[key].appUrl}
-                      >
-                        {this.state.courses[key].appUrlText}
-                      </a>
-                    )}
-                  </p>
-                </div>
-              </Detail>
-              <hr />
-            </div>
-          ))}
-        </Styles>
+                </p>
+              </div>
+            </Detail>
+          </Styles>
+        ))}
       </div>
     );
   }

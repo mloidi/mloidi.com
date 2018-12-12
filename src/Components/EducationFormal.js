@@ -6,7 +6,7 @@ import {
   faAngleDoubleUp
 } from '@fortawesome/free-solid-svg-icons';
 
-import { Styles, Header, SubHeader, Detail } from './Styles/Styles';
+import { Styles, Header, SubHeader, Detail } from './Styles/EducationStyles';
 
 const hidden = 'hidden';
 const visible = 'visible';

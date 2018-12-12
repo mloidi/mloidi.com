@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const Styles = styled.div`
   background: white;
-  box-shadow: 0px 12px 31px 0px rgba(0, 0, 0, 0.62);
+  border-left: 10px solid green;
+  /* box-shadow: 0px 12px 31px 0px rgba(0, 0, 0, 0.62); */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -20,7 +21,7 @@ export const Styles = styled.div`
     border-bottom: 2px solid #ecd018;
   }
   .coursesDetail {
-    margin: 0 0 40px 0;
+    /* margin: 0 0 0px 0; */
   }
   .imgLogo {
     object-fit: cover;
@@ -82,7 +83,6 @@ export const Styles = styled.div`
   }
   .textTitle {
     font-weight: 900;
-    font-size: 1.5em;
     margin-bottom: 10px;
   }
   .textRigth {
@@ -113,16 +113,6 @@ export const Styles = styled.div`
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
   }
-  /* .skillButton {
-    border: none;
-    background: white;
-    font-size: 1.25rem;
-    cursor: pointer;
-  }
-  .skillButton:hover {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-      0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  } */
 `;
 
 export const Header = styled.div`
@@ -157,11 +147,13 @@ export const SkillsDetail = styled.div`
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
   margin: 20px 0 20px 0;
-  border: 1px solid black;
   align-items: center;
   img {
     max-width: 100%;
     height: auto;
+  }
+  .skillSelected {
+    box-shadow: 0px 12px 31px 0px rgba(0, 0, 0, 0.62);
   }
   @media (max-width: 768px) {
     padding: 0 3rem;
@@ -178,19 +170,5 @@ export const SkillsDetail = styled.div`
       max-width: 50%;
       height: auto;
     }
-  }
-`;
-
-export const Social = styled.div`
-  border-top: solid 1px;
-  margin: 50px 0 0 0;
-  text-align: center;
-  a {
-    border-bottom: none;
-    margin: 0 10px 0 10px;
-    font-size: 2rem;
-  }
-  .socialBody {
-    margin: 10px 0 0 0;
   }
 `;

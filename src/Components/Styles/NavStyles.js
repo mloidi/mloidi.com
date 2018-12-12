@@ -1,5 +1,20 @@
 import styled from 'styled-components';
 
+export const StyledHeader = styled.header`
+  .bar {
+    border-bottom: 1px solid grey;
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    align-items: stretch;
+    @media (max-width: 1300px) {
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+  }
+`;
+
 export const NavStyles = styled.ul`
   margin: 0;
   padding: 10px;
@@ -8,16 +23,15 @@ export const NavStyles = styled.ul`
   justify-content: center;
   font-size: 1.5rem;
   list-style-type: none;
-  a,
-  button {
+  .social {
     color: black;
-    padding: 1rem 3rem;
+    margin: 1rem 1rem;
     display: flex;
     align-items: center;
     position: relative;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 0.7em;
     font-weight: 900;
     background: none;
     border: 0;
@@ -27,16 +41,31 @@ export const NavStyles = styled.ul`
       padding: 0 10px;
       font-size: 0.5rem;
     }
-    &:before {
-      content: '';
-      width: 2px;
-      background: #e1e1e1;
-      height: 100%;
-      left: 0;
-      position: absolute;
-      transform: skew(-20deg);
-      top: 0;
-      bottom: 0;
+    &:hover,
+    &:focus {
+      outline: none;
+      &:after {
+        width: calc(100% - 60px);
+      }
+    }
+  }
+  .link {
+    color: black;
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.7em;
+    font-weight: 900;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    @media (max-width: 768px) {
+      font-size: 10px;
+      padding: 0 10px;
+      font-size: 0.5rem;
     }
     &:after {
       height: 2px;
@@ -86,26 +115,5 @@ export const Logo = styled.h1`
   @media (max-width: 1300px) {
     margin: 0;
     text-align: center;
-  }
-`;
-
-export const StyledHeader = styled.header`
-  .bar {
-    /* border-bottom: 10px solid black; */
-    box-shadow: 0px 12px 31px 0px rgba(0, 0, 0, 0.62);
-    display: grid;
-    grid-template-columns: auto 1fr;
-    justify-content: space-between;
-    align-items: stretch;
-    @media (max-width: 1300px) {
-      grid-template-columns: 1fr;
-      justify-content: center;
-    }
-  }
-
-  .sub-bar {
-    display: grid;
-    grid-auto-columns: 1fr auto;
-    border-bottom: 1px solid #e1e1e1;
   }
 `;

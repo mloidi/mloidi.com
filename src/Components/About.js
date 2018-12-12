@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretRight, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import {
-  faGithub,
-  faLinkedin,
-  faTwitter
-} from '@fortawesome/free-brands-svg-icons';
+import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 import { ResumeService } from '../Service/resume.service';
-import { Header, Styles, Detail, Social } from './Styles/Styles';
+import { Header, Styles, Detail } from './Styles/Styles';
 
 class About extends Component {
   constructor(props) {
@@ -53,51 +48,6 @@ class About extends Component {
                     ))}
                 </div>
               </Detail>
-              <Social>
-                <div className="socialHeader">Contact with me:</div>
-                <div className="socialBody">
-                  {this.state.about[key].github && (
-                    <a
-                      className="aboutLink"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={this.state.about[key].github}
-                    >
-                      <FontAwesomeIcon icon={faGithub} />
-                    </a>
-                  )}
-                  {this.state.about[key].linkedin && (
-                    <a
-                      className="aboutLink"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={this.state.about[key].linkedin}
-                    >
-                      <FontAwesomeIcon icon={faLinkedin} />
-                    </a>
-                  )}
-                  {this.state.about[key].twitter && (
-                    <a
-                      className="aboutLink"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={this.state.about[key].twitter}
-                    >
-                      <FontAwesomeIcon icon={faTwitter} />
-                    </a>
-                  )}
-                  {this.state.about[key].mail && (
-                    <a
-                      className="aboutLink"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={this.state.about[key].mail}
-                    >
-                      <FontAwesomeIcon icon={faEnvelope} />
-                    </a>
-                  )}
-                </div>
-              </Social>
             </div>
           ))}
         </Styles>

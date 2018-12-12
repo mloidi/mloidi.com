@@ -4,10 +4,8 @@ import { Helmet } from 'react-helmet';
 // My components
 import { ResumeService } from '../Service/resume.service';
 import { CommonService } from '../Service/common.service';
-import SkillsCheckbox from './Elements/SkillsCheckbox';
 import Job from './Job';
 
-import { Styles } from './Styles/Styles';
 class Resume extends Component {
   constructor(props) {
     super(props);
@@ -53,7 +51,7 @@ class Resume extends Component {
           </div>
         </Styles> */}
         {Object.keys(this.state.resume).map(key => (
-          <Job key={key} job={this.state.resume[key]}/>
+          <Job key={key} job={this.state.resume[key]} skills={this.state.skills}/>
         ))}
       </div>
     );

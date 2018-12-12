@@ -536,11 +536,25 @@ const checkSkill = (skills, workSkill) => {
   return isSkill;
 };
 
+const noSkillSelected = skills => {
+  let noSkillSelected = true;
+  skills.map(skill => {
+    if(skill.status === 'noSelected' && noSkillSelected !== false) {
+      noSkillSelected = true;
+    } else {
+      noSkillSelected = false;
+    }
+    return noSkillSelected;
+  });
+  return noSkillSelected;
+}
+
 export const ResumeService = {
   getWorks: () => {
     return works;
   },
   getWorksBySkill: skills => {
+    if (noSkillSelected(skills)) return works;
     let worksFilterBySkill = [];
     works.map(work => {
       let isSkill = false;

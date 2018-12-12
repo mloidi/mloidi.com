@@ -7,11 +7,22 @@ import {
   Styles,
   Header,
   SubHeader,
-  Detail,
-  SkillsDetail
+  Detail
 } from './Styles/Styles';
 
 class Job extends Component {
+
+  skillSelected = skill => {
+    let className = ''
+    this.props.skills.map(skillFilter => {
+      if(skillFilter.status === 'selected' && skillFilter.id === skill.id) {
+        className = 'skillSelected';
+      }
+      return true;
+    })
+    return className;
+  };
+
   render() {
     const { job } = this.props;
     return (
@@ -49,8 +60,8 @@ class Job extends Component {
           <Detail>
             {/* <SkillsDetail>
               {job.skills.map(skill => (
-                <div className="skill" key={skill.id}>
-                  <img src={skill.url} alt={skill.id} />
+                <div key={skill.id}>
+                  <img className={this.skillSelected(skill)} src={skill.url} alt={skill.id} />
                 </div>
               ))}
             </SkillsDetail> */}

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const DivCheckbox = styled.div`
   padding: 0.5rem;
   .selected {
-    border: 2px solid red;
+    box-shadow: 0px 12px 31px 0px rgba(0, 0, 0, 0.62);
   }
 `;
 
@@ -17,7 +17,10 @@ export const Checkbox = styled.button`
   background-color: transparent;
   cursor: pointer;
   :hover {
-    border-bottom: 2px solid green;
+    box-shadow: 0 12px 31px 0 rgba(0, 0, 0, 0.62), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  }
+  :focus {
+    outline: none;
   }
 `;
 
