@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
   .bar {
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid darkgreen;
     background-color: white;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -24,7 +24,7 @@ export const NavStyles = styled.ul`
   font-size: 1.5rem;
   list-style-type: none;
   .social {
-    color: black;
+    color: darkgreen;
     margin: 1rem 1rem;
     display: flex;
     align-items: center;
@@ -107,7 +107,7 @@ export const Logo = styled.h1`
   }
   a {
     padding: 0.5rem 1rem;
-    background: green;
+    background: darkgreen;
     color: white;
     text-transform: uppercase;
     text-decoration: none;
