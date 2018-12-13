@@ -98,6 +98,7 @@ export const Styles = styled.div`
   }
   .showDetailButton {
     border: none;
+    outline: none;
     background: white;
     font-size: 1.25rem;
     cursor: pointer;
