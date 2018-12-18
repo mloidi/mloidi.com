@@ -41,7 +41,7 @@ class Resume extends Component {
           <title>Resume | Mikel Loidi | Web Developer</title>
         </Helmet>
         <PageHeader>
-          <h2>Resume</h2>
+          <h2>Work experience</h2>
         </PageHeader>
         {/* <Styles>
           <div className="skillBar">
