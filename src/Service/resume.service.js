@@ -1,5 +1,385 @@
+const items = [
+  {
+    type: 'job',
+    title: 'Software Engineer',
+    place: 'Tracasa Intrumental',
+    placeURL: 'http://itracasa.es',
+    location: 'Pamplona, Navarre (Spain)',
+    fromDate: new Date(2018, 3, 10),
+    untilDate: null,
+    description: [
+      'Technical design and construction of an integrated file management tool with workflow tools. Integration with third-party information systems.',
+      'Functional analysis of BPM processes, applications and integration between information systems.'
+    ],
+    skills: [
+      {
+        id: 'java',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png'
+      },
+      {
+        id: 'html',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png'
+      },
+      {
+        id: 'css',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png'
+      },
+      {
+        id: 'js',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      },
+      {
+        id: 'angular',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:092da9/v1542456321/mloidi/angular.png'
+      },
+      {
+        id: 'angularjs',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100/v1542456321/mloidi/angularjs.png'
+      },
+      {
+        id: 'react',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/react.png'
+      },
+      {
+        id: 'bootstrap',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/bootstrap.png'
+      },
+      {
+        id: 'mongodb',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:000000/v1542456321/mloidi/mongodb.png'
+      }
+    ],
+    left: true
+  },
+  {
+    type: 'job',
+    title: 'Project Manager',
+    place: 'Universidad de Navarra',
+    placeURL: 'https://www.unav.edu/',
+    location: 'Pamplona, Navarre (Spain)',
+    fromDate: new Date(2014, 0, 1),
+    untilDate: new Date(2018, 3, 9),
+    description: [
+      'Lead, coordinate and supervise the evolution and maintenance plan of the technological solutions of different functional areas',
+      'Gathered requirements, definition and improvement of processes, functional analysis, approval of offers, risk analysis, definition of integrations.',
+      'Coordination of multidisciplinary teams and project management.'
+    ],
+    skills: [
+      {
+        id: 'java',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png'
+      },
+      {
+        id: 'html',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png'
+      },
+      {
+        id: 'css',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png'
+      },
+      {
+        id: 'js',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      },
+      {
+        id: 'angular',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:092da9/v1542456321/mloidi/angular.png'
+      },
+      {
+        id: 'angularjs',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100/v1542456321/mloidi/angularjs.png'
+      },
+      {
+        id: 'react',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/react.png'
+      },
+      {
+        id: 'bootstrap',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/bootstrap.png'
+      },
+      {
+        id: 'mongodb',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:000000/v1542456321/mloidi/mongodb.png'
+      }
+    ],
+    left: false
+  },
+  {
+    type: 'study',
+    title: 'Master in Project Management PMP',
+    titleURL:
+      'https://www.unir.net/ingenieria/master-project-management/549200001441/',
+    place: 'Universidad Internacional de la Rioja',
+    placeURL: 'https://www.unir.net',
+    finishDate: new Date(2016, 6, 1),
+    location: 'Logroño, La Rioja (Spain)',
+    description: [
+      'With the Master in PMP I have acquired the knowledge and skills to:'
+    ],
+    descriptionDetails: [
+      'Generate added value to the business cycle by adequately managing knowledge.',
+      'Make important decisions in pressure environments.',
+      'Develop a global strategic vision and its impact on the business.',
+      'Optimize the management of scarce resources (Time, money, personnel, etc.)',
+      'Manage conflicts and work teams.',
+      'Manage properly and minimize situations of uncertainty and risk.',
+      'Design efficient business strategies and achieve different business objectives (costs, margins, etc.)'
+    ],
+    left: true
+  },
+  {
+    type: 'job',
+    title: 'Project Manager / Senior Developer',
+    place: 'CONASA',
+    placeURL: 'http://www.conasa.es',
+    location: 'Pamplona, Navarre (Spain)',
+    fromDate: new Date(2011, 6, 1),
+    untilDate: new Date(2013, 11, 31),
+    description: [
+      'Responsible for coordinating the evolutionary and corrective of the PDM and PLM (Windchill) application of Gamesa.',
+      'Development of reports in BI Publisher, development of web applications and evolutionary and corrective maintenance of the applications of the University of Navarre.'
+    ],
+    skills: [
+      {
+        id: 'java',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png'
+      },
+      {
+        id: 'html',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png'
+      },
+      {
+        id: 'css',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png'
+      },
+      {
+        id: 'js',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      },
+      {
+        id: 'spring',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/spring.png'
+      },
+      {
+        id: 'mongodb',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:000000/v1542456321/mloidi/mongodb.png'
+      }
+    ],
+    left: false
+  },
+  {
+    type: 'job',
+    title: 'Senior Developer',
+    place: 'AVALON Tecnologias de la Informacion',
+    placeURL: 'https://grupoavalon.es/index.html',
+    location: 'Pamplona, Navarre (Spain)',
+    fromDate: new Date(2009, 5, 1),
+    untilDate: new Date(2011, 6, 31),
+    description: [
+      'Analysis and development of web applications for the Education Department of the Government of Navarre'
+    ],
+    skills: [
+      {
+        id: 'java',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png'
+      },
+      {
+        id: 'html',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png'
+      },
+      {
+        id: 'css',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png'
+      },
+      {
+        id: 'js',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      },
+      {
+        id: 'mongodb',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:000000/v1542456321/mloidi/mongodb.png'
+      }
+    ],
+    left: true
+  },
+  {
+    type: 'study',
+    title: 'Undergraduate in Informatics Engineering',
+    titleURL: 'https://www.ehu.eus/es/grado-ingenieria-informatica',
+    place: 'University of Basque Country',
+    placeURL: 'https://www.ehu.eus/en/en-home',
+    finishDate: new Date(2010, 6, 1),
+    location: 'San Sebastian, Gipuzkoa (Spain)',
+    description: [
+      'These are the main competences that I have acquired with this degree:'
+    ],
+    descriptionDetails: [
+      'Ability to conceive and develop centralized or distributed computer systems or architectures integrating hardware, software and networks.',
+      'Ability to conceive, develop and maintain computer systems, services and applications using software engineering methods as an instrument for quality assurance.',
+      'Ability to conceive, write, organize, plan, develop and sign projects in the field of computer engineering with the purpose of designing, developing or operating systems, services and computer applications.',
+      'Ability to define, evaluate and select hardware and software platforms for the development and execution of systems, services and computer applications.',
+      'Ability to design, develop, evaluate and ensure the accessibility, ergonomics, usability and security of the systems, services and computer applications, as well as the information they manage.',
+      'Ability to solve problems with initiative, decision making, autonomy and creativity.',
+      'Knowledge of basic subjects and technologies, which enable the learning and development of new methods and technologies, as well as those that provide them with great versatility to adapt to new situations.'
+    ],
+    left: false
+  },
+  {
+    type: 'job',
+    title: 'Senior Developer',
+    place: 'Ibermatica',
+    placeURL: 'http://ibermatica.com',
+    location: 'Donostia, Gipuzkoa (Spain)',
+    fromDate: new Date(2007, 1, 8),
+    untilDate: new Date(2009, 4, 30),
+    description: [
+      'Analysis and development of web applications for the Justice Department of the Basque Government.',
+      'Analysis and development of core applications of Kutxabank bank.'
+    ],
+    skills: [
+      {
+        id: 'java',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png'
+      },
+      {
+        id: 'html',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png'
+      },
+      {
+        id: 'css',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png'
+      },
+      {
+        id: 'js',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      }
+    ],
+    left: true
+  },
+  {
+    type: 'job',
+    title: 'Developer',
+    place: 'TB-Solutions',
+    placeURL: null,
+    location: 'Pamplona, Navarre (Spain)',
+    fromDate: new Date(2006, 5, 1),
+    untilDate: new Date(2007, 1, 7),
+    description: [
+      'Development of electronic banking, with J2EE technology, applying the MVC architecture. Specifically, analysis and development of the web module of collections and payments.'
+    ],
+    skills: [
+      {
+        id: 'java',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png'
+      },
+      {
+        id: 'html',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png'
+      },
+      {
+        id: 'css',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png'
+      },
+      {
+        id: 'js',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      }
+    ],
+    left: false
+  },
+  {
+    type: 'job',
+    title: 'Developer',
+    place: 'Freelance',
+    placeURL: null,
+    location: 'Pamplona, Navarre (Spain)',
+    fromDate: new Date(2002, 6, 1),
+    untilDate: new Date(2006, 5, 30),
+    description: ['Development and maintenance of web applications.'],
+    skills: [
+      {
+        id: 'html',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png'
+      },
+      {
+        id: 'css',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png'
+      },
+      {
+        id: 'js',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      }
+    ],
+    left: true
+  },
+  {
+    type: 'study',
+    title: 'Development of Computer Applications',
+    titleURL: null,
+    place: 'Instituto María Ana Sanz',
+    placeURL: 'http://www.mariaanasanz.es/',
+    finishDate: new Date(2002, 6, 1),
+    location: 'Pamplona, Navarra (Spain)',
+    description: [
+      'These are the main competences that I have acquired with this study:'
+    ],
+    descriptionDetails: [
+      'Configure and exploit computer systems.',
+      'Program relational databases.',
+      'Develop software components in structured programming languages.',
+      'Develop software components in object - oriented programming languages.',
+      'Install and configure business resource planning and customer relationship management systems.',
+      'Develop software elements in the client environment.',
+      'Develop software elements in the server environment.',
+      'Implement, verify and document web applications in Internet, intranet and extranet environments.'
+    ],
+    left: false
+  }
+];
+
 const works = [
   {
+    type: 'job',
     position: 'Software Engineer',
     company: 'Tracasa Intrumental',
     companyImage:
@@ -58,9 +438,11 @@ const works = [
         url:
           'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:000000/v1542456321/mloidi/mongodb.png'
       }
-    ]
+    ],
+    left: false
   },
   {
+    type: 'job',
     position: 'Project Manager',
     company: 'Universidad de Navarra',
     companyImage:
@@ -120,9 +502,11 @@ const works = [
         url:
           'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:000000/v1542456321/mloidi/mongodb.png'
       }
-    ]
+    ],
+    left: true
   },
   {
+    type: 'job',
     position: 'Project Manager / Senior Developer',
     company: 'CONASA',
     companyImage:
@@ -166,9 +550,11 @@ const works = [
         url:
           'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:000000/v1542456321/mloidi/mongodb.png'
       }
-    ]
+    ],
+    left: false
   },
   {
+    type: 'job',
     position: 'Senior Developer',
     company: 'AVALON Tecnologias de la Informacion',
     companyImage:
@@ -206,9 +592,11 @@ const works = [
         url:
           'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:000000/v1542456321/mloidi/mongodb.png'
       }
-    ]
+    ],
+    left: true
   },
   {
+    type: 'job',
     position: 'Senior Developer',
     company: 'Ibermatica',
     companyImage:
@@ -242,9 +630,11 @@ const works = [
         url:
           'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
       }
-    ]
+    ],
+    left: false
   },
   {
+    type: 'job',
     position: 'Developer',
     company: 'TB-Solutions',
     companyImage:
@@ -277,9 +667,11 @@ const works = [
         url:
           'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
       }
-    ]
+    ],
+    left: true
   },
   {
+    type: 'job',
     position: 'Developer',
     company: 'Freelance',
     companyImage: null,
@@ -304,12 +696,14 @@ const works = [
         url:
           'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
       }
-    ]
+    ],
+    left: false
   }
 ];
 
 const education = [
   {
+    type: 'study',
     title: 'Master in Project Management PMP',
     titleURL:
       'https://www.unir.net/ingenieria/master-project-management/549200001441/',
@@ -333,6 +727,7 @@ const education = [
     ]
   },
   {
+    type: 'study',
     title: 'Undergraduate in Informatics Engineering',
     titleURL: 'https://www.ehu.eus/es/grado-ingenieria-informatica',
     center: 'University of Basque Country',
@@ -355,6 +750,7 @@ const education = [
     ]
   },
   {
+    type: 'study',
     title: 'Development of Computer Applications',
     titleURL: null,
     center: 'Instituto María Ana Sanz',
@@ -381,6 +777,7 @@ const education = [
 
 const courses = [
   {
+    type: 'course',
     title: 'Fullstack Advanced React & GraphQL',
     description: [
       'It’s GraphQL API with Node.js on the backend and React and Apollo on the front end. The course cover everything from authentication and sending email to uploading photos and caching data. The entire front - end is built in modern React.js and GraphQL. '
@@ -410,6 +807,7 @@ const courses = [
     ]
   },
   {
+    type: 'course',
     title: 'React For Beginners',
     description: [
       'A premium step-by-step training course to get you building real world React.js + Firebase apps and website components. '
@@ -439,6 +837,7 @@ const courses = [
     ]
   },
   {
+    type: 'course',
     title: 'Learn Node',
     description: [
       'A premium training course to learn to build apps with Node.js, Express and MongoDB. '
@@ -468,6 +867,7 @@ const courses = [
     ]
   },
   {
+    type: 'course',
     title: 'Microsoft Professional Program for Front-End Web Development',
     description: ['Knowledge acquired:'],
     descriptionDetails: [
@@ -511,7 +911,7 @@ const courses = [
 
 const about = [
   {
-    name: 'Mikel Loidi',
+    name: "I'm Mikel Loidi",
     profile:
       'Advanced developer with 15 years of experience in structuring, developing and implementing applications and innovative use of technology. Able to complete projects efficiently and satisfy clients.',
     areas: [
@@ -523,7 +923,80 @@ const about = [
     github: 'https://github.com/mloidi/',
     linkedin: 'https://www.linkedin.com/in/mikel-loidi-ardanaz/',
     twitter: 'https://twitter.com/mikelloidi',
-    mail: 'mailto:mikel@mloidi.com'
+    mail: 'mailto:mikel@mloidi.com',
+    skillLevelMax: 10,
+    skills: [
+      {
+        id: 'java',
+        description: 'Java',
+        level: '9',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/java.png'
+      },
+      {
+        id: 'html',
+        description: 'HTML',
+        level: '9',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/html.png'
+      },
+      {
+        id: 'css',
+        description: 'CSS',
+        level: '8',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/css.png'
+      },
+      {
+        id: 'js',
+        description: 'Javascript',
+        level: '8',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/js.png'
+      },
+      {
+        id: 'angular',
+        description: 'Angular',
+        level: '5',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:092da9/v1542456321/mloidi/angular.png'
+      },
+      {
+        id: 'angularjs',
+        description: 'AngularJS',
+        level: '7',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100/v1542456321/mloidi/angularjs.png'
+      },
+      {
+        id: 'react',
+        description: 'ReactJS',
+        level: '6',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/react.png'
+      },
+      {
+        id: 'bootstrap',
+        description: 'Bootstrap',
+        level: '7',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/bootstrap.png'
+      },
+      {
+        id: 'mongodb',
+        description: 'MongoDB',
+        level: '6',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_100,b_rgb:000000/v1542456321/mloidi/mongodb.png'
+      },
+      {
+        id: 'spring',
+        description: 'Spring',
+        level: '5',
+        url:
+          'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_40/v1542456321/mloidi/spring.png'
+      }
+    ]
   }
 ];
 
@@ -539,7 +1012,7 @@ const checkSkill = (skills, workSkill) => {
 const noSkillSelected = skills => {
   let noSkillSelected = true;
   skills.map(skill => {
-    if(skill.status === 'noSelected' && noSkillSelected !== false) {
+    if (skill.status === 'noSelected' && noSkillSelected !== false) {
       noSkillSelected = true;
     } else {
       noSkillSelected = false;
@@ -547,9 +1020,12 @@ const noSkillSelected = skills => {
     return noSkillSelected;
   });
   return noSkillSelected;
-}
+};
 
 export const ResumeService = {
+  getItems: () => {
+    return items;
+  },
   getWorks: () => {
     return works;
   },

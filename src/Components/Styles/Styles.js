@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+export const PageHeader = styled.div`
+  display: grid;
+  grid-template-columns: 38% auto;
+  margin: 20px 10% 20px 10%;
+  padding: 20px;
+  background-color: white;
+`;
+
 export const Styles = styled.div`
   background: white;
   border-left: 10px solid green;
@@ -7,7 +15,7 @@ export const Styles = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 20px 15% 20px 15%;
+  margin: 20px 10% 20px 10%;
   padding: 20px;
   @media (max-width: 768px) {
     margin: 20px 10px 20px 10px;
@@ -50,6 +58,7 @@ export const Styles = styled.div`
     padding: 0 3rem;
     font-size: 1rem;
     grid-template-columns: 1% auto;
+    color: grey;
     @media (max-width: 768px) {
       font-size: 0.5rem;
     }
@@ -68,6 +77,7 @@ export const Styles = styled.div`
     font-size: 1rem;
     display: grid;
     grid-template-columns: 1% auto;
+    color: grey;
     @media (max-width: 768px) {
       font-size: 0.5rem;
     }

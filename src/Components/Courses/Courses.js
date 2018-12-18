@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretRight, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-import { ResumeService } from '../Service/resume.service';
-import { Header, Styles, Detail } from './Styles/Styles';
+import { ResumeService } from '../../Service/resume.service';
+import { PageHeader, Header, Styles, Detail } from '../Styles/Styles';
 
 class Courses extends Component {
   constructor(props) {
@@ -25,6 +25,9 @@ class Courses extends Component {
         <Helmet>
           <title>Projects | Mikel Loidi | Web Developer</title>
         </Helmet>
+        <PageHeader>
+          <h2>Courses</h2>
+        </PageHeader>
         {Object.keys(this.state.courses).map(key => (
           <Styles key={key}>
             <Header>

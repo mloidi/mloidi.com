@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 
 // My components
-import { ResumeService } from '../Service/resume.service';
-import { CommonService } from '../Service/common.service';
+import { ResumeService } from '../../Service/resume.service';
+import { CommonService } from '../../Service/common.service';
 import Job from './Job';
+import { PageHeader } from '../About/AboutStyles';
 
 class Resume extends Component {
   constructor(props) {
@@ -39,6 +40,9 @@ class Resume extends Component {
         <Helmet>
           <title>Resume | Mikel Loidi | Web Developer</title>
         </Helmet>
+        <PageHeader>
+          <h2>Resume</h2>
+        </PageHeader>
         {/* <Styles>
           <div className="skillBar">
             {Object.keys(this.state.skills).map(key => (
@@ -51,7 +55,11 @@ class Resume extends Component {
           </div>
         </Styles> */}
         {Object.keys(this.state.resume).map(key => (
-          <Job key={key} job={this.state.resume[key]} skills={this.state.skills}/>
+          <Job
+            key={key}
+            job={this.state.resume[key]}
+            skills={this.state.skills}
+          />
         ))}
       </div>
     );

@@ -9,8 +9,8 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 // My components
-import { NavStyles, StyledHeader, Logo } from './Styles/NavStyles';
-import { ResumeService } from '../Service/resume.service';
+import { NavStyles, StyledHeader, Logo } from './NavStyles';
+import { ResumeService } from '../../Service/resume.service';
 
 class NavMenu extends Component {
   state = {

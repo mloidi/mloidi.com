@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // My components
-import NavMenu from './Components/NavMenu';
-import About from './Components/About';
-import Resume from './Components/Resume';
-import Education from './Components/Education';
-import Courses from './Components/Courses';
+import NavMenu from './Components/Menu/NavMenu';
+import About from './Components/About/About';
+import Resume from './Components/Resume/Resume';
+import Education from './Components/Education/Education';
+import Courses from './Components/Courses/Courses';
 import NotFound from './Components/NotFound';
 
 

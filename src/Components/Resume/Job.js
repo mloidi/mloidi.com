@@ -3,23 +3,17 @@ import moment from 'moment';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
-import {
-  Styles,
-  Header,
-  SubHeader,
-  Detail
-} from './Styles/Styles';
+import { Styles, Header, SubHeader, Detail } from '../Styles/Styles';
 
 class Job extends Component {
-
   skillSelected = skill => {
-    let className = ''
+    let className = '';
     this.props.skills.map(skillFilter => {
-      if(skillFilter.status === 'selected' && skillFilter.id === skill.id) {
+      if (skillFilter.status === 'selected' && skillFilter.id === skill.id) {
         className = 'skillSelected';
       }
       return true;
-    })
+    });
     return className;
   };
 
@@ -29,7 +23,7 @@ class Job extends Component {
       <React.Fragment>
         <Styles>
           <Header>
-            <div className="text textLeft textTitle">{job.position}</div>
+            <div className="text textTitle">{job.position}</div>
             <div className="text textRigth">
               {moment(job.fromDate).format('MMM YYYY')} to{' '}
               {job.untilDate
@@ -38,23 +32,19 @@ class Job extends Component {
             </div>
           </Header>
           <SubHeader>
-            {job.companyImage ? (
-              <div className="imgLogo textLeft">
-                {job.companyURL ? (
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={job.companyURL}
-                  >
-                    <img src={job.companyImage} alt={job.company} />
-                  </a>
-                ) : (
-                  <img src={job.companyImage} alt={job.company} />
-                )}
-              </div>
-            ) : (
-              <div className="text textLeft">{job.company}</div>
-            )}
+            <div className="imgLogo textLeft">
+              {job.companyURL ? (
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={job.companyURL}
+                >
+                  {job.company}
+                </a>
+              ) : (
+                <p>{job.company}</p>
+              )}
+            </div>
             <div className="text textRigth">{job.location}</div>
           </SubHeader>
           <Detail>

@@ -24,8 +24,13 @@ export const NavStyles = styled.ul`
   font-size: 1.5rem;
   list-style-type: none;
   .social {
-    color: darkgreen;
-    margin: 1rem 1rem;
+    border: 1px solid darkgreen;
+    background-color: darkgreen;
+    border-radius: 50%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    color: white;
     display: flex;
     align-items: center;
     position: relative;
@@ -33,8 +38,6 @@ export const NavStyles = styled.ul`
     text-decoration: none;
     font-size: 0.7em;
     font-weight: 900;
-    background: none;
-    border: 0;
     cursor: pointer;
     @media (max-width: 768px) {
       font-size: 10px;
@@ -44,14 +47,17 @@ export const NavStyles = styled.ul`
     &:hover,
     &:focus {
       outline: none;
+      background-color: green;
       &:after {
         width: calc(100% - 60px);
       }
     }
   }
   .link {
-    color: black;
+    border: 0;
+    background: none;
     padding: 1rem 3rem;
+    color: black;
     display: flex;
     align-items: center;
     position: relative;
@@ -59,8 +65,6 @@ export const NavStyles = styled.ul`
     text-decoration: none;
     font-size: 0.7em;
     font-weight: 900;
-    background: none;
-    border: 0;
     cursor: pointer;
     @media (max-width: 768px) {
       font-size: 10px;

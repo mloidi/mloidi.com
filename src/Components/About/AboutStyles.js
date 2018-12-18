@@ -1,14 +1,20 @@
 import styled from 'styled-components';
 
+export const PageHeader = styled.div`
+  display: grid;
+  grid-template-columns: 38% auto;
+  margin: 20px 10% 20px 10%;
+  padding: 20px;
+  background-color: white;
+`;
+
 export const Styles = styled.div`
   background: white;
-  /* border: 1px solid grey; */
   border-left: 10px solid green;
-  /* box-shadow: 0px 12px 31px 0px rgba(0, 0, 0, 0.62); */
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 20px 15% 20px 15%;
+  margin: 20px 10% 20px 10%;
   padding: 20px;
   @media (max-width: 768px) {
     margin: 20px 10px 20px 10px;
@@ -17,6 +23,12 @@ export const Styles = styled.div`
     color: black;
     text-decoration: none;
     border-bottom: 2px solid #ecd018;
+  }
+  .coursesLink {
+    border-bottom: 2px solid #ecd018;
+  }
+  .coursesDetail {
+    /* margin: 0 0 0px 0; */
   }
   .imgLogo {
     object-fit: cover;
@@ -73,10 +85,8 @@ export const Styles = styled.div`
       margin: 7px 0 0 0;
     }
   }
-  .textTitle {
-    font-weight: 900;
-    font-size: 1em;
-    margin-bottom: 10px;
+  .skill {
+    margin: 5px;
   }
   .textRigth {
     text-align: end;
@@ -86,22 +96,10 @@ export const Styles = styled.div`
   }
   .textLeft {
     text-align: start;
+    color: grey;
   }
   .textCenter {
     text-align: center;
-  }
-  .hidden {
-    display: none;
-  }
-  .visible {
-    display: inline;
-  }
-  .showDetailButton {
-    border: none;
-    outline: none;
-    background: white;
-    font-size: 1.25rem;
-    cursor: pointer;
   }
 `;
 
@@ -109,16 +107,8 @@ export const Header = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   margin: 0;
-  @media (max-width: 700px) {
-    grid-template-columns: auto;
-  }
-`;
-
-export const SubHeader = styled.div`
-  display: grid;
-  grid-template-columns: auto auto;
-  margin: 20px 0 30px 0;
-  /* border-bottom: 1px solid; */
+  font-weight: 900;
+  margin-bottom: 10px;
   @media (max-width: 700px) {
     grid-template-columns: auto;
   }
@@ -130,5 +120,17 @@ export const Detail = styled.div`
   margin: 0;
   @media (max-width: 768px) {
     grid-template-columns: auto;
+  }
+`;
+
+export const Skill = styled.div`
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 0;
+  @media (max-width: 1100px) {
+    grid-template-columns: auto;
+  }
+  label {
+    padding: 1rem;
   }
 `;
