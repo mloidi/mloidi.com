@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c4b43862-b409-4415-9354-3de4017d778d/deploy-status)](https://app.netlify.com/sites/mloidi-web/deploys)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
