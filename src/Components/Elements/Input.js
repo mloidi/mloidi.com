@@ -17,7 +17,7 @@ const InputStyle = styled.input`
     border-bottom: 2px solid #ccc;
     text-align: start;
     padding: 0.5em;
-    marging: 0.5em;
+    margin: 0.5em;
     font-size: 1em;
     background-color: transparent;
     :focus {

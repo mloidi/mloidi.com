@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 import { ResumeService } from '../../Service/resume.service';
-import { PageHeader, Styles, Detail, Skill } from './AboutStyles';
+import { PageHeader } from '../Styles/Styles';
+import { Styles, Detail, Skill } from './AboutStyles';
 import SkillLevel from '../Elements/SkillLevel';
 import TimeLine from '../TimeLine/TimeLine';
 

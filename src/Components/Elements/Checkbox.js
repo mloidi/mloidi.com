@@ -1,37 +1,34 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
-import Label from './Label'
+import Label from './Label';
 
-export const DivStyle = styled.div`
+const DivStyle = styled.div`
   display: grid;
-  grid-template-columns: 30% 70% ;
+  grid-template-columns: auto auto;
   margin: 0;
-  @media (max-width: 700px) {
-    grid-template-columns: auto;
-  }
 `;
 
-export const LabelCheckbox = styled.label`
-  padding: 0.5rem
+const LabelCheckbox = styled.label`
+  padding: 0.5rem;
 `;
 
 const CheckboxContainer = styled.div`
   display: inline-block;
   vertical-align: middle;
-`
+`;
 
 const Icon = styled.svg`
   fill: none;
   stroke: white;
   stroke-width: 2px;
-`
+`;
 // Hide checkbox visually but remain accessible to screen readers.
 // Source: https://polished.js.org/docs/#hidevisually
 const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
   border: 0;
   clip: rect(0 0 0 0);
-  clippath: inset(50%);
+  clip-path: inset(50%);
   height: 1px;
   margin: -1px;
   overflow: hidden;
@@ -39,13 +36,13 @@ const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
   position: absolute;
   white-space: nowrap;
   width: 1px;
-`
+`;
 
 const StyledCheckbox = styled.div`
   display: inline-block;
   width: 16px;
   height: 16px;
-  background: ${props => (props.checked ? 'green' : 'lightgray')}
+  background: ${props => (props.checked ? 'green' : 'lightgray')};
   border-radius: 3px;
   transition: all 150ms;
 
@@ -54,13 +51,13 @@ const StyledCheckbox = styled.div`
   }
 
   ${Icon} {
-    visibility: ${props => (props.checked ? 'visible' : 'hidden')}
+    visibility: ${props => (props.checked ? 'visible' : 'hidden')};
   }
-`
+`;
 
 const Checkbox = ({ className, checked, ...props }) => (
   <DivStyle>
-    {props.position === "left" && (<Label text={props.label}></Label>)} 
+    {props.position === 'left' && <Label text={props.label} />}
     <LabelCheckbox>
       <CheckboxContainer className={className}>
         <HiddenCheckbox checked={checked} {...props} />
@@ -71,8 +68,8 @@ const Checkbox = ({ className, checked, ...props }) => (
         </StyledCheckbox>
       </CheckboxContainer>
     </LabelCheckbox>
-    {props.position === "right" && (<Label text={props.label}></Label>)} 
+    {props.position === 'right' && <Label text={props.label} />}
   </DivStyle>
-)
+);
 
-export default Checkbox
+export default Checkbox;
