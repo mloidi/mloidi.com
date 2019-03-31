@@ -61,13 +61,13 @@ const skills = [
     id: 'css',
     description: 'CSS',
     icon: 'faCss3',
-    level: '8'
+    level: '7'
   },
   {
     id: 'js',
     description: 'Javascript',
     icon: 'faJs',
-    level: '8'
+    level: '7'
   },
   {
     id: 'angular',
@@ -79,7 +79,7 @@ const skills = [
     id: 'react',
     description: 'React',
     icon: 'faReact',
-    level: '8'
+    level: '7'
   },
   {
     id: 'bootstrap',
@@ -91,7 +91,7 @@ const skills = [
     id: 'node',
     description: 'NodeJS',
     icon: 'faNode',
-    level: '7'
+    level: '6'
   },
   {
     id: 'express',
@@ -103,7 +103,7 @@ const skills = [
     id: 'angularjs',
     description: 'AngularJS',
     icon: null,
-    level: '6'
+    level: '7'
   }
 ];
 
