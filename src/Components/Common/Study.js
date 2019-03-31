@@ -1,11 +1,7 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faGraduationCap,
-  faCaretRight
-} from '@fortawesome/free-solid-svg-icons';
 
 import { diffDates, dates } from '../../lib/dateUtil';
+import Icon from './Icon';
 import {
   BoxDiv,
   Box,
@@ -15,20 +11,21 @@ import {
   BoxRoleLeft,
   BoxRoleRight,
   BoxRoleDetail,
-  Icon,
+  BoxRoleDetailLine,
+  IconDiv,
   Title,
   Link,
   BoxDetail
-} from './ItemStyle';
+} from '../Style/Style';
 
 const ItemStudy = props => (
   <BoxDiv {...props}>
     <React.Fragment>
       <Box {...props}>
         <BoxTitle>
-          <Icon {...props}>
-            <FontAwesomeIcon icon={faGraduationCap} />
-          </Icon>
+          <IconDiv {...props}>
+            <Icon icon="faGraduationCap" />
+          </IconDiv>
           <Title {...props}>
             {props.item.titleURL ? (
               <Link
@@ -64,8 +61,10 @@ const ItemStudy = props => (
             {props.item.descriptionDetails &&
               Object.keys(props.item.descriptionDetails).map(key => (
                 <BoxRoleDetail key={key}>
-                  <FontAwesomeIcon icon={faCaretRight} />{' '}
-                  {props.item.descriptionDetails[key]}
+                  <BoxRoleDetailLine>
+                    <Icon icon='faCaretRight' />{' '}
+                    {props.item.descriptionDetails[key]}
+                  </BoxRoleDetailLine>
                 </BoxRoleDetail>
               ))}
           </BoxDetail>

@@ -1,8 +1,7 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 import { diffDates, dates } from '../../lib/dateUtil';
+import Icon from './Icon';
 import {
   BoxDiv,
   Box,
@@ -12,20 +11,22 @@ import {
   BoxRoleLeft,
   BoxRoleRight,
   BoxRoleDetail,
-  Icon,
+  BoxRoleDetailLine,
+  IconDiv,
   Title,
   Link,
-  BoxDetail
-} from './ItemStyle';
+  BoxDetail,
+  Line
+} from '../Style/Style';
 
 const ItemJob = props => (
   <BoxDiv {...props}>
     <React.Fragment>
       <Box {...props}>
         <BoxTitle>
-          <Icon {...props}>
-            <FontAwesomeIcon icon={faBriefcase} />
-          </Icon>
+          <IconDiv {...props}>
+            <Icon icon="faBriefcase" />
+          </IconDiv>
           <Title {...props}>
             {props.item.titleURL ? (
               <Link
@@ -58,13 +59,17 @@ const ItemJob = props => (
               </BoxRoleRight>
             </BoxRoleTitle>
             <BoxDetail>
-              <BoxRoleDetail>
-                <FontAwesomeIcon icon={faCaretRight} />{' '}
-                {props.item.roles[key].description}
-              </BoxRoleDetail>
+              {props.item.roles[key].description.map(description => (
+                <BoxRoleDetail key={description}>
+                  <BoxRoleDetailLine>
+                    <Icon icon="faCaretRight" /> {description}
+                  </BoxRoleDetailLine>
+                </BoxRoleDetail>
+              ))}
             </BoxDetail>
           </BoxRole>
         ))}
+        <Line />
       </Box>
     </React.Fragment>
   </BoxDiv>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
 
-import { NotFoundStyles } from './Common';
+import { NotFoundStyles } from '../Style/Style';
 
 class NotFound extends Component {
   render() {
