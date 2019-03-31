@@ -1,5 +1,134 @@
 import styled from 'styled-components';
 
+export const MainContainer = styled.div`
+  display: grid;
+  grid-template-columns: auto auto;
+  @media all and (max-width: 900px) {
+    display: grid;
+    grid-template-columns: auto;
+  }
+`;
+
+export const MenuHeader = styled.div`
+  border-right: 0.2rem solid #424943;
+  background-color: #252527;
+  display: grid;
+  grid-template-rows: 4rem auto 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15rem;
+  height: 100%;
+  @media all and (max-width: 900px) {
+    display: none;
+  }
+`;
+
+export const MenuHeaderH = styled.div`
+  display: none;
+  @media all and (max-width: 900px) {
+    border-bottom: 0.2rem solid #424943;
+    background-color: #252527;
+    display: inline-grid;
+    grid-template-rows: auto auto auto;
+    position: sticky;
+  }
+`;
+
+export const Logo = styled.div`
+  padding-top: 1rem;
+  font-size: 2rem;
+  color: #ecd018;
+  background: #424943;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+`;
+
+export const MenuUl = styled.ul`
+  margin: 2rem 0 0 0;
+  align-items: left;
+  font-size: 1.5rem;
+  list-style-type: none;
+  .menuA {
+    background: none;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      font-weight: 900;
+      color: #ecd018;
+      outline: none;
+    }
+  }
+  .selected {
+    font-weight: 900;
+    color: #ecd018;
+    outline: none;
+  }
+  @media all and (max-width: 900px) {
+    margin: 0;
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto auto;
+  }
+`;
+
+export const SocialUl = styled.ul`
+  margin: 0;
+  align-items: left;
+  font-size: 1.5rem;
+  list-style-type: none;
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+  @media all and (max-width: 900px) {
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto auto;
+  }
+`;
+
+export const SocialA = styled.a`
+  border: 1px solid #424943;
+  background-color: #424943;
+  border-radius: 50%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  margin-left: -0.5rem;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    font-weight: 900;
+    outline: none;
+    background-color: #ecd018;
+    color: #424943;
+  }
+  @media all and (max-width: 900px) {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    border-radius: 0;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1rem;
+    &:hover,
+    &:focus {
+      font-weight: 900;
+      color: #ecd018;
+      background: none;
+      outline: none;
+    }
+  }
+`;
+
 export const job = 'job';
 export const study = 'study';
 export const course = 'course';
@@ -16,6 +145,10 @@ export const NotFoundStyles = styled.div`
 export const PageDiv = styled.div`
   margin: 1rem 2rem 1rem 16rem;
   padding: 1rem;
+  @media all and (max-width: 900px) {
+    margin: 1rem 2rem 1rem 1rem;
+    /* display: none; */
+  }
 `;
 
 export const SectionTitle = styled.h1`
@@ -31,6 +164,10 @@ export const SectionSubtitle = styled.h2`
 export const SectionContent = styled.div`
   margin: 0 1rem 1rem 1rem;
   padding: 0 1rem 0 1rem;
+  @media all and (max-width: 900px) {
+    margin: 0;
+    padding: 0 0.2rem 0 0.2rem;
+  }
 `;
 
 export const BoxDiv = styled.div`
@@ -117,19 +254,28 @@ export const Technologies = styled.div`
   display: inline-grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
   grid-column-gap: 1rem;
+  @media all and (max-width: 900px) {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+  }
 `;
 
 export const SkillTable = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   grid-column-gap: 1rem;
+  @media all and (max-width: 900px) {
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-gap: 1rem;
+  }
 `;
 
 export const SkillBox = styled.div`
   display: grid;
   grid-template-columns: 5rem auto;
   width: 0.5rem;
-  margin: 1px 0 5px 0;
+  margin: 0.2rem 0 0.5rem 0;
 `;
 
 export const SkillIcon = styled.label`

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Menu from './Components/Menu';
@@ -12,10 +11,7 @@ import Projects from './Components/Pages/Projects';
 import NotFound from './Components/Pages/NotFound';
 // import Construction from './Components/Pages/Construction';
 
-const MainContainer = styled.div`
-  display: grid;
-  grid-template-columns: auto auto;
-`;
+import { MainContainer } from './Components/Style/Style';
 
 class App extends Component {
   render() {
