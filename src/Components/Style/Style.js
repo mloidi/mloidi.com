@@ -125,6 +125,24 @@ export const SkillTable = styled.div`
   grid-column-gap: 1rem;
 `;
 
+export const SkillBox = styled.div`
+  display: grid;
+  grid-template-columns: 5rem auto;
+  width: 0.5rem;
+  margin: 1px 0 5px 0;
+`;
+
+export const SkillIcon = styled.label`
+  text-align: end;
+  margin-right: 1rem;
+  font-size: 2rem;
+`;
+
+export const SkillText = styled.label`
+  text-align: end;
+  font-size: 0.8rem;
+`;
+
 export const TechnologiesTitle = styled.h4`
   font-size: 1rem;
   margin-top: 0;

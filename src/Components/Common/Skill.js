@@ -1,29 +1,20 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import ProgressBar from './ProgressBar';
 import Icon from '../Common/Icon';
-
-const Box = styled.div`
-  display: grid;
-  grid-template-columns: 4rem auto;
-  width: 0.5rem;
-  margin: 1px 0 5px 0;
-`;
-
-const SkillLabel = styled.label`
-  text-align: center;
-  margin-right: 1rem;
-  font-size: 2rem;
-`;
+import { SkillBox, SkillIcon, SkillText } from '../Style/Style';
 
 const SkillLevel = props => (
-  <Box>
-    <SkillLabel>
-      <Icon icon={props.skill.icon} />
-    </SkillLabel>
+  <SkillBox>
+    <SkillIcon>
+      {props.skill.icon ? (
+        <Icon icon={props.skill.icon} />
+      ) : (
+        <SkillText>{props.skill.description}</SkillText>
+      )}
+    </SkillIcon>
     <ProgressBar level={props.skill.level} />
-  </Box>
+  </SkillBox>
 );
 
 export default SkillLevel;

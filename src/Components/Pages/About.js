@@ -8,7 +8,6 @@ import {
   PageDiv,
   SkillTable
 } from '../Style/Style';
-import Icon from '../Common/Icon';
 import Skill from '../Common/Skill';
 
 export default class About extends Component {

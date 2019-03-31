@@ -77,7 +77,7 @@ const skills = [
   },
   {
     id: 'react',
-    description: 'ReactJS',
+    description: 'React',
     icon: 'faReact',
     level: '8'
   },
@@ -92,6 +92,18 @@ const skills = [
     description: 'NodeJS',
     icon: 'faNode',
     level: '7'
+  },
+  {
+    id: 'express',
+    description: 'Express',
+    icon: null,
+    level: '6'
+  },
+  {
+    id: 'angularjs',
+    description: 'AngularJS',
+    icon: null,
+    level: '6'
   }
 ];
 
@@ -310,7 +322,7 @@ const items = [
         title: 'Fullstack Advanced React & GraphQL',
         titleUrl: 'https://advancedreact.com',
         description:
-          'It’s GraphQL API with Node.js on the backend and React and Apollo on the front end. The course cover everything from authentication and sending email to uploading photos and caching data. The entire front - end is built in modern React.js and GraphQL. ',
+          'It’s GraphQL API with Node.js on the backend and React and Apollo on the front end. The course cover everything from authentication and sending email to uploading photos and caching data. The entire front - end is built in modern React and GraphQL. ',
         fromDate: null,
         untilDate: null,
         finishDate: new Date(2018, 10, 1),
@@ -334,7 +346,7 @@ const items = [
           },
           {
             id: 'react',
-            description: 'ReactJS /',
+            description: 'React /',
             icon: 'faReact'
           },
           {
@@ -358,7 +370,7 @@ const items = [
         title: 'React For Beginners',
         titleUrl: 'https://reactforbeginners.com/',
         description:
-          'A premium step-by-step training course to get you building real world React.js + Firebase apps and website components. ',
+          'A premium step-by-step training course to get you building real world React + Firebase apps and website components. ',
         fromDate: null,
         untilDate: null,
         finishDate: new Date(2018, 6, 1),
@@ -382,7 +394,7 @@ const items = [
           },
           {
             id: 'react',
-            description: 'ReactJS /',
+            description: 'React /',
             icon: 'faReact'
           },
           {
@@ -528,7 +540,7 @@ const items = [
       },
       {
         id: 'react',
-        description: 'ReactJS /',
+        description: 'React /',
         icon: 'faReact'
       },
       {
