@@ -28,7 +28,7 @@ export default class About extends Component {
       <React.Fragment>
         <PageDiv id="about">
           <SectionTitle>About me</SectionTitle>
-          <SectionSubtitle>Some of the technologies I know.</SectionSubtitle>
+          <SectionSubtitle>Skills</SectionSubtitle>
           <SectionContent>
             <SkillTable>
               {this.state.skills.map(skill => (
@@ -40,23 +40,20 @@ export default class About extends Component {
           </SectionContent>
           <SectionSubtitle />
           <SectionContent>
-            {this.state.about.description &&
-              this.state.about.description.map(areas => (
-                <p key={areas}>{areas}</p>
-              ))}
-
-            {/* <h2>{this.state.about.name}</h2>
-            <h4>Full-stack web developer</h4>
-            <p>{this.state.about.profile}</p>
-            <h3>Areas of Expertise</h3>
-            <React.Fragment>
-              {this.state.about.areas &&
-                this.state.about.areas.map(areas => (
-                  <p key={areas}>
-                    <Icon icon="faCaretRight" /> {areas}
-                  </p>
-                ))}
-            </React.Fragment> */}
+            {this.state.about.descriptions &&
+              this.state.about.descriptions.map(description =>
+                description.line === 1 ? (
+                  <span key={description.line}>
+                    <strong>{description.text}</strong>
+                  </span>
+                ) : (
+                  <React.Fragment>
+                    <span key={description.line}>{description.text}</span>
+                    <br />
+                    <br />
+                  </React.Fragment>
+                )
+              )}
           </SectionContent>
         </PageDiv>
       </React.Fragment>
