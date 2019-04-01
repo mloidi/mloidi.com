@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { OfflineService } from '../../Service/resume.service';
+import { NewsService } from '../../Service/news.service';
 import {
   SectionTitle,
   SectionSubtitle,
@@ -17,6 +18,7 @@ export default class About extends Component {
   };
 
   componentDidMount() {
+    NewsService.getTopHeadlines();
     this.setState({
       about: OfflineService.getAbout(),
       skills: OfflineService.getSkills()
@@ -47,8 +49,8 @@ export default class About extends Component {
                     <strong>{description.text}</strong>
                   </span>
                 ) : (
-                  <React.Fragment>
-                    <span key={description.line}>{description.text}</span>
+                  <React.Fragment key={description.line}>
+                    <span>{description.text}</span>
                     <br />
                     <br />
                   </React.Fragment>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { diffDates, dates, lastElementInArray } from '../../lib/util';
+import { diffDates, dates } from '../../lib/util';
 import Icon from './Icon';
 import {
   BoxDiv,
@@ -92,19 +92,9 @@ const ItemCourse = props => (
                 <TechnologiesTitle>Technologies used</TechnologiesTitle>
                 <Technologies>
                   {props.item.roles[key].technologies.map(technology => (
-                    <React.Fragment>
-                      <Technology key={technology.id}>
+                    <Technology key={technology.id}>
                       <Icon icon="faCheck" /> {technology.description}
-                      </Technology>
-                      {/* <div>
-                        {lastElementInArray(
-                          technology.line,
-                          props.item.roles[key].maxTech
-                        )
-                          ? '|'
-                          : ''}
-                      </div> */}
-                    </React.Fragment>
+                    </Technology>
                   ))}
                 </Technologies>
               </BoxDetail>

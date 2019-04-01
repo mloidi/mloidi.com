@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { lastElementInArray } from '../../lib/util';
 import Icon from './Icon';
 import {
   BoxDiv,
@@ -40,15 +39,6 @@ const ItemProject = props => (
             )}
           </Title>
         </BoxTitle>
-        {/* {Object.keys(props.item.roles).map(key => (
-          <BoxRole key={key} {...props}>
-            <BoxDetail>
-              <BoxRoleDetail>
-                <Icon icon="faCaretRight" /> {props.item.roles[key].description}
-              </BoxRoleDetail>
-            </BoxDetail>
-          </BoxRole>
-        ))} */}
         <BoxRole>
           <BoxDetail>
             <BoxRoleDetail>{props.item.description}</BoxRoleDetail>
@@ -57,16 +47,9 @@ const ItemProject = props => (
             <TechnologiesTitle>Technologies used</TechnologiesTitle>
             <Technologies>
               {props.item.technologies.map(technology => (
-                <React.Fragment>
-                  <Technology key={technology.id}>
-                    {technology.description}
-                  </Technology>
-                  <div>
-                    {lastElementInArray(technology.line, props.item.maxTech)
-                      ? '|'
-                      : ''}
-                  </div>
-                </React.Fragment>
+                <Technology key={technology.id}>
+                  <Icon icon="faCheck" /> {technology.description}
+                </Technology>
               ))}
             </Technologies>
           </BoxDetail>
