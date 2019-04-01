@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { diffDates, dates } from '../../lib/dateUtil';
+import { diffDates, dates, lastElementInArray } from '../../lib/util';
 import Icon from './Icon';
 import {
   BoxDiv,
@@ -94,6 +94,10 @@ const ItemCourse = props => (
                   {props.item.roles[key].technologies.map(technology => (
                     <Technology key={technology.id}>
                       {technology.description}
+                  {technology.description}
+                  {lastElementInArray(technology.line, props.item.roles[key].maxTech)
+                    ? ' | '
+                    : ''}
                     </Technology>
                   ))}
                 </Technologies>

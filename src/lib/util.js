@@ -25,3 +25,7 @@ export const dates = (fromDate, untilDate, finishDate) => {
   }
   return dates;
 };
+
+export const lastElementInArray = (lineElement, maxElements) => {
+  return lineElement !== maxElements;
+};

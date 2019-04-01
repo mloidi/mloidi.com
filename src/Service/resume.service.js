@@ -341,38 +341,46 @@ const items = [
         finishDate: new Date(2018, 10, 1),
         appTitle: 'Sick Fits',
         appUrl: 'https://mloidi-store-prod.herokuapp.com',
+        maxTech: 7,
         technologies: [
           {
+            line: 1,
             id: 'html',
-            description: 'HTML /',
+            description: 'HTML',
             icon: 'faHtml5'
           },
           {
+            line: 2,
             id: 'css',
-            description: 'CSS /',
+            description: 'CSS',
             icon: 'faCss3'
           },
           {
+            line: 3,
             id: 'js',
-            description: 'JavaScript /',
+            description: 'JavaScript',
             icon: 'faJs'
           },
           {
+            line: 4,
             id: 'react',
-            description: 'React /',
+            description: 'React',
             icon: 'faReact'
           },
           {
+            line: 5,
             id: 'nextJS',
-            description: 'Next.js /',
+            description: 'Next.js',
             icon: null
           },
           {
+            line: 6,
             id: 'graphQL',
-            description: 'GraphQL /',
+            description: 'GraphQL',
             icon: null
           },
           {
+            line: 7,
             id: 'reactApollo',
             description: 'React-Apollo',
             icon: null
@@ -389,28 +397,34 @@ const items = [
         finishDate: new Date(2018, 6, 1),
         appTitle: 'Catch Of The Day',
         appUrl: 'https://cotd.mloidi.com',
+        maxTech: 5,
         technologies: [
           {
+            line: 1,
             id: 'html',
-            description: 'HTML /',
+            description: 'HTML',
             icon: 'faHtml5'
           },
           {
+            line: 2,
             id: 'css',
-            description: 'CSS /',
+            description: 'CSS',
             icon: 'faCss3'
           },
           {
+            line: 3,
             id: 'js',
-            description: 'JavaScript /',
+            description: 'JavaScript',
             icon: 'faJs'
           },
           {
+            line: 4,
             id: 'react',
-            description: 'React /',
+            description: 'React',
             icon: 'faReact'
           },
           {
+            line: 5,
             id: 'firebase',
             description: 'Firebase',
             icon: null
@@ -427,45 +441,54 @@ const items = [
         finishDate: new Date(2018, 5, 1),
         appTitle: "Now That's Delicious!",
         appUrl: 'https://mloidi-app-jskauyrogh.now.sh',
+        maxTech: 8,
         technologies: [
           {
+            line: 1,
             id: 'html',
-            description: 'HTML /',
+            description: 'HTML',
             icon: 'faHtml5'
           },
           {
+            line: 2,
             id: 'css',
-            description: 'CSS /',
+            description: 'CSS',
             icon: 'faCss3'
           },
           {
+            line: 3,
             id: 'js',
-            description: 'JavaScript /',
+            description: 'JavaScript',
             icon: 'faJs'
           },
           {
+            line: 4,
             id: 'node',
-            description: 'NodeJS /',
+            description: 'NodeJS',
             icon: 'faNode'
           },
           {
+            line: 5,
             id: 'mongodb',
-            description: 'MongoDB /',
+            description: 'MongoDB',
             icon: null
           },
           {
+            line: 6,
             id: 'passport',
-            description: 'Passport /',
+            description: 'Passport',
             icon: null
           },
           {
+            line: 7,
             id: 'googlemaps',
-            description: 'Google Maps /',
+            description: 'Google Maps',
             icon: null
           },
           {
+            line: 8,
             id: 'express',
-            description: 'Express /',
+            description: 'Express',
             icon: null
           }
         ]
@@ -498,28 +521,34 @@ const items = [
         finishDate: new Date(2018, 4, 1),
         appTitle: 'World Wide Importers',
         appUrl: 'https://worldwideimporters.mloidi.com',
+        maxTech: 5,
         technologies: [
           {
+            line: 1,
             id: 'html',
-            description: 'HTML /',
+            description: 'HTML',
             icon: 'faHtml5'
           },
           {
+            line: 2,
             id: 'css',
-            description: 'CSS /',
+            description: 'CSS',
             icon: 'faCss3'
           },
           {
+            line: 3,
             id: 'js',
-            description: 'JavaScript /',
+            description: 'JavaScript',
             icon: 'faJs'
           },
           {
+            line: 4,
             id: 'angularjs',
-            description: 'AngularJS /',
+            description: 'AngularJS',
             icon: null
           },
           {
+            line: 5,
             id: 'bootstrap',
             description: 'Bootstrap',
             icon: 'faBootstrap'
@@ -535,28 +564,34 @@ const items = [
     titleURL: 'https://mloidi.com',
     location: null,
     description: 'My personal webpage.',
+    maxTech: 5,
     technologies: [
       {
+        line: 1,
         id: 'html',
-        description: 'HTML /',
+        description: 'HTML',
         icon: 'faHtml5'
       },
       {
+        line: 2,
         id: 'css',
-        description: 'CSS /',
+        description: 'CSS',
         icon: 'faCss3'
       },
       {
+        line: 3,
         id: 'js',
-        description: 'JavaScript /',
+        description: 'JavaScript',
         icon: 'faJs'
       },
       {
+        line: 4,
         id: 'react',
-        description: 'React /',
+        description: 'React',
         icon: 'faReact'
       },
       {
+        line: 5,
         id: 'styled-components',
         description: 'Styled Components',
         icon: null
@@ -570,28 +605,34 @@ const items = [
     titleURL: 'https://bricovidrio.mloidi.com',
     location: null,
     description: 'Sample demo webpage for a glassware company.',
+    maxTech: 5,
     technologies: [
       {
+        line: 1,
         id: 'html',
-        description: 'HTML /',
+        description: 'HTML',
         icon: 'faHtml5'
       },
       {
+        line: 2,
         id: 'css',
-        description: 'CSS /',
+        description: 'CSS',
         icon: 'faCss3'
       },
       {
+        line: 3,
         id: 'js',
-        description: 'JavaScript /',
+        description: 'JavaScript',
         icon: 'faJs'
       },
       {
+        line: 4,
         id: 'angularjs',
-        description: 'AngularJS /',
+        description: 'AngularJS',
         icon: null
       },
       {
+        line: 5,
         id: 'bootstrap',
         description: 'Bootstrap',
         icon: 'faBootstrap'

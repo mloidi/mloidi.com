@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import { diffDates, dates } from '../../lib/dateUtil';
+import { lastElementInArray } from '../../lib/util';
 import Icon from './Icon';
 import {
   BoxDiv,
@@ -50,18 +50,18 @@ const ItemProject = props => (
           </BoxRole>
         ))} */}
         <BoxRole>
-
-        <BoxDetail>
-                <BoxRoleDetail>
-                  {props.item.description}
-                </BoxRoleDetail>
-              </BoxDetail>
+          <BoxDetail>
+            <BoxRoleDetail>{props.item.description}</BoxRoleDetail>
+          </BoxDetail>
           <BoxDetail>
             <TechnologiesTitle>Technologies used</TechnologiesTitle>
             <Technologies>
               {props.item.technologies.map(technology => (
                 <Technology key={technology.id}>
                   {technology.description}
+                  {lastElementInArray(technology.line, props.item.maxTech)
+                    ? ' | '
+                    : ''}
                 </Technology>
               ))}
             </Technologies>

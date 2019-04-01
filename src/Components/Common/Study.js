@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { diffDates, dates } from '../../lib/dateUtil';
+import { diffDates, dates } from '../../lib/util';
 import Icon from './Icon';
 import {
   BoxDiv,
