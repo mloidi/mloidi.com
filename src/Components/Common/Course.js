@@ -101,7 +101,7 @@ const ItemCourse = props => (
                           technology.line,
                           props.item.roles[key].maxTech
                         )
-                          ? ' |'
+                          ? '|'
                           : ''}
                       </div>
                     </React.Fragment>

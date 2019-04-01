@@ -63,7 +63,7 @@ const ItemProject = props => (
                   </Technology>
                   <div>
                     {lastElementInArray(technology.line, props.item.maxTech)
-                      ? ' |'
+                      ? '|'
                       : ''}
                   </div>
                 </React.Fragment>

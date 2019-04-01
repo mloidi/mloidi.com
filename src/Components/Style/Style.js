@@ -250,17 +250,6 @@ export const Line = styled.div`
   border-bottom: 0.2rem dotted #424943;
 `;
 
-export const Technologies = styled.div`
-  display: inline-grid;
-  align-items: center;
-  grid-template-columns: auto 1rem auto 1rem auto 1rem auto 1rem auto 1rem auto 1rem auto 1rem auto 1rem auto 1rem auto 1rem auto 1rem auto 1rem;
-  grid-column-gap: 1rem;
-  @media all and (max-width: 900px) {
-    display: inline-grid;
-    grid-template-columns: auto 1rem auto 1rem auto 1rem;
-  }
-`;
-
 export const SkillTable = styled.div`
   display: grid;
   grid-template-columns: auto auto;
@@ -288,6 +277,17 @@ export const SkillIcon = styled.label`
 export const SkillText = styled.label`
   text-align: end;
   font-size: 0.8rem;
+`;
+
+export const Technologies = styled.div`
+  display: inline-grid;
+  align-items: center;
+  grid-template-columns: auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem;
+  grid-column-gap: 1rem;
+  @media all and (max-width: 900px) {
+    display: inline-grid;
+    grid-template-columns: auto 0.5rem auto 0.5rem;
+  }
 `;
 
 export const TechnologiesTitle = styled.h4`
