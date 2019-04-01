@@ -94,10 +94,12 @@ const ItemCourse = props => (
                   {props.item.roles[key].technologies.map(technology => (
                     <Technology key={technology.id}>
                       {technology.description}
-                  {technology.description}
-                  {lastElementInArray(technology.line, props.item.roles[key].maxTech)
-                    ? ' | '
-                    : ''}
+                      {lastElementInArray(
+                        technology.line,
+                        props.item.roles[key].maxTech
+                      )
+                        ? ' |'
+                        : ''}
                     </Technology>
                   ))}
                 </Technologies>

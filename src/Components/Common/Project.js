@@ -60,7 +60,7 @@ const ItemProject = props => (
                 <Technology key={technology.id}>
                   {technology.description}
                   {lastElementInArray(technology.line, props.item.maxTech)
-                    ? ' | '
+                    ? ' |'
                     : ''}
                 </Technology>
               ))}
