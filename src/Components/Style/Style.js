@@ -282,11 +282,13 @@ export const SkillText = styled.label`
 export const Technologies = styled.div`
   display: inline-grid;
   align-items: center;
-  grid-template-columns: auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+  /* grid-template-columns: auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem; */
   grid-column-gap: 1rem;
   @media all and (max-width: 900px) {
     display: inline-grid;
-    grid-template-columns: auto 0.5rem auto 0.5rem;
+    grid-template-columns: auto auto;
+    /* grid-template-columns: auto 0.5rem auto 0.5rem; */
   }
 `;
 

@@ -9,7 +9,8 @@ import {
   faBriefcase,
   faArrowRight,
   faCaretRight,
-  faCertificate
+  faCertificate,
+  faCheck
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faGithub,
@@ -65,6 +66,8 @@ const Icon = props => (
       <FontAwesomeIcon icon={faUser} />
     ) : props.icon === 'faCertificate' ? (
       <FontAwesomeIcon icon={faCertificate} />
+    ) : props.icon === 'faCheck' ? (
+      <FontAwesomeIcon icon={faCheck} />
     ) : props.icon === 'faCoffee' ? (
       <FontAwesomeIcon icon={faCoffee} />
     ) : (

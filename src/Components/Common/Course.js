@@ -94,16 +94,16 @@ const ItemCourse = props => (
                   {props.item.roles[key].technologies.map(technology => (
                     <React.Fragment>
                       <Technology key={technology.id}>
-                        {technology.description}
+                      <Icon icon="faCheck" /> {technology.description}
                       </Technology>
-                      <div>
+                      {/* <div>
                         {lastElementInArray(
                           technology.line,
                           props.item.roles[key].maxTech
                         )
                           ? '|'
                           : ''}
-                      </div>
+                      </div> */}
                     </React.Fragment>
                   ))}
                 </Technologies>
