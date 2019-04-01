@@ -13,6 +13,8 @@ import NotFound from './Components/Pages/NotFound';
 
 import { MainContainer } from './Components/Style/Style';
 
+require('dotenv').config();
+
 class App extends Component {
   render() {
     return (
