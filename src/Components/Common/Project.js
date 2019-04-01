@@ -57,12 +57,16 @@ const ItemProject = props => (
             <TechnologiesTitle>Technologies used</TechnologiesTitle>
             <Technologies>
               {props.item.technologies.map(technology => (
-                <Technology key={technology.id}>
-                  {technology.description}
-                  {lastElementInArray(technology.line, props.item.maxTech)
-                    ? ' |'
-                    : ''}
-                </Technology>
+                <React.Fragment>
+                  <Technology key={technology.id}>
+                    {technology.description}
+                  </Technology>
+                  <div>
+                    {lastElementInArray(technology.line, props.item.maxTech)
+                      ? ' |'
+                      : ''}
+                  </div>
+                </React.Fragment>
               ))}
             </Technologies>
           </BoxDetail>

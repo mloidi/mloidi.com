@@ -252,11 +252,12 @@ export const Line = styled.div`
 
 export const Technologies = styled.div`
   display: inline-grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+  align-items: center;
+  grid-template-columns: auto 1rem auto 1rem auto 1rem auto 1rem auto 1rem auto 1rem auto 1rem auto 1rem auto 1rem auto 1rem auto 1rem auto 1rem;
   grid-column-gap: 1rem;
   @media all and (max-width: 900px) {
     display: inline-grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto 1rem auto 1rem auto 1rem;
   }
 `;
 

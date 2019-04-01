@@ -92,15 +92,19 @@ const ItemCourse = props => (
                 <TechnologiesTitle>Technologies used</TechnologiesTitle>
                 <Technologies>
                   {props.item.roles[key].technologies.map(technology => (
-                    <Technology key={technology.id}>
-                      {technology.description}
-                      {lastElementInArray(
-                        technology.line,
-                        props.item.roles[key].maxTech
-                      )
-                        ? ' |'
-                        : ''}
-                    </Technology>
+                    <React.Fragment>
+                      <Technology key={technology.id}>
+                        {technology.description}
+                      </Technology>
+                      <div>
+                        {lastElementInArray(
+                          technology.line,
+                          props.item.roles[key].maxTech
+                        )
+                          ? ' |'
+                          : ''}
+                      </div>
+                    </React.Fragment>
                   ))}
                 </Technologies>
               </BoxDetail>
