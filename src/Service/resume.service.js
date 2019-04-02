@@ -639,7 +639,7 @@ const items = [
     title: 'News about ...',
     titleURL: 'https://news.mloidi.com',
     location: null,
-    description: 'Show randoms news.',
+    description: 'Some randoms news.',
     maxTech: 5,
     technologies: [
       {
