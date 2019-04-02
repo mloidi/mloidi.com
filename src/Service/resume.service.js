@@ -605,6 +605,41 @@ const items = [
     titleURL: 'https://bricovidrio.mloidi.com',
     location: null,
     description: 'Sample demo webpage for a glassware company.',
+    maxTech: 4,
+    technologies: [
+      {
+        line: 1,
+        id: 'html',
+        description: 'HTML',
+        icon: 'faHtml5'
+      },
+      {
+        line: 2,
+        id: 'css',
+        description: 'CSS',
+        icon: 'faCss3'
+      },
+      {
+        line: 3,
+        id: 'js',
+        description: 'JavaScript',
+        icon: 'faJs'
+      },
+      {
+        line: 4,
+        id: 'react',
+        description: 'React',
+        icon: null
+      }
+    ]
+  },
+  {
+    id: 16,
+    type: 'project',
+    title: 'News about ...',
+    titleURL: 'https://news.mloidi.com',
+    location: null,
+    description: 'Show randoms news.',
     maxTech: 5,
     technologies: [
       {
@@ -627,18 +662,18 @@ const items = [
       },
       {
         line: 4,
-        id: 'angularjs',
-        description: 'AngularJS',
-        icon: null
+        id: 'react',
+        description: 'React',
+        icon: 'faReact'
       },
       {
         line: 5,
-        id: 'bootstrap',
-        description: 'Bootstrap',
-        icon: 'faBootstrap'
+        id: 'styled-components',
+        description: 'Styled Components',
+        icon: null
       }
     ]
-  }
+  },
 ];
 
 export const OfflineService = {
