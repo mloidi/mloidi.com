@@ -2,3 +2,4 @@
 /build
 /Old
 *.env
+.vscode
