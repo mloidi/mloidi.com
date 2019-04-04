@@ -14,8 +14,10 @@ import {
   Line,
   Technologies,
   TechnologiesTitle,
-  Technology
-} from '../Style/Style';
+  Technology,
+  ProjectDetailArea,
+  ImageArea
+} from '../style/Style';
 
 const ItemProject = props => (
   <BoxDiv {...props}>
@@ -40,19 +42,31 @@ const ItemProject = props => (
           </Title>
         </BoxTitle>
         <BoxRole>
-          <BoxDetail>
-            <BoxRoleDetail>{props.item.description}</BoxRoleDetail>
-          </BoxDetail>
-          <BoxDetail>
-            <TechnologiesTitle>Technologies used</TechnologiesTitle>
-            <Technologies>
-              {props.item.technologies.map(technology => (
-                <Technology key={technology.id}>
-                  <Icon icon="faCheck" /> {technology.description}
-                </Technology>
-              ))}
-            </Technologies>
-          </BoxDetail>
+          <ProjectDetailArea>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href={props.item.titleURL}
+              isLink="true"
+            >
+              <ImageArea src={props.item.imageURL} alt={props.item.title} />
+            </Link>
+            <div>
+              <BoxDetail>
+                <BoxRoleDetail>{props.item.description}</BoxRoleDetail>
+              </BoxDetail>
+              <BoxDetail>
+                <TechnologiesTitle>Technologies used</TechnologiesTitle>
+                <Technologies>
+                  {props.item.technologies.map(technology => (
+                    <Technology key={technology.id}>
+                      <Icon icon="faCheck" /> {technology.description}
+                    </Technology>
+                  ))}
+                </Technologies>
+              </BoxDetail>
+            </div>
+          </ProjectDetailArea>
         </BoxRole>
         <Line />
       </Box>

@@ -341,6 +341,7 @@ const items = [
         finishDate: new Date(2018, 10, 1),
         appTitle: 'Sick Fits',
         appUrl: 'https://mloidi-store-prod.herokuapp.com',
+        imageURL:'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_300/v1554404407/mloidi/sickFits.png',
         maxTech: 7,
         technologies: [
           {
@@ -397,6 +398,7 @@ const items = [
         finishDate: new Date(2018, 6, 1),
         appTitle: 'Catch Of The Day',
         appUrl: 'https://cotd.mloidi.com',
+        imageURL:'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_300/v1554404407/mloidi/catchDay.png',
         maxTech: 5,
         technologies: [
           {
@@ -441,6 +443,7 @@ const items = [
         finishDate: new Date(2018, 5, 1),
         appTitle: "Now That's Delicious!",
         appUrl: 'https://mloidi-app-jskauyrogh.now.sh',
+        imageURL:'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_300/v1554404407/mloidi/thatsDelicious.png',
         maxTech: 8,
         technologies: [
           {
@@ -504,7 +507,7 @@ const items = [
       {
         title: 'Microsoft Professional Program for Front-End Web Development',
         titleUrl:
-          'https://academy.microsoft.com/en-us/certificates/3f8d10b9-784c-403b-bd96-367182a13aa3/',
+        'https://academy.microsoft.com/en-us/certificates/3f8d10b9-784c-403b-bd96-367182a13aa3/',
         description: 'Knowledge acquired:',
         descriptionDetails: [
           'Build Dynamic Web Apps',
@@ -521,6 +524,7 @@ const items = [
         finishDate: new Date(2018, 4, 1),
         appTitle: 'World Wide Importers',
         appUrl: 'https://worldwideimporters.mloidi.com',
+        imageURL:'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_300/v1554404407/mloidi/worldImporters.png',
         maxTech: 5,
         technologies: [
           {
@@ -562,6 +566,7 @@ const items = [
     type: 'project',
     title: 'Mikel Loidi',
     titleURL: 'https://mloidi.com',
+    imageURL: 'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_300/v1554396432/mloidi/mloidi.png',
     location: null,
     description: 'My personal webpage.',
     maxTech: 5,
@@ -603,6 +608,7 @@ const items = [
     type: 'project',
     title: 'Cristaleria Bricovidrio',
     titleURL: 'https://bricovidrio.mloidi.com',
+    imageURL: 'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_300/v1554396432/mloidi/bricovidrio.png',
     location: null,
     description: 'Sample demo webpage for a glassware company.',
     maxTech: 4,
@@ -638,6 +644,7 @@ const items = [
     type: 'project',
     title: 'News about ...',
     titleURL: 'https://news.mloidi.com',
+    imageURL: 'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_300/v1554396432/mloidi/news.png',
     location: null,
     description: 'Some randoms news.',
     maxTech: 5,

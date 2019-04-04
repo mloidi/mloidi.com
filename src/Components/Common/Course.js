@@ -17,22 +17,24 @@ import {
   Line,
   Technologies,
   TechnologiesTitle,
-  Technology
-} from '../Style/Style';
+  Technology,
+  ImageArea,
+  ProjectDetailArea
+} from '../style/Style';
 
 const ItemCourse = props => (
-  <BoxDiv {...props}>
+  <BoxDiv>
     <React.Fragment>
       {props.item.roles &&
         Object.keys(props.item.roles).map(key => (
-          <Box {...props} key={key}>
-            <BoxRole key={key} {...props}>
+          <Box key={key}>
+            <BoxRole key={key}>
               <BoxRoleTitle>
                 <BoxRoleLeftC>
-                  <IconDiv {...props}>
+                  <IconDiv>
                     <Icon icon="faLaptopCode" />
                   </IconDiv>
-                  <Title {...props}>
+                  <Title>
                     {props.item.roles[key].titleUrl ? (
                       <Link
                         itemRole
@@ -76,27 +78,42 @@ const ItemCourse = props => (
                 </BoxRoleRight>
               </BoxRoleTitle>
               <BoxDetail>
-                <BoxRoleDetail>
-                  {props.item.roles[key].description}
-                  {props.item.roles[key].descriptionDetails &&
-                    props.item.roles[key].descriptionDetails.map(
-                      descriptionDetails => (
-                        <p key={descriptionDetails}>
-                          <Icon icon="faCaretRight" /> {descriptionDetails}
-                        </p>
-                      )
-                    )}
-                </BoxRoleDetail>
-              </BoxDetail>
-              <BoxDetail>
-                <TechnologiesTitle>Technologies used</TechnologiesTitle>
-                <Technologies>
-                  {props.item.roles[key].technologies.map(technology => (
-                    <Technology key={technology.id}>
-                      <Icon icon="faCheck" /> {technology.description}
-                    </Technology>
-                  ))}
-                </Technologies>
+                <ProjectDetailArea>
+                  <Link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={props.item.roles[key].appUrl}
+                    isLink="true"
+                  >
+                    <ImageArea
+                      src={props.item.roles[key].imageURL}
+                      alt={props.item.roles[key].title}
+                    />
+                  </Link>
+                  <div>
+                    <BoxRoleDetail>
+                      {props.item.roles[key].description}
+                      {props.item.roles[key].descriptionDetails &&
+                        props.item.roles[key].descriptionDetails.map(
+                          descriptionDetails => (
+                            <p key={descriptionDetails}>
+                              <Icon icon="faCaretRight" /> {descriptionDetails}
+                            </p>
+                          )
+                        )}
+                    </BoxRoleDetail>
+                    <BoxDetail>
+                      <TechnologiesTitle>Technologies used</TechnologiesTitle>
+                      <Technologies>
+                        {props.item.roles[key].technologies.map(technology => (
+                          <Technology key={technology.id}>
+                            <Icon icon="faCheck" /> {technology.description}
+                          </Technology>
+                        ))}
+                      </Technologies>
+                    </BoxDetail>
+                  </div>
+                </ProjectDetailArea>
               </BoxDetail>
               <BoxDetail>
                 {props.item.roles[key].appUrl ? (

@@ -238,7 +238,7 @@ export const Title = styled.div`
 export const Link = styled.a`
   color: black;
   text-decoration: none;
-  border-bottom: 2px solid #ecd018;
+  border-bottom: ${props => (props.isLink ? 'none' : '2px solid #ecd018')};
 `;
 
 export const BoxDetail = styled.div`
@@ -282,13 +282,12 @@ export const SkillText = styled.label`
 export const Technologies = styled.div`
   display: inline-grid;
   align-items: center;
-  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
-  /* grid-template-columns: auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem auto 0.5rem; */
+  grid-template-columns: auto auto auto auto auto;
   grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
   @media all and (max-width: 900px) {
     display: inline-grid;
     grid-template-columns: auto auto;
-    /* grid-template-columns: auto 0.5rem auto 0.5rem; */
   }
 `;
 
@@ -299,4 +298,19 @@ export const TechnologiesTitle = styled.h4`
 
 export const Technology = styled.div`
   font-size: 0.8rem;
+`;
+
+export const ProjectDetailArea = styled.div`
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  grid-column-gap: 1rem;
+  @media all and (max-width: 900px) {
+    grid-template-columns: auto;
+  }
+`;
+
+export const ImageArea = styled.img`
+  box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2),
+    0 0.5rem 1rem 0 rgba(0, 0, 0, 0.19);
 `;

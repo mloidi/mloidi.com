@@ -16,17 +16,17 @@ import {
   Title,
   Link,
   BoxDetail
-} from '../Style/Style';
+} from '../style/Style';
 
 const ItemStudy = props => (
-  <BoxDiv {...props}>
+  <BoxDiv>
     <React.Fragment>
-      <Box {...props}>
+      <Box>
         <BoxTitle>
-          <IconDiv {...props}>
+          <IconDiv>
             <Icon icon="faGraduationCap" />
           </IconDiv>
-          <Title {...props}>
+          <Title>
             {props.item.titleURL ? (
               <Link
                 target="_blank"
@@ -40,7 +40,7 @@ const ItemStudy = props => (
             )}
           </Title>
         </BoxTitle>
-        <BoxRole {...props}>
+        <BoxRole>
           <BoxRoleTitle>
             <BoxRoleLeft>{props.item.place}</BoxRoleLeft>
             <BoxRoleRight>

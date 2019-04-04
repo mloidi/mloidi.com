@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-import { OfflineService } from '../../Service/resume.service';
+import { OfflineService } from '../../service/resume.service';
 import {
   SectionTitle,
   SectionSubtitle,
   SectionContent,
   PageDiv,
   course
-} from '../Style/Style';
-import Course from '../Common/Course';
+} from '../style/Style';
+import Course from '../common/Course';
 
 export default class Courses extends Component {
   state = {

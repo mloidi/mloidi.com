@@ -17,17 +17,17 @@ import {
   Link,
   BoxDetail,
   Line
-} from '../Style/Style';
+} from '../style/Style';
 
 const ItemJob = props => (
-  <BoxDiv {...props}>
+  <BoxDiv>
     <React.Fragment>
-      <Box {...props}>
+      <Box>
         <BoxTitle>
-          <IconDiv {...props}>
+          <IconDiv>
             <Icon icon="faBriefcase" />
           </IconDiv>
-          <Title {...props}>
+          <Title>
             {props.item.titleURL ? (
               <Link
                 target="_blank"
@@ -42,7 +42,7 @@ const ItemJob = props => (
           </Title>
         </BoxTitle>
         {Object.keys(props.item.roles).map(key => (
-          <BoxRole key={key} {...props}>
+          <BoxRole key={key}>
             <BoxRoleTitle>
               <BoxRoleLeft>{props.item.roles[key].title}</BoxRoleLeft>
               <BoxRoleRight>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink as Link } from 'react-router-dom';
 
-import { OfflineService } from '../Service/resume.service';
+import { OfflineService } from '../service/resume.service';
 import {
   MenuHeader,
   MenuHeaderH,
@@ -9,8 +9,8 @@ import {
   MenuUl,
   SocialUl,
   SocialA
-} from './Style/Style';
-import Icon from './Common/Icon';
+} from './style/Style';
+import Icon from './common/Icon';
 
 export default class Menu extends Component {
   state = {
