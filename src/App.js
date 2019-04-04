@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Menu from './components/Menu';
-import About from './components/pages/About';
-import WorkExperience from './components/pages/WorkExperience';
-import Education from './components/pages/Education';
-import Skills from './components/pages/Skills';
-import Courses from './components/pages/Courses';
-import Projects from './components/pages/Projects';
-import NotFound from './components/pages/NotFound';
-// import Construction from './components/pages/Construction';
+import Menu from './Components/Menu';
+import About from './Components/About';
+import WorkExperience from './Components/WorkExperience';
+import Education from './Components/Education';
+import Skills from './Components/Skills';
+import Courses from './Components/Courses';
+import Projects from './Components/Projects';
+import NotFound from './Components/NotFound';
+// import Construction from './Components/Construction';
 
-import { MainContainer } from './components/style/Style';
+import { MainContainer } from './Components/Style/Style';
 
 class App extends Component {
   render() {

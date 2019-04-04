@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 
-import { OfflineService } from '../../service/resume.service';
+import { OfflineService } from '../Service/resume.service';
 import {
   SectionTitle,
   SectionSubtitle,
   SectionContent,
   PageDiv,
-  study
-} from '../style/Style';
-import Study from '../common/Study';
+  job
+} from './Style/Style';
+import Job from './Common/Job';
 
-export default class Education extends Component {
+export default class WorkExperience extends Component {
   state = {
     items: {}
   };
 
   componentDidMount() {
     this.setState({
-      items: OfflineService.getItemsByType(study)
+      items: OfflineService.getItemsByType(job)
     });
   }
 
@@ -25,11 +25,11 @@ export default class Education extends Component {
     return (
       <React.Fragment>
         <PageDiv id="timeline">
-          <SectionTitle>Education</SectionTitle>
+          <SectionTitle>Work experience</SectionTitle>
           <SectionSubtitle />
           <SectionContent>
             {Object.keys(this.state.items).map(key => (
-              <Study key={key} item={this.state.items[key]} />
+              <Job key={key} item={this.state.items[key]} />
             ))}
           </SectionContent>
         </PageDiv>

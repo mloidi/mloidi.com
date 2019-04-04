@@ -20,7 +20,7 @@ import {
   Technology,
   ImageArea,
   ProjectDetailArea
-} from '../style/Style';
+} from '../Style/Style';
 
 const ItemCourse = props => (
   <BoxDiv>

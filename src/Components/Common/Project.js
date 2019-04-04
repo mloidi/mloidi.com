@@ -17,7 +17,7 @@ import {
   Technology,
   ProjectDetailArea,
   ImageArea
-} from '../style/Style';
+} from '../Style/Style';
 
 const ItemProject = props => (
   <BoxDiv {...props}>
