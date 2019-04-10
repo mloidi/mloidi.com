@@ -70,7 +70,7 @@ export default class Menu extends Component {
                 exact
                 to={'/projects'}
               >
-                Projects
+                Side Projects
               </Link>
             </li>
           </MenuUl>

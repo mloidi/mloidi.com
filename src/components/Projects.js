@@ -24,7 +24,7 @@ export default class Projects extends Component {
     return (
       <React.Fragment>
         <PageDiv id="projects">
-          <SectionTitle>Projects</SectionTitle>
+          <SectionTitle>Side Projects</SectionTitle>
           <SectionSubtitle>
             Here you can found some of the projects I have recently worked on.
           </SectionSubtitle>
