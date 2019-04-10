@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { diffDates, dates } from '../../lib/util';
-import Icon from './Icon';
+import Icon from '../common/Icon';
 import {
   BoxDiv,
   Box,
