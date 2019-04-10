@@ -9,7 +9,7 @@ import {
   MenuUl,
   SocialUl,
   SocialA
-} from './style2/Style';
+} from './style/Style';
 import Icon from './common/Icon';
 
 export default class Menu extends Component {

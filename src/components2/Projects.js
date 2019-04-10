@@ -7,7 +7,7 @@ import {
   SectionContent,
   PageDiv,
   project
-} from './style2/Style';
+} from './style/Style';
 import Project from './common/Project';
 
 export default class Projects extends Component {

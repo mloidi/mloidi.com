@@ -7,7 +7,7 @@ import {
   SectionContent,
   PageDiv,
   SkillTable
-} from './style2/Style';
+} from './style/Style';
 import Skill from './common/Skill';
 
 export default class About extends Component {

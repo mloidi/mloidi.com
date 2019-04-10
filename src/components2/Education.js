@@ -5,32 +5,31 @@ import {
   SectionTitle,
   SectionSubtitle,
   SectionContent,
-  PageDiv
-} from './style2/Style';
-import Skill from './common/Skill';
+  PageDiv,
+  study
+} from './style/Style';
+import Study from './Common/Study';
 
-export default class Skills extends Component {
+export default class Education extends Component {
   state = {
-    skills: []
+    items: {}
   };
 
   componentDidMount() {
     this.setState({
-      skills: OfflineService.getSkills()
+      items: OfflineService.getItemsByType(study)
     });
   }
 
   render() {
     return (
       <React.Fragment>
-        <PageDiv id="skills">
-          <SectionTitle>Skills</SectionTitle>
+        <PageDiv id="timeline">
+          <SectionTitle>Education</SectionTitle>
           <SectionSubtitle />
           <SectionContent>
-            {this.state.skills.map(skill => (
-              <div key={skill.id}>
-                <Skill skill={skill} />
-              </div>
+            {Object.keys(this.state.items).map(key => (
+              <Study key={key} item={this.state.items[key]} />
             ))}
           </SectionContent>
         </PageDiv>

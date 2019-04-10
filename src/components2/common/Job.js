@@ -17,7 +17,7 @@ import {
   Link,
   BoxDetail,
   Line
-} from '../style2/Style';
+} from '../style/Style';
 
 const ItemJob = props => (
   <BoxDiv>
