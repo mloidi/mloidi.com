@@ -16,7 +16,7 @@ import {
   Title,
   Link,
   BoxDetail
-} from '../Style/Style';
+} from '../style2/Style';
 
 const ItemStudy = props => (
   <BoxDiv>

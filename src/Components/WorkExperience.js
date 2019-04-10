@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-import { OfflineService } from '../Service/resume.service';
+import { OfflineService } from './service/resume.service';
 import {
   SectionTitle,
   SectionSubtitle,
   SectionContent,
   PageDiv,
   job
-} from './Style/Style';
-import Job from './Common/Job';
+} from './style2/Style';
+import Job from './common/Job';
 
 export default class WorkExperience extends Component {
   state = {

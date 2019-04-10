@@ -2,7 +2,7 @@ import React from 'react';
 
 import ProgressBar from './ProgressBar';
 import Icon from './Icon';
-import { SkillBox, SkillIcon, SkillText } from '../Style/Style';
+import { SkillBox, SkillIcon, SkillText } from '../style2/Styls';
 
 const SkillLevel = props => (
   <SkillBox>

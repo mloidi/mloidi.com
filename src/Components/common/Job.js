@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { diffDates, dates } from '../../lib/util';
-import Icon from '../common/Icon';
+import Icon from './Icon';
 import {
   BoxDiv,
   Box,
@@ -17,7 +17,7 @@ import {
   Link,
   BoxDetail,
   Line
-} from '../Style/Style';
+} from '../style2/Style';
 
 const ItemJob = props => (
   <BoxDiv>

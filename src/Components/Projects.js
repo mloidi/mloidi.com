@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
-import { OfflineService } from '../Service/resume.service';
+import { OfflineService } from './service/resume.service';
 import {
   SectionTitle,
   SectionSubtitle,
   SectionContent,
   PageDiv,
   project
-} from './Style/Style';
-import Project from './Common/Project';
+} from './style2/Style';
+import Project from './common/Project';
 
 export default class Projects extends Component {
   state = {

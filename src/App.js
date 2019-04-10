@@ -9,14 +9,12 @@ import Skills from './Components/Skills';
 import Courses from './Components/Courses';
 import Projects from './Components/Projects';
 import NotFound from './Components/NotFound';
-// import Construction from './Components/Construction';
 
-import { MainContainer } from './Components/Style/Style';
+import { MainContainer } from './Components/style2/Style';
 
 class App extends Component {
   render() {
     return (
-      // <Construction></Construction>
       <Router>
         <React.Fragment>
           <MainContainer>

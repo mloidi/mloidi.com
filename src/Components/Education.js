@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import { OfflineService } from '../Service/resume.service';
+import { OfflineService } from './service/resume.service';
 import {
   SectionTitle,
   SectionSubtitle,
   SectionContent,
   PageDiv,
   study
-} from './Style/Style';
+} from './style2/Style';
 import Study from './Common/Study';
 
 export default class Education extends Component {
