@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { OfflineService } from './service/resume.service;
+import { OfflineService } from './service/resume.service';
 import {
   SectionTitle,
   SectionSubtitle,

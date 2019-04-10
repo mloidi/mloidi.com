@@ -8,7 +8,7 @@ import {
   PageDiv,
   study
 } from './style/Style';
-import Study from './Common/Study';
+import Study from './common/Study';
 
 export default class Education extends Component {
   state = {
