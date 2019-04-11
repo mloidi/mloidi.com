@@ -23,17 +23,15 @@ export default class Courses extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <PageDiv id="courses">
-          <SectionTitle>Courses</SectionTitle>
-          <SectionSubtitle />
-          <SectionContent>
-            {Object.keys(this.state.items).map(key => (
-              <Course key={key} item={this.state.items[key]} />
-            ))}
-          </SectionContent>
-        </PageDiv>
-      </React.Fragment>
+      <PageDiv id="courses">
+        <SectionTitle>Courses</SectionTitle>
+        <SectionSubtitle />
+        <SectionContent>
+          {Object.keys(this.state.items).map(key => (
+            <Course key={key} item={this.state.items[key]} />
+          ))}
+        </SectionContent>
+      </PageDiv>
     );
   }
 }

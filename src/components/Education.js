@@ -23,17 +23,15 @@ export default class Education extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <PageDiv id="timeline">
-          <SectionTitle>Education</SectionTitle>
-          <SectionSubtitle />
-          <SectionContent>
-            {Object.keys(this.state.items).map(key => (
-              <Study key={key} item={this.state.items[key]} />
-            ))}
-          </SectionContent>
-        </PageDiv>
-      </React.Fragment>
+      <PageDiv id="timeline">
+        <SectionTitle>Education</SectionTitle>
+        <SectionSubtitle />
+        <SectionContent>
+          {Object.keys(this.state.items).map(key => (
+            <Study key={key} item={this.state.items[key]} />
+          ))}
+        </SectionContent>
+      </PageDiv>
     );
   }
 }

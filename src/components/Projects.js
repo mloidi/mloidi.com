@@ -22,7 +22,6 @@ export default class Projects extends Component {
   }
   render() {
     return (
-      <React.Fragment>
         <PageDiv id="projects">
           <SectionTitle>Side Projects</SectionTitle>
           <SectionSubtitle>
@@ -34,7 +33,6 @@ export default class Projects extends Component {
             ))}
           </SectionContent>
         </PageDiv>
-      </React.Fragment>
     );
   }
 }

@@ -23,17 +23,15 @@ export default class WorkExperience extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <PageDiv id="timeline">
-          <SectionTitle>Work experience</SectionTitle>
-          <SectionSubtitle />
-          <SectionContent>
-            {Object.keys(this.state.items).map(key => (
-              <Job key={key} item={this.state.items[key]} />
-            ))}
-          </SectionContent>
-        </PageDiv>
-      </React.Fragment>
+      <PageDiv id="timeline">
+        <SectionTitle>Work experience</SectionTitle>
+        <SectionSubtitle />
+        <SectionContent>
+          {Object.keys(this.state.items).map(key => (
+            <Job key={key} item={this.state.items[key]} />
+          ))}
+        </SectionContent>
+      </PageDiv>
     );
   }
 }
