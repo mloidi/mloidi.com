@@ -197,7 +197,7 @@ const items = [
     roles: [
       {
         title: 'Developer',
-        fromDate: new Date(2011, 3, 15),
+        fromDate: new Date(2012, 3, 15),
         untilDate: new Date(2013, 11, 31),
         description: [
           'Development of reports in BI Publisher, development of web applications and evolutionary and corrective maintenance of the applications of the University of Navarra.'
