@@ -27,17 +27,6 @@ export default class About extends Component {
     return (
       <PageDiv id="about">
         <SectionTitle>About me</SectionTitle>
-        <SectionSubtitle>Skills</SectionSubtitle>
-        <SectionContent>
-          <SkillTable>
-            {this.state.skills.map(skill => (
-              <div key={skill.id}>
-                <Skill skill={skill} />
-              </div>
-            ))}
-          </SkillTable>
-        </SectionContent>
-        <SectionSubtitle />
         <SectionContent>
           {this.state.about.descriptions &&
             this.state.about.descriptions.map(description =>
@@ -53,6 +42,16 @@ export default class About extends Component {
                 </React.Fragment>
               )
             )}
+        </SectionContent>
+        <SectionSubtitle>Skills</SectionSubtitle>
+        <SectionContent>
+          <SkillTable>
+            {this.state.skills.map(skill => (
+              <div key={skill.id}>
+                <Skill skill={skill} />
+              </div>
+            ))}
+          </SkillTable>
         </SectionContent>
       </PageDiv>
     );
