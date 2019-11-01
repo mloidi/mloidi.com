@@ -615,6 +615,11 @@ const items = [
 exports.handler = (event, context, callback) => {
   callback(null, {
     statusCode: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers':
+        'Origin, X-Request-With, Content-Type, Accept'
+    },
     body: JSON.stringify(items)
   });
 };

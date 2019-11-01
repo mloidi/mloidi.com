@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { OfflineService, ResumeService } from './service/resume.service';
+import {  ResumeService } from './service/resume.service';
 import {
   SectionTitle,
   SectionSubtitle,
@@ -12,21 +12,20 @@ import Skill from './common/Skill';
 
 const About = () => {
   const [about, setAbout] = useState();
+  const [skills, setSkills] = useState();
 
   useEffect(() => {
     ResumeService.getAbout().then(res => {
       setAbout(res);
     });
+    ResumeService.getSkills().then(res => {
+      setSkills(res);
+    });
   }, []);
-
-  const [skills] = useState(() => {
-    return OfflineService.getSkills();
-  });
 
   return (
     <PageDiv id="about">
       <SectionTitle>About me</SectionTitle>
-      {/* <div>{about.name}</div> */}
       <SectionContent>
         {about &&
           about.descriptions &&
@@ -47,7 +46,7 @@ const About = () => {
       <SectionSubtitle>Skills</SectionSubtitle>
       <SectionContent>
         <SkillTable>
-          {skills.map(skill => (
+          {skills && skills.map(skill => (
             <div key={skill.id}>
               <Skill skill={skill} />
             </div>
