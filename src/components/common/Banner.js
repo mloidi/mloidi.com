@@ -94,7 +94,6 @@ export default class Banner extends Component {
 
   componentDidMount() {
     const cookies = this.getCookie(cookieName);
-    console.log(cookies);
     this.setState({
       showBanner: !cookies
     });
