@@ -192,8 +192,8 @@ const items = [
     id: 4,
     type: 'job',
     title: 'CONASA',
-    placeURL: 'http://www.conasa.es',
-    titleURL: 'Pamplona, Navarre (Spain)',
+    titleURL: 'http://www.conasa.es',
+    location: 'Pamplona, Navarre (Spain)',
     roles: [
       {
         title: 'Developer',
