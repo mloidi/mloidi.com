@@ -26,7 +26,7 @@ export default class Menu extends Component {
     return (
       <React.Fragment>
         <MenuHeader>
-          <Logo>Mikel Loidi</Logo>
+          <Logo>Mikel Loidi (ND)</Logo>
           <MenuUl>
             <li>
               <Link className="menuA" activeClassName="selected" exact to={'/'}>
