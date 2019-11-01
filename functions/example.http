@@ -1,0 +1,4 @@
+GET http://localhost:9000/about
+GET http://localhost:9000/about
+GET http://localhost:9000/items
+GET http://localhost:9000/skills

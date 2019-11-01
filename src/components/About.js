@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { OfflineService } from './service/resume.service';
+import { OfflineService, ResumeService } from './service/resume.service';
 import {
   SectionTitle,
   SectionSubtitle,
@@ -10,50 +10,52 @@ import {
 } from './style/Style';
 import Skill from './common/Skill';
 
-export default class About extends Component {
-  state = {
-    about: {},
-    skills: []
-  };
+const About = () => {
+  const [about, setAbout] = useState();
 
-  componentDidMount() {
-    this.setState({
-      about: OfflineService.getAbout(),
-      skills: OfflineService.getSkills()
+  useEffect(() => {
+    ResumeService.getAbout().then(res => {
+      setAbout(res);
     });
-  }
+  }, []);
 
-  render() {
-    return (
-      <PageDiv id="about">
-        <SectionTitle>About me</SectionTitle>
-        <SectionContent>
-          {this.state.about.descriptions &&
-            this.state.about.descriptions.map(description =>
-              description.line === 1 ? (
-                <span key={description.line}>
-                  <strong>{description.text}</strong>
-                </span>
-              ) : (
-                <React.Fragment key={description.line}>
-                  <span>{description.text}</span>
-                  <br />
-                  <br />
-                </React.Fragment>
-              )
-            )}
-        </SectionContent>
-        <SectionSubtitle>Skills</SectionSubtitle>
-        <SectionContent>
-          <SkillTable>
-            {this.state.skills.map(skill => (
-              <div key={skill.id}>
-                <Skill skill={skill} />
-              </div>
-            ))}
-          </SkillTable>
-        </SectionContent>
-      </PageDiv>
-    );
-  }
-}
+  const [skills] = useState(() => {
+    return OfflineService.getSkills();
+  });
+
+  return (
+    <PageDiv id="about">
+      <SectionTitle>About me</SectionTitle>
+      {/* <div>{about.name}</div> */}
+      <SectionContent>
+        {about &&
+          about.descriptions &&
+          about.descriptions.map(description =>
+            description.line === 1 ? (
+              <span key={description.line}>
+                <strong>{description.text}</strong>
+              </span>
+            ) : (
+              <React.Fragment key={description.line}>
+                <span>{description.text}</span>
+                <br />
+                <br />
+              </React.Fragment>
+            )
+          )}
+      </SectionContent>
+      <SectionSubtitle>Skills</SectionSubtitle>
+      <SectionContent>
+        <SkillTable>
+          {skills.map(skill => (
+            <div key={skill.id}>
+              <Skill skill={skill} />
+            </div>
+          ))}
+        </SkillTable>
+      </SectionContent>
+    </PageDiv>
+  );
+};
+
+export default About;
