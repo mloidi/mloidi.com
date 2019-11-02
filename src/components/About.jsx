@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import {  ResumeService } from './service/resume.service';
-import {
-  SectionTitle,
-  SectionSubtitle,
-  SectionContent,
-  PageDiv,
-  SkillTable
-} from './style/Style';
+import { ResumeService } from '../service/resume.service';
 import Skill from './common/Skill';
 
 const About = () => {
@@ -24,36 +17,33 @@ const About = () => {
   }, []);
 
   return (
-    <PageDiv id="about">
-      <SectionTitle>About me</SectionTitle>
-      <SectionContent>
+    <div className="mt-8 mx-24">
+      <div className="text-2xl mb-4">About me</div>
+      <div className="border-b rounded mb-2">
         {about &&
           about.descriptions &&
           about.descriptions.map(description =>
             description.line === 1 ? (
-              <span key={description.line}>
-                <strong>{description.text}</strong>
-              </span>
+              <span key={description.line}>{description.text}</span>
             ) : (
               <React.Fragment key={description.line}>
-                <span>{description.text}</span>
+                <span className="text-gray-600">{description.text}</span>
                 <br />
                 <br />
               </React.Fragment>
             )
           )}
-      </SectionContent>
-      <SectionSubtitle>Skills</SectionSubtitle>
-      <SectionContent>
-        <SkillTable>
-          {skills && skills.map(skill => (
-            <div key={skill.id}>
+      </div>
+      <div className="text-xl mb-2">Skills</div>
+      <div className="md:flex flex-wrap">
+        {skills &&
+          skills.map(skill => (
+            <div key={skill.id} className="w-1/2 h-7">
               <Skill skill={skill} />
             </div>
           ))}
-        </SkillTable>
-      </SectionContent>
-    </PageDiv>
+      </div>
+    </div>
   );
 };
 

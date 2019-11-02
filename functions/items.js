@@ -613,13 +613,27 @@ const items = [
 ];
 
 exports.handler = (event, context, callback) => {
-  callback(null, {
-    statusCode: 200,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Headers':
-        'Origin, X-Request-With, Content-Type, Accept'
-    },
-    body: JSON.stringify(items)
+  const send = body => {
+    callback(null, {
+      statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers':
+          'Origin, X-Request-With, Content-Type, Accept'
+      },
+      body: JSON.stringify(body)
+    });
+  };
+
+  // if (event.httpMethod == 'GET') {
+  const type = event.queryStringParameters.type;
+  let itemsByType = [];
+  items.map(item => {
+    if (item.type === type) {
+      itemsByType.push(item);
+    }
+    return itemsByType;
   });
+  send(itemsByType);
+  // }
 };
