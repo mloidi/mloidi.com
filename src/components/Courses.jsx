@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { ResumeService } from '../service/resume.service';
-import {
-  SectionTitle,
-  SectionSubtitle,
-  SectionContent,
-  PageDiv,
-  course
-} from './style/Style';
+import { course } from '../lib/util.lib';
 import Course from './common/Course';
 
 const Courses = () => {
@@ -20,15 +14,11 @@ const Courses = () => {
   }, []);
 
   return (
-    <PageDiv id="courses">
-      <SectionTitle>Courses</SectionTitle>
-      <SectionSubtitle />
-      <SectionContent>
-        {items && Object.keys(items).map(key => (
-          <Course key={key} item={items[key]} />
-        ))}
-      </SectionContent>
-    </PageDiv>
+    <div className="mt-8 mx-4 lg:mx-24">
+      <div className="text-2xl mb-4">Courses</div>
+      {items &&
+        Object.keys(items).map(key => <Course key={key} item={items[key]} />)}
+    </div>
   );
 };
 export default Courses;

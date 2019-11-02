@@ -46,18 +46,6 @@ const skills = [
     description: 'NodeJS',
     icon: 'faNode',
     level: '6'
-  },
-  {
-    id: 'express',
-    description: 'Express',
-    icon: null,
-    level: '6'
-  },
-  {
-    id: 'angularjs',
-    description: 'AngularJS',
-    icon: null,
-    level: '7'
   }
 ];
 
@@ -75,6 +63,6 @@ exports.handler = (event, context, callback) => {
   };
 
   // if (event.httpMethod == 'GET') {
-    send(skills);
+  send(skills);
   // }
 };

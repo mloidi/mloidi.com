@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { ResumeService } from '../service/resume.service';
-import {
-  SectionTitle,
-  SectionSubtitle,
-  SectionContent,
-  PageDiv,
-  study
-} from './style/Style';
+import { study } from '../lib/util.lib';
 import Study from './common/Study';
 
 const Education = () => {
@@ -20,15 +14,11 @@ const Education = () => {
   }, []);
 
   return (
-    <PageDiv id="timeline">
-      <SectionTitle>Education</SectionTitle>
-      <SectionSubtitle />
-      <SectionContent>
-        {items && Object.keys(items).map(key => (
-          <Study key={key} item={items[key]} />
-        ))}
-      </SectionContent>
-    </PageDiv>
+    <div className="mt-8 mx-4 lg:mx-24">
+      <div className="text-2xl mb-4">Education</div>
+      {items &&
+        Object.keys(items).map(key => <Study key={key} item={items[key]} />)}
+    </div>
   );
 };
 

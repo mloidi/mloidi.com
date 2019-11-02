@@ -1,13 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { ResumeService } from '../service/resume.service';
-import {
-  SectionTitle,
-  SectionSubtitle,
-  SectionContent,
-  PageDiv,
-  job
-} from './style/Style';
+import { job } from '../lib/util.lib';
 import Job from './common/Job';
 
 const WorkExperience = () => {
@@ -20,15 +14,11 @@ const WorkExperience = () => {
   }, []);
 
   return (
-    <PageDiv id="timeline">
-      <SectionTitle>Work experience</SectionTitle>
-      <SectionSubtitle />
-      <SectionContent>
-        {items && Object.keys(items).map(key => (
-          <Job key={key} item={items[key]} />
-        ))}
-      </SectionContent>
-    </PageDiv>
+    <div className="mt-8 mx-4 lg:mx-24">
+      <div className="text-2xl mb-4">Work experience</div>
+      {items &&
+        Object.keys(items).map(key => <Job key={key} item={items[key]} />)}
+    </div>
   );
 };
 

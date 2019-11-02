@@ -1,5 +1,10 @@
 import moment from 'moment';
 
+export const job = 'job';
+export const study = 'study';
+export const course = 'course';
+export const project = 'project';
+
 export const diffDates = (fromDate, untilDate) => {
   let diff = ' (';
   let years = 0;

@@ -129,11 +129,6 @@ export const SocialA = styled.a`
   }
 `;
 
-export const job = 'job';
-export const study = 'study';
-export const course = 'course';
-export const project = 'project';
-
 export const NotFoundStyles = styled.div`
   margin: 1rem 2rem 1rem 16rem;
   padding: 1rem;

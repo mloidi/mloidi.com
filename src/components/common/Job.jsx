@@ -2,77 +2,58 @@ import React from 'react';
 
 import { diffDates, dates } from '../../lib/util.lib';
 import Icon from './Icon';
-import {
-  BoxDiv,
-  Box,
-  BoxTitle,
-  BoxRole,
-  BoxRoleTitle,
-  BoxRoleLeft,
-  BoxRoleRight,
-  BoxRoleDetail,
-  BoxRoleDetailLine,
-  IconDiv,
-  Title,
-  Link,
-  BoxDetail,
-  Line
-} from '../style/Style';
 
-const ItemJob = props => (
-  <BoxDiv>
-    <React.Fragment>
-      <Box>
-        <BoxTitle>
-          <IconDiv>
-            <Icon icon="faBriefcase" />
-          </IconDiv>
-          <Title>
-            {props.item.titleURL ? (
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                href={props.item.titleURL}
-              >
-                {props.item.title}
-              </Link>
-            ) : (
-              <React.Fragment>{props.item.title}</React.Fragment>
+const Job = ({ item }) => (
+  <div className="border-b rounded border-gray-500 hover:border-black mb-2 p-2 text-gray-500 hover:bg-gray-100 cursor-default">
+    <div className="flex text-xl mb-1 text-gray-800">
+      <div className="w-8">
+        <Icon icon="faBriefcase" />
+      </div>
+      <div>
+        {item.titleURL ? (
+          <a
+            className="border-b rounded hover:border-black"
+            target="_blank"
+            rel="noopener noreferrer"
+            href={item.titleURL}
+          >
+            {item.title}
+          </a>
+        ) : (
+          <React.Fragment>{item.title}</React.Fragment>
+        )}
+      </div>
+    </div>
+    {Object.keys(item.roles).map(key => (
+      <div
+        className="border-l rounded hover:border-black hover:text-gray-600 px-2 mb-4"
+        key={key}
+      >
+        <div className="flex flex-row text-gray-600 mb-2">
+          <div className="w-1/2">{item.roles[key].title}</div>
+          <div className="w-1/2 text-right">
+            {dates(
+              item.roles[key].fromDate,
+              item.roles[key].untilDate,
+              item.roles[key].finishDate
             )}
-          </Title>
-        </BoxTitle>
-        {Object.keys(props.item.roles).map(key => (
-          <BoxRole key={key}>
-            <BoxRoleTitle>
-              <BoxRoleLeft>{props.item.roles[key].title}</BoxRoleLeft>
-              <BoxRoleRight>
-                {dates(
-                  props.item.roles[key].fromDate,
-                  props.item.roles[key].untilDate,
-                  props.item.roles[key].finishDate
-                )}
-                {diffDates(
-                  props.item.roles[key].fromDate,
-                  props.item.roles[key].untilDate,
-                  props.item.roles[key].finishDate
-                )}
-              </BoxRoleRight>
-            </BoxRoleTitle>
-            <BoxDetail>
-              {props.item.roles[key].description.map(description => (
-                <BoxRoleDetail key={description}>
-                  <BoxRoleDetailLine>
-                    <Icon icon="faCaretRight" /> {description}
-                  </BoxRoleDetailLine>
-                </BoxRoleDetail>
-              ))}
-            </BoxDetail>
-          </BoxRole>
-        ))}
-        <Line />
-      </Box>
-    </React.Fragment>
-  </BoxDiv>
+            {diffDates(
+              item.roles[key].fromDate,
+              item.roles[key].untilDate,
+              item.roles[key].finishDate
+            )}
+          </div>
+        </div>
+        <div>
+          {item.roles[key].description.map(description => (
+            <div key={description}>
+              <Icon icon="faCaretRight" /> {description}
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
 );
 
-export default ItemJob;
+export default Job;

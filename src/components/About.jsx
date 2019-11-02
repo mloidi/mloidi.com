@@ -17,7 +17,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="mt-8 mx-24">
+    <div className="mt-8 mx-4 lg:mx-24">
       <div className="text-2xl mb-4">About me</div>
       <div className="border-b rounded mb-2">
         {about &&
