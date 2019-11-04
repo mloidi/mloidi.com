@@ -111,7 +111,7 @@ const items = [
   {
     id: 6,
     type: 'study',
-    title: 'Undergraduate in Informatics Engineering',
+    title: 'Bachelor Degree in Computer Engineering',
     titleURL: 'https://www.ehu.eus/es/grado-ingenieria-informatica',
     place: 'University of Basque Country',
     placeURL: 'https://www.ehu.eus/en/en-home',
