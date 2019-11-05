@@ -4,11 +4,11 @@ import { Helmet } from 'react-helmet';
 
 const NotFound = () => {
   return (
-    <div>
+    <div className="mt-8 mx-4 lg:mx-24 h-screen">
       <Helmet>
         <title>Where are you going? | Mikel Loidi | Web Developer</title>
       </Helmet>
-      <h1>PAGE NOT FOUND</h1>
+      <div className="text-4xl mb-4">Sorry, page not found.</div>
     </div>
   );
 };
