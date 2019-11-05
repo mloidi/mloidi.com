@@ -5,7 +5,7 @@ import Icon from './Icon';
 
 const Job = ({ item }) => (
   <div className="border-b rounded border-gray-500 hover:border-black mb-2 p-2 text-gray-500 hover:bg-gray-100 cursor-default">
-    <div className="flex text-xl mb-1 text-gray-800">
+    <div className="flex text-sm lg:text-xl mb-1 text-gray-800">
       <div className="w-8">
         <Icon icon="faBriefcase" />
       </div>
@@ -26,7 +26,7 @@ const Job = ({ item }) => (
     </div>
     {Object.keys(item.roles).map(key => (
       <div
-        className="border-l rounded hover:border-black hover:text-gray-600 px-2 mb-4"
+        className="border-l rounded hover:border-black hover:text-gray-600 px-2 mb-4 text-xs lg:text-base"
         key={key}
       >
         <div className="flex flex-row text-gray-600 mb-2">
