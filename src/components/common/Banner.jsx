@@ -47,7 +47,7 @@ const Banner = () => {
 
   const getStyle = () => {
     if (showBanner) {
-      return 'block sticky bottom-0 right-0 min-w-full bg-black text-gray-100 border-gray-900 border-2 px-2 py-1 opacity-75';
+      return 'block sticky bottom-0 right-0 min-w-full bg-black text-gray-100 border-gray-900 border-2 px-2 py-1 opacity-100';
     } else {
       return 'hidden';
     }
@@ -56,7 +56,7 @@ const Banner = () => {
     <div className={getStyle()}>
       <div className="text-xl">What do I use cookies for?</div>
       <div className="flex flex-wrap justify-between">
-        <div className="text-sm">
+        <div className="text-sm text-gray-200">
           I use own and third-party cookies, analytics and advertising to create
           profiles based on user navigation.{'  '}
           <Link
@@ -67,7 +67,7 @@ const Banner = () => {
             More info
           </Link>
         </div>
-        <div>
+        <div className="mt-2 lg:mt-0">
           <button
             className="border rounded mx-2 px-1 hover:bg-gray-100 hover:text-black hover:opacity-75"
             onClick={() => {
