@@ -14,7 +14,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="mt-8 mx-4 lg:mx-24">
+    <div className="mt-8 mx-4 lg:mx-24 h-screen">
       <div className="text-2xl mb-4">Side Projects</div>
       <div className="text-xl mb-4">
         Here you can found some of the projects I have recently worked on.
