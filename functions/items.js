@@ -449,7 +449,7 @@ const items = [
     title: 'Mikel Loidi',
     titleURL: 'https://mloidi.com',
     imageURL:
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_300/v1554396432/mloidi/mloidi.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_300/v1572989826/mloidi/mloidi.png',
     location: null,
     description: 'My personal webpage.',
     maxTech: 5,
@@ -477,12 +477,6 @@ const items = [
         id: 'react',
         description: 'React',
         icon: 'faReact'
-      },
-      {
-        line: 5,
-        id: 'styled-components',
-        description: 'Styled Components',
-        icon: null
       }
     ]
   },
