@@ -78,6 +78,7 @@ const Menu = () => {
             </React.Fragment>
           ))}
         </div>
+        <div className="block lg:hidden w-full"></div>
         <div className="lg:text-2xl text-gray-500 mt-1 lg:mt-0">
           <a
             className="p-1 hover:text-gray-800"
