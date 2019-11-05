@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { SectionTitle, SectionContent, PageDiv } from './style/Style';
 const Cookies = () => {
   return (
     <div className="mt-8 mx-4 lg:mx-24 max-h-full text-gray-500">

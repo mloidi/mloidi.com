@@ -3,14 +3,14 @@ import React from 'react';
 import Icon from './Icon';
 
 const ItemCourse = ({ item }) => (
-  <div className=" mb-2 p-2 text-gray-500  cursor-default">
+  <div className="text-gray-500 cursor-default">
     {item.roles &&
       Object.keys(item.roles).map(key => (
         <div
           className="border-b rounded border-gray-500 hover:border-black mb-2 p-2 hover:bg-gray-100"
           key={key}
         >
-          <div className="text-xl mb-1 text-gray-800">
+          <div className="text-sm lg:text-xl mb-1 text-gray-800">
             <div className="flex">
               <div className="w-8">
                 <Icon icon="faLaptopCode" />
@@ -45,7 +45,7 @@ const ItemCourse = ({ item }) => (
               </div>
             </div>
           </div>
-          <div className="md:flex flex-wrap md:mt-4">
+          <div className="lg:flex flex-wrap lg:mt-4 text-xs lg:text-base">
             <div className="md:w-1/4">
               <a
                 target="_blank"
@@ -59,7 +59,7 @@ const ItemCourse = ({ item }) => (
                 />
               </a>
             </div>
-            <div className="w-1/2 ml-6">
+            <div className="mt-1 lg:mt-0 w-full lg:w-2/3 lg:ml-6">
               {item.roles[key].description}
               {item.roles[key].descriptionDetails &&
                 item.roles[key].descriptionDetails.map(descriptionDetails => (
@@ -70,8 +70,8 @@ const ItemCourse = ({ item }) => (
             </div>
           </div>
           <div>
-            <div className="my-1">Technologies used</div>
-            <div className="md:flex md:flex-wrap mb-5 text-sm">
+            <div className="my-1 text-xs lg:text-base">Technologies used</div>
+            <div className="md:flex md:flex-wrap mb-5 text-xs lg:text-sm">
               {item.roles[key].technologies.map(technology => (
                 <div key={technology.id} className="md:w-1/5">
                   <Icon icon="faCheck" /> {technology.description}
@@ -79,7 +79,7 @@ const ItemCourse = ({ item }) => (
               ))}
             </div>
           </div>
-          <div>
+          <div className="text-xs lg:text-base">
             {item.roles[key].appUrl ? (
               <React.Fragment>
                 <strong>Finished project</strong> <Icon icon="faArrowRight" />{' '}
