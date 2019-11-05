@@ -51,7 +51,6 @@ const ItemCourse = ({ item }) => (
                 target="_blank"
                 rel="noopener noreferrer"
                 href={item.roles[key].appUrl}
-                isLink="true"
               >
                 <img
                   className="border rounded border-black"
