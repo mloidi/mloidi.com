@@ -14,7 +14,7 @@ const Courses = () => {
   }, []);
 
   return (
-    <div className="mt-8 mx-4 lg:mx-24 h-screen">
+    <div className="mt-8 mx-4 lg:mx-24 max-h-full">
       <div className="text-2xl mb-4">Courses</div>
       {items &&
         Object.keys(items).map(key => <Course key={key} item={items[key]} />)}
