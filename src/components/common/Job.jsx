@@ -26,7 +26,7 @@ const Job = ({ item }) => (
     </div>
     {Object.keys(item.roles).map(key => (
       <div
-        className="border-l rounded hover:border-black hover:text-gray-600 px-2 mb-4 text-xs lg:text-base"
+        className="border-l rounded hover:border-black hover:text-gray-600 px-2 mb-4 text-sm lg:text-base"
         key={key}
       >
         <div className="flex flex-row text-gray-600 mb-2">
