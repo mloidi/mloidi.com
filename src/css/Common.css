@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: 'Bitter', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--background-color);
+}
+
+.page-title {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: var(--page-title-color);
+}
+
+.loading {
+  width: 0%;
+  height: 1rem;
+  /* background-color: var(--main-txt-color); */
+  animation-timing-function: linear;
+  animation: loading-animation 4s infinite;
+}
+
+@keyframes loading-animation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}

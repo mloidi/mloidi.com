@@ -1,0 +1,20 @@
+:root {
+  --background-color: #f2f6ff;
+  --page-title-color: #88b6d2;
+  --main-txt-color: #2e2d2b;
+  --main-aux-color: #e3e85d;
+  --main-border-color: #88b6d2;
+  /* Menu colors */
+  --menu-background-color: #e4ebf9;
+  --menu-logo-color: #88b6d2;
+  --menu-option-color: black;
+  --menu-option-selected-color: #88b6d2;
+  --menu-txt-color: black;
+  /* Button color */
+  --button-color: #88b6d2;
+  --button-selected-color: black;
+  /* Input */
+  --input-color: #061b27;
+  --input-background-color: #f2f6ff;
+  --input-border-color: #88b6d2;
+}

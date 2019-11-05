@@ -1,125 +1,3 @@
-import axios from 'axios';
-
-axios.defaults.baseURL = 'http://localhost:7777';
-// axios.defaults.baseURL = "https://backend-mloidi.herokuapp.com";
-
-axios.interceptors.response.use(
-  res => res.data,
-  err => Promise.reject(err.response)
-);
-
-export const ResumeService = {
-  getItemsByType: async type => {
-    return await axios.get(`/mloidi/${type}`);
-  },
-  getAbout: async () => {
-    return await axios.get(`/mloidi/about/`);
-  },
-  getSkills: async () => {
-    return await axios.get(`/mloidi/skills/`);
-  }
-};
-
-const about = {
-  name: 'Mikel Loidi',
-  descriptions: [
-    { line: 1, text: 'Hi, my name is Mikel Loidi. ' },
-    {
-      line: 2,
-      text:
-        'I am a web developer currently located in Pamplona Spain. You know, the running of the bulls. When I’m not running with them, my main focus is to developing new web technologies. In my free time, I am constantly experimenting with new projects, pushing my skills to adapt  the latest web tech to build new web designs.'
-    },
-    {
-      line: 3,
-      text:
-        'I am passionate about development and design. On the frontend, I work mainly with React while on the backend I work with Node and Express. As for a data base I prefer to use MongoDB.'
-    },
-    {
-      line: 4,
-      text:
-        'As a growing community, the web industry is one that I have learned so much from and hope to give back just as much. I am mostly excited about the future of this industry. There is so much we have yet to discover, and I cannot wait to see what is coming next.'
-    }
-  ],
-  profile:
-    'Advanced developer with 15 years of experience in structuring, developing and implementing applications and innovative use of technology. Able to complete projects efficiently and satisfy clients.',
-  areas: [
-    'Advanced programming and design skills',
-    'Excellent problem solving skills',
-    'Strong collaborative skills',
-    'Project Management'
-  ],
-  github: 'https://github.com/mloidi/',
-  githubIcon: 'faGithub',
-  linkedin: 'https://www.linkedin.com/in/mikel-loidi-ardanaz/',
-  linkedinIcon: 'faLinkedin',
-  twitter: 'https://twitter.com/mikelloidi',
-  twitterIcon: 'faTwitter',
-  mail: 'mailto:mikel@mloidi.com',
-  mailIcon: 'faEnvelope'
-};
-const skills = [
-  {
-    id: 'java',
-    description: 'Java',
-    icon: 'faJava',
-    level: '9'
-  },
-  {
-    id: 'html',
-    description: 'HTML',
-    icon: 'faHtml5',
-    level: '9'
-  },
-  {
-    id: 'css',
-    description: 'CSS',
-    icon: 'faCss3',
-    level: '7'
-  },
-  {
-    id: 'js',
-    description: 'Javascript',
-    icon: 'faJs',
-    level: '9'
-  },
-  {
-    id: 'angular',
-    description: 'Angular',
-    icon: 'faAngular',
-    level: '5'
-  },
-  {
-    id: 'react',
-    description: 'React',
-    icon: 'faReact',
-    level: '9'
-  },
-  {
-    id: 'bootstrap',
-    description: 'Bootstrap',
-    icon: 'faBootstrap',
-    level: '7'
-  },
-  {
-    id: 'node',
-    description: 'NodeJS',
-    icon: 'faNode',
-    level: '6'
-  },
-  {
-    id: 'express',
-    description: 'Express',
-    icon: null,
-    level: '6'
-  },
-  {
-    id: 'angularjs',
-    description: 'AngularJS',
-    icon: null,
-    level: '7'
-  }
-];
-
 const items = [
   {
     id: 1,
@@ -233,7 +111,7 @@ const items = [
   {
     id: 6,
     type: 'study',
-    title: 'Undergraduate in Informatics Engineering',
+    title: 'Bachelor Degree in Computer Engineering',
     titleURL: 'https://www.ehu.eus/es/grado-ingenieria-informatica',
     place: 'University of Basque Country',
     placeURL: 'https://www.ehu.eus/en/en-home',
@@ -659,7 +537,8 @@ const items = [
     imageURL:
       'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_300/v1554396432/mloidi/contacts.png',
     location: null,
-    description: 'Simple contacts web, you can add contacts and groups. To login use demo@mloidi.com user name and demo like a password',
+    description:
+      'Simple contacts web, you can add contacts and groups. To login use demo@mloidi.com user name and demo like a password',
     maxTech: 5,
     technologies: [
       {
@@ -733,21 +612,28 @@ const items = [
   }
 ];
 
-export const OfflineService = {
-  getAbout: () => {
-    return about;
-  },
-  getSkills: () => {
-    return skills;
-  },
-  getItemsByType: type => {
-    let itemsByType = [];
-    items.map(item => {
-      if (item.type === type) {
-        itemsByType.push(item);
-      }
-      return itemsByType;
+exports.handler = (event, context, callback) => {
+  const send = body => {
+    callback(null, {
+      statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers':
+          'Origin, X-Request-With, Content-Type, Accept'
+      },
+      body: JSON.stringify(body)
     });
+  };
+
+  // if (event.httpMethod == 'GET') {
+  const type = event.queryStringParameters.type;
+  let itemsByType = [];
+  items.map(item => {
+    if (item.type === type) {
+      itemsByType.push(item);
+    }
     return itemsByType;
-  }
+  });
+  send(itemsByType);
+  // }
 };
