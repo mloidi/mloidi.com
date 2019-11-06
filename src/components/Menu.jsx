@@ -3,7 +3,6 @@ import { NavLink as Link } from 'react-router-dom';
 
 import { ResumeService } from '../service/resume.service';
 
-import '../css/Menu.css';
 import Icon from './common/Icon';
 
 const Menu = () => {

@@ -1,20 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 
-import { ResumeService } from '../service/resume.service';
+import { DataContext } from '../globalState';
 import Skill from './common/Skill';
 
 const About = () => {
-  const [about, setAbout] = useState();
-  const [skills, setSkills] = useState();
-
-  useEffect(() => {
-    ResumeService.getAbout().then(res => {
-      setAbout(res);
-    });
-    ResumeService.getSkills().then(res => {
-      setSkills(res);
-    });
-  }, []);
+  const { about, skills } = useContext(DataContext);
 
   return (
     <div className="mt-8 mx-4 lg:mx-24 max-h-full">

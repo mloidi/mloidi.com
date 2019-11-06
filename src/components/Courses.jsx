@@ -1,23 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 
-import { ResumeService } from '../service/resume.service';
-import { course } from '../lib/util.lib';
+import { DataContext } from '../globalState';
 import Course from './common/Course';
 
 const Courses = () => {
-  const [items, setItems] = useState();
-
-  useEffect(() => {
-    ResumeService.getItemsByType(course).then(res => {
-      setItems(res);
-    });
-  }, []);
+  const { coursesItems } = useContext(DataContext);
 
   return (
     <div className="mt-8 mx-4 lg:mx-24 max-h-full">
       <div className="text-2xl mb-4">Courses</div>
-      {items &&
-        Object.keys(items).map(key => <Course key={key} item={items[key]} />)}
+      {coursesItems &&
+        Object.keys(coursesItems).map(key => (
+          <Course key={key} item={coursesItems[key]} />
+        ))}
     </div>
   );
 };

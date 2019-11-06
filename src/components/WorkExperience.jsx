@@ -1,23 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 
-import { ResumeService } from '../service/resume.service';
-import { job } from '../lib/util.lib';
+import { DataContext } from '../globalState';
 import Job from './common/Job';
 
 const WorkExperience = () => {
-  const [items, setItems] = useState();
-
-  useEffect(() => {
-    ResumeService.getItemsByType(job).then(res => {
-      setItems(res);
-    });
-  }, []);
+  const { jobItems } = useContext(DataContext);
 
   return (
     <div className="mt-8 mx-4 lg:mx-24 max-h-full">
       <div className="text-2xl mb-4">Work experience</div>
-      {items &&
-        Object.keys(items).map(key => <Job key={key} item={items[key]} />)}
+      {jobItems &&
+        Object.keys(jobItems).map(key => (
+          <Job key={key} item={jobItems[key]} />
+        ))}
     </div>
   );
 };
