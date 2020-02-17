@@ -3,3 +3,5 @@
 /Old
 *.env
 .vscode
+# Local Netlify folder
+.netlify
