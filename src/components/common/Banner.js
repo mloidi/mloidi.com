@@ -1,12 +1,51 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink as Link } from 'react-router-dom';
+import React, { useState, useEffect, useContext } from 'react';
+import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
+
+import { DataContext } from '../../globalState';
+
 const cookieName = 'EU_COOKIE_MLOIDI';
 
-const Banner = () => {
-  const [showBanner, setShowBanner] = useState(true);
+const Content = styled.div`
+  display: ${(props) => (props.show ? 'block' : 'none')};
+  position: sticky;
+  bottom: 0;
+  background-color: ${(props) => props.color};
+  width: 100%;
+  padding: 20px;
+`;
+
+const Title = styled.div`
+  font-size: 1.5rem;
+`;
+
+const Line = styled.div`
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+`;
+
+const Buttons = styled.div`
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+`;
+
+const Button = styled.button`
+  border: 2px solid black;
+  padding: 5px 10px;
+`;
+
+const Link = styled(NavLink)`
+  border-bottom: 1px solid black;
+`;
+
+export const Banner = () => {
+  const [showBanner, setShowBanner] = useState(false);
+  const { selectedColor } = useContext(DataContext);
 
   useEffect(() => {
-    const getCookie = cname => {
+    const getCookie = (cname) => {
       var name = cname + '=';
       var decodedCookie = decodeURIComponent(document.cookie);
       var ca = decodedCookie.split(';');
@@ -45,49 +84,34 @@ const Banner = () => {
     setShowBanner(false);
   };
 
-  const getStyle = () => {
-    if (showBanner) {
-      return 'block sticky bottom-0 right-0 min-w-full bg-black text-gray-100 border-gray-900 border-2 px-2 py-1 opacity-100';
-    } else {
-      return 'hidden';
-    }
-  };
   return (
-    <div className={getStyle()}>
-      <div className="text-xl">What do I use cookies for?</div>
-      <div className="flex flex-wrap justify-between">
-        <div className="text-sm text-gray-200">
+    <Content color={selectedColor} show={showBanner}>
+      <Title>What do I use cookies for?</Title>
+      <Line>
+        <div>
           I use own and third-party cookies, analytics and advertising to create
           profiles based on user navigation.{'  '}
-          <Link
-            className="border-b rounded hover:border-black"
-            exact
-            to={'/cookies'}
-          >
+          <Link exact to={'/cookies'}>
             More info
           </Link>
         </div>
-        <div className="mt-2 lg:mt-0">
-          <button
-            className="border rounded mx-2 px-1 hover:bg-gray-100 hover:text-black hover:opacity-75"
+        <Buttons>
+          <Button
             onClick={() => {
               acceptCookies();
             }}
           >
             Accept
-          </button>
-          <button
-            className="border rounded mx-2 px-1 hover:bg-gray-100 hover:text-black hover:opacity-75"
+          </Button>
+          <Button
             onClick={() => {
               refuseCookies();
             }}
           >
             Refuse
-          </button>
-        </div>
-      </div>
-    </div>
+          </Button>
+        </Buttons>
+      </Line>
+    </Content>
   );
 };
-
-export default Banner;

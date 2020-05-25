@@ -3,9 +3,9 @@ export const POST = 'POST';
 export const PATCH = 'PATCH';
 export const DELETE = 'DELETE';
 
-const setRequestOptions = options => {
+const setRequestOptions = (options) => {
   const headers = {
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
   };
 
   if (options.token) {
@@ -22,37 +22,49 @@ const setRequestOptions = options => {
     headers,
     redirect: 'follow',
     referrer: 'no-referrer',
-    body: JSON.stringify(body)
+    body: JSON.stringify(body),
   };
   return requestOptions;
 };
 
 export const ResumeService = {
   getAbout: async () => {
-    const URL = `${process.env.REACT_APP_ENDPOINT}/about`;
-    const requestOptions = setRequestOptions({
-      method: GET
-    });
-    const req = new Request(URL, requestOptions);
-    const response = await fetch(req);
-    return await response.json();
+    try {
+      const URL = `${process.env.REACT_APP_ENDPOINT}/about`;
+      const requestOptions = setRequestOptions({
+        method: GET,
+      });
+      const req = new Request(URL, requestOptions);
+      const response = await fetch(req);
+      return await response.json();
+    } catch (e) {
+      console.log(e);
+    }
   },
-  getItemsByType: async type => {
-    const URL = `${process.env.REACT_APP_ENDPOINT}/items?type=${type}`;
-    const requestOptions = setRequestOptions({
-      method: GET
-    });
-    const req = new Request(URL, requestOptions);
-    const response = await fetch(req);
-    return await response.json();
+  getItemsByType: async (type) => {
+    try {
+      const URL = `${process.env.REACT_APP_ENDPOINT}/items?type=${type}`;
+      const requestOptions = setRequestOptions({
+        method: GET,
+      });
+      const req = new Request(URL, requestOptions);
+      const response = await fetch(req);
+      return await response.json();
+    } catch (e) {
+      console.log(e);
+    }
   },
   getSkills: async () => {
-    const URL = `${process.env.REACT_APP_ENDPOINT}/skills`;
-    const requestOptions = setRequestOptions({
-      method: GET
-    });
-    const req = new Request(URL, requestOptions);
-    const response = await fetch(req);
-    return await response.json();
-  }
+    try {
+      const URL = `${process.env.REACT_APP_ENDPOINT}/skills`;
+      const requestOptions = setRequestOptions({
+        method: GET,
+      });
+      const req = new Request(URL, requestOptions);
+      const response = await fetch(req);
+      return await response.json();
+    } catch (e) {
+      console.log(e);
+    }
+  },
 };

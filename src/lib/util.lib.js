@@ -6,22 +6,28 @@ export const course = 'course';
 export const project = 'project';
 
 export const diffDates = (fromDate, untilDate) => {
-  let diff = ' (';
-  let years = 0;
-  if (untilDate) {
-    years = moment(untilDate).diff(fromDate, 'years');
-    if (years === 0) {
-      return diff + moment(untilDate).diff(fromDate, 'months') + ' months)';
-    }
-  } else {
-    return '';
+  let years = moment(untilDate ? untilDate : new Date()).diff(
+    fromDate,
+    'years'
+  );
+  let months = moment(untilDate ? untilDate : new Date()).diff(
+    fromDate,
+    'months'
+  );
+
+  if (months > 12) {
+    months = Math.floor(months % 12);
   }
-  diff = diff + years + ' years)';
-  return diff;
+
+  if (years === 0) {
+    return `${months} months`;
+  } else {
+    return `${years} years and ${months} months`;
+  }
 };
 
 export const dates = (fromDate, untilDate, finishDate) => {
-  if (finishDate) return moment(finishDate).format('YYYY');
+  if (finishDate) return moment(finishDate).format('MMM YYYY');
   let dates = moment(fromDate).format('MMM YYYY');
   if (untilDate) {
     dates = dates + ' - ' + moment(untilDate).format('MMM YYYY');

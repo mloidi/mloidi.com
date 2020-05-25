@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Icon from './Icon';
+import Icon from './common/Icon';
 
 const ItemCourse = ({ item }) => (
   <div className="text-gray-500 cursor-default">
