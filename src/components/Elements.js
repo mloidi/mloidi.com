@@ -64,30 +64,57 @@ export const MenuNav = styled.div`
   position: sticky;
   top: 0;
   font-family: 'Cutive Mono', monospace;
-  display: grid;
+  display: none;
   grid-template-columns: auto auto auto;
   justify-content: space-between;
   padding: 0.5rem 2rem;
   align-content: center;
   background-color: white;
-  /* @media ${device.laptop} {
-    display: initial;
-  } */
+  @media ${device.laptop} {
+    display: grid;
+  }
 `;
 
-export const Logo = styled.div`
-  cursor: default;
-  padding: 0 10px;
-  border-left: 2px solid ${(props) => props.color};
-  border-right: 2px solid ${(props) => props.color};
-  border-radius: 5%;
+export const MenuNavSmall = styled.div`
+  position: sticky;
+  top: 0;
+  font-family: 'Cutive Mono', monospace;
+  padding: 0.5rem 2rem;
+  align-content: center;
+  background-color: white;
+  @media ${device.laptop} {
+    display: none;
+  }
 `;
 
-export const LogoTopText = styled.div`
+export const MenuHeaderSmall = styled.div`
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+`;
+
+export const MenuShowButton = styled.button`
   font-size: 2rem;
+  color: ${(props) => props.color};
+  border: none;
+  text-decoration: none;
+  outline: none;
+  &:active {
+    outline: none;
+  }
+  &:focus{
+    outline:none;
+  }
 `;
-export const LogoBottomText = styled.div`
-  font-size: 0.8rem;
+
+export const MenuLinksSamll = styled.div`
+  position: absolute;
+  align-content: center;
+  background-color: white;
+  right: 0;
+  width: 250px;
+  padding: 20px;
+  z-index: 99;
 `;
 
 export const MenuLinks = styled.div`
@@ -308,7 +335,7 @@ export const CardItemRoleDates = styled.div`
       width: 1px;
       height: 30px;
       margin-left: -5px;
-      margin-top:-5px;
+      margin-top: -5px;
       background-color: darkgrey;
       pointer-events: none;
       position: absolute;

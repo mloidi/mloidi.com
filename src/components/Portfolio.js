@@ -12,13 +12,13 @@ const Container = styled.div`
   }
 `;
 
-export const Projects = () => {
+export const Portfolio = () => {
   return (
     <Container>
       <Helmet>
-        <title>Projects</title>
+        <title>Portfolio</title>
       </Helmet>
-      <SectionTitle>Projects completed</SectionTitle>
+      <SectionTitle>Portfolio</SectionTitle>
     </Container>
   );
 };

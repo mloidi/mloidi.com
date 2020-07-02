@@ -6,21 +6,115 @@
 // const Client = Prismic.client(apiEndpoint, { accessToken });
 
 export const TECHNOLOGIES = {
-  _HTML: { id: 'html', name: 'HTML' },
-  _CSS: { id: 'css', name: 'CSS' },
-  _JAVASCRIPT: { id: 'js', name: 'JavaScript' },
-  _REACT: { id: 'react', name: 'React' },
-  _NEXTJS: { id: 'nextJS', name: 'Next.js' },
-  _GRAPHQL: { id: 'graphQL', name: 'GraphQL' },
-  _APOLLO: { id: 'apollo', name: 'Apollo' },
-  _FIREBASE: { id: 'firebase', description: 'Firebase' },
-  _NODE: { id: 'node', description: 'NodeJS' },
-  _MONGODB: { id: 'mongodb', description: 'MongoDB' },
-  _PASSPORT: { id: 'passport', description: 'Passport' },
-  _GOOGLEMAPS: { id: 'googlemaps', description: 'Google Maps' },
-  _EXPRESS: { id: 'express', description: 'Express' },
-  _ANGULARJS: { id: 'angularjs', description: 'AngularJS' },
-  _BOOTSTRAP: { id: 'bootstrap', description: 'Bootstrap' },
+  _HTML: {
+    id: 'html',
+    name: 'HTML',
+    url:
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/v1542456321/mloidi/tech/html.png',
+  },
+  _CSS: {
+    id: 'css',
+    name: 'CSS',
+    url:
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/v1542456321/mloidi/tech/css.png',
+  },
+  _JAVASCRIPT: {
+    id: 'js',
+    name: 'JavaScript',
+    url:
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/v1542456321/mloidi/tech/js.png',
+  },
+  _REACT: {
+    id: 'react',
+    name: 'React',
+    url:
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/v1591122048/mloidi/tech/react.png',
+  },
+  _NEXTJS: {
+    id: 'nextJS',
+    name: 'Next.js',
+    url:
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/v1591122346/mloidi/tech/NextJS.png',
+  },
+  _GRAPHQL: {
+    id: 'graphQL',
+    name: 'GraphQL',
+    url:
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/v1591121704/mloidi/tech/GraphQL.png',
+  },
+  _APOLLO: {
+    id: 'apollo',
+    name: 'Apollo',
+    url:
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/v1591122484/mloidi/tech/apollo.png',
+  },
+  _FIREBASE: {
+    id: 'firebase',
+    name: 'Firebase',
+    url:
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/v1591122048/mloidi/tech/Firebase.png',
+  },
+  _NODE: {
+    id: 'node',
+    name: 'NodeJS',
+    url:
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/v1591122048/mloidi/tech/Node.png',
+  },
+  _MONGODB: {
+    id: 'mongodb',
+    name: 'MongoDB',
+    url:
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/v1542456321/mloidi/tech/mongodb.png',
+  },
+  _PASSPORT: {
+    id: 'passport',
+    name: 'Passport',
+    url:
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/v1591123463/mloidi/tech/Passport.png',
+  },
+  _GOOGLEMAPS: {
+    id: 'googlemaps',
+    name: 'Google Maps',
+    url:
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/v1591122048/mloidi/tech/Google_maps.png',
+  },
+  _EXPRESS: {
+    id: 'express',
+    name: 'Express',
+    url:
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/v1591122048/mloidi/tech/Expressjs.png',
+  },
+  _ANGULARJS: {
+    id: 'angularjs',
+    name: 'AngularJS',
+    url:
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/v1591122048/mloidi/tech/angularJS.png',
+  },
+  _BOOTSTRAP: {
+    id: 'bootstrap',
+    name: 'Bootstrap',
+    url:
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/v1591122048/mloidi/tech/bootstrap.png',
+  },
+};
+
+export const getTechnologies = () => {
+  return [
+    TECHNOLOGIES._HTML,
+    TECHNOLOGIES._CSS,
+    TECHNOLOGIES._JAVASCRIPT,
+    TECHNOLOGIES._REACT,
+    TECHNOLOGIES._NEXTJS,
+    TECHNOLOGIES._GRAPHQL,
+    TECHNOLOGIES._APOLLO,
+    TECHNOLOGIES._FIREBASE,
+    TECHNOLOGIES._NODE,
+    TECHNOLOGIES._PASSPORT,
+    TECHNOLOGIES._GOOGLEMAPS,
+    TECHNOLOGIES._EXPRESS,
+    TECHNOLOGIES._ANGULARJS,
+    TECHNOLOGIES._BOOTSTRAP,
+  ];
 };
 
 const works = [
@@ -252,12 +346,12 @@ const courses = [
     title: 'Fullstack Advanced React & GraphQL',
     titleUrl: 'https://advancedreact.com',
     description:
-      'It’s GraphQL API with Node.js on the backend and React and Apollo on the front end. The course cover everything from authentication and sending email to uploading photos and caching data. The entire front - end is built in modern React and GraphQL. ',
+      'It’s GraphQL API with Node.js on the backend and React and Apollo on the front end. The course cover everything from authentication and sending email to upload/c_scale,h_80ing photos and caching data. The entire front - end is built in modern React and GraphQL. ',
     finishDate: new Date(2018, 10, 1),
     appTitle: 'Sick Fits',
     appUrl: 'https://mloidi-store-prod.herokuapp.com',
     imageURL:
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_300/v1554404407/mloidi/sickFits.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1554404407/mloidi/sickFits.png',
     technologies: [
       TECHNOLOGIES._HTML,
       TECHNOLOGIES._CSS,
@@ -280,7 +374,7 @@ const courses = [
     appTitle: 'Catch Of The Day',
     appUrl: 'https://cotd.mloidi.com',
     imageURL:
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_300/v1554404407/mloidi/catchDay.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1554404407/mloidi/catchDay.png',
     technologies: [
       TECHNOLOGIES._HTML,
       TECHNOLOGIES._CSS,
@@ -301,7 +395,7 @@ const courses = [
     appTitle: "Now That's Delicious!",
     appUrl: 'https://mloidi-app-jskauyrogh.now.sh',
     imageURL:
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_300/v1554404407/mloidi/thatsDelicious.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1554404407/mloidi/thatsDelicious.png',
     technologies: [
       TECHNOLOGIES._HTML,
       TECHNOLOGIES._CSS,
@@ -326,7 +420,7 @@ const courses = [
     appTitle: "Now That's Delicious!",
     appUrl: 'https://tracker.mloidi.now.sh',
     imageURL:
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_300/v1589390801/mloidi/tracker.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1589390801/mloidi/tracker.png',
     technologies: [
       TECHNOLOGIES._HTML,
       TECHNOLOGIES._CSS,
@@ -361,21 +455,13 @@ const courses = [
     appTitle: 'World Wide Importers',
     appUrl: 'https://worldwideimporters.mloidi.com',
     imageURL:
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_300/v1554404407/mloidi/worldImporters.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1554404407/mloidi/worldImporters.png',
     technologies: [
       TECHNOLOGIES._HTML,
       TECHNOLOGIES._CSS,
       TECHNOLOGIES._JAVASCRIPT,
-      {
-        id: 'angularjs',
-        description: 'AngularJS',
-        icon: null,
-      },
-      {
-        id: 'bootstrap',
-        description: 'Bootstrap',
-        icon: 'faBootstrap',
-      },
+      TECHNOLOGIES._ANGULARJS,
+      TECHNOLOGIES._BOOTSTRAP,
     ],
   },
 ];
@@ -386,7 +472,7 @@ const projects = [
     title: 'Mikel Loidi',
     titleURL: 'https://mloidi.com',
     imageURL:
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_300/v1572989826/mloidi/mloidi.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1572989826/mloidi/mloidi.png',
     location: null,
     description: 'My personal webpage.',
     maxTech: 5,
@@ -418,7 +504,7 @@ const projects = [
     title: 'News about ...',
     titleURL: 'https://news.mloidi.com',
     imageURL:
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_300/v1554396432/mloidi/news.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1554396432/mloidi/news.png',
     location: null,
     description: 'Some randoms news.',
     technologies: [
@@ -454,7 +540,7 @@ const projects = [
     title: 'Contacts',
     titleURL: 'https://contacts.mloidi.com',
     imageURL:
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_300/v1554396432/mloidi/contacts.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1554396432/mloidi/contacts.png',
     location: null,
     description:
       'Simple contacts web, you can add contacts and groups. To login use demo@mloidi.com user name and demo like a password',
@@ -491,7 +577,7 @@ const projects = [
     title: 'Cristaleria Bricovidrio',
     titleURL: 'https://bricovidrio.mloidi.com',
     imageURL:
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,w_300/v1554396432/mloidi/bricovidrio.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1554396432/mloidi/bricovidrio.png',
     location: null,
     description: 'Sample demo webpage for a glassware company.',
     technologies: [
@@ -528,7 +614,7 @@ export const getStudies = () => {
 };
 
 export const getCourses = () => {
-  return [];
+  return courses;
 };
 
 export const getProjects = () => {

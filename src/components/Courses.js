@@ -2,20 +2,8 @@ import React, { useState, useContext } from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { FiAtSign } from 'react-icons/fi';
-import {
-  DiReact,
-  DiHtml5,
-  DiCss3,
-  DiJavascript1,
-  DiAngularSimple,
-  DiBootstrap,
-  DiNodejs,
-  DiFirebase,
-  DiMongodb,
-} from 'react-icons/di';
-import { GrGraphQl } from "react-icons/gr";
 
-import { getCourses, TECHNOLOGIES } from '../lib/Data';
+import { getCourses } from '../lib/Data';
 import { DataContext } from '../globalState';
 import {
   device,
@@ -26,7 +14,6 @@ import {
   CardTitle,
   CardTitleLink,
   CardTitleNoLink,
-  CardLocation,
   // CardItem,
   // CardItemTitle,
   // CardItemRoleName,
@@ -44,44 +31,33 @@ const Container = styled.div`
   }
 `;
 
-const getIcon = (iconName) => {
-  switch (iconName) {
-    case TECHNOLOGIES._REACT.id:
-      return <DiReact />;
-    case TECHNOLOGIES._HTML.id:
-      return <DiHtml5 />;
-    case TECHNOLOGIES._CSS.id:
-      return <DiCss3 />;
-    case TECHNOLOGIES._JAVASCRIPT.id:
-      return <DiJavascript1 />;
-    case TECHNOLOGIES._NEXTJS.id:
-      return iconName;
-    case TECHNOLOGIES._GRAPHQL.id:
-      return <GrGraphQl/>;
-    case TECHNOLOGIES._APOLLO.id:
-      return iconName;
-    case TECHNOLOGIES._FIREBASE.id:
-      return <DiFirebase />;
-    case TECHNOLOGIES._NODE.id:
-      return <DiNodejs />;
-    case TECHNOLOGIES._MONGODB.id:
-      return <DiMongodb />;
-    case TECHNOLOGIES._PASSPORT.id:
-      return iconName;
-    case TECHNOLOGIES._GOOGLEMAPS.id:
-      return iconName;
-    case TECHNOLOGIES._EXPRESS.id:
-      return iconName
-    case TECHNOLOGIES._ANGULARJS.id:
-      return <DiAngularSimple />;
-    case TECHNOLOGIES._BOOTSTRAP.id:
-      return <DiBootstrap />;
-
-    default:
-      break;
+const CourseBy = styled.div`
+  font-style: italic;
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  align-content: center;
+  margin: 10px 0;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+  :hover {
+    border-bottom: 1px solid ${(props) => props.color};
+    color: ${(props) => props.color};
   }
-  return iconName;
-};
+`;
+
+const Technologies = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 120px);
+  grid-gap: 20px;
+  align-items: center;
+  margin: 20px 0;
+  font-size: 0.9rem;
+`;
+const Technology = styled.div`
+  text-align: center;
+  border: 0.1px solid ${(props) => props.color};
+`;
 
 export const Courses = () => {
   const { selectedColor } = useContext(DataContext);
@@ -111,19 +87,19 @@ export const Courses = () => {
               )}
             </CardTitle>
             <br />
-            <CardLocation>
+            <CourseBy color={selectedColor}>
               <Icon>
                 <FiAtSign />
               </Icon>
-              <CardTitleLink
+              <a
                 color={selectedColor}
                 target='_blank'
                 rel='noopener noreferrer'
                 href={course.placeUrl}
               >
                 {course.place}
-              </CardTitleLink>
-            </CardLocation>
+              </a>
+            </CourseBy>
             <br />
             <div>
               <a target='_blank' rel='noopener noreferrer' href={course.appUrl}>
@@ -137,9 +113,13 @@ export const Courses = () => {
             <br />
             <div>
               {course.description}
-              {course.technologies.map((technology) => (
-                <div key={technology.id}>{getIcon(technology.name)}</div>
-              ))}
+              <Technologies>
+                {course.technologies.map((technology) => (
+                  <Technology key={technology.id} color={selectedColor}>
+                    {technology.name}
+                  </Technology>
+                ))}
+              </Technologies>
             </div>
           </Card>
         ))}
