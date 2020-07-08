@@ -466,38 +466,23 @@ const courses = [
   },
 ];
 
-const projects = [
+const portfolios = [
   {
     id: 1,
     title: 'Mikel Loidi',
     titleURL: 'https://mloidi.com',
     imageURL:
-      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1572989826/mloidi/mloidi.png',
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1594108321/mloidi/mloidi.png',
     location: null,
     description: 'My personal webpage.',
-    maxTech: 5,
+    public: true,
     technologies: [
-      {
-        id: 'html',
-        description: 'HTML',
-        icon: 'faHtml5',
-      },
-      {
-        id: 'css',
-        description: 'CSS',
-        icon: 'faCss3',
-      },
-      {
-        id: 'js',
-        description: 'JavaScript',
-        icon: 'faJs',
-      },
-      {
-        id: 'react',
-        description: 'React',
-        icon: 'faReact',
-      },
+      TECHNOLOGIES._HTML,
+      TECHNOLOGIES._CSS,
+      TECHNOLOGIES._JAVASCRIPT,
+      TECHNOLOGIES._REACT,
     ],
+    gitHubURL: 'https://github.com/mloidi/mloidi.com',
   },
   {
     id: 2,
@@ -507,33 +492,14 @@ const projects = [
       'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1554396432/mloidi/news.png',
     location: null,
     description: 'Some randoms news.',
+    public: true,
     technologies: [
-      {
-        id: 'html',
-        description: 'HTML',
-        icon: 'faHtml5',
-      },
-      {
-        id: 'css',
-        description: 'CSS',
-        icon: 'faCss3',
-      },
-      {
-        id: 'js',
-        description: 'JavaScript',
-        icon: 'faJs',
-      },
-      {
-        id: 'react',
-        description: 'React',
-        icon: 'faReact',
-      },
-      {
-        id: 'styled-components',
-        description: 'Styled Components',
-        icon: null,
-      },
+      TECHNOLOGIES._HTML,
+      TECHNOLOGIES._CSS,
+      TECHNOLOGIES._JAVASCRIPT,
+      TECHNOLOGIES._REACT,
     ],
+    gitHubURL: 'https://github.com/mloidi/news',
   },
   {
     id: 3,
@@ -543,34 +509,16 @@ const projects = [
       'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1554396432/mloidi/contacts.png',
     location: null,
     description:
-      'Simple contacts web, you can add contacts and groups. To login use demo@mloidi.com user name and demo like a password',
+      'Simple contacts web, you can add contacts and groups. To login use "demo@mloidi.com" user name and "demo" like a password',
+    public: true,
     technologies: [
-      {
-        id: 'html',
-        description: 'HTML',
-        icon: 'faHtml5',
-      },
-      {
-        id: 'css',
-        description: 'CSS',
-        icon: 'faCss3',
-      },
-      {
-        id: 'js',
-        description: 'JavaScript',
-        icon: 'faJs',
-      },
-      {
-        id: 'react',
-        description: 'React',
-        icon: 'faReact',
-      },
-      {
-        id: 'mongoDB',
-        description: 'MongoDB',
-        icon: null,
-      },
+      TECHNOLOGIES._HTML,
+      TECHNOLOGIES._CSS,
+      TECHNOLOGIES._JAVASCRIPT,
+      TECHNOLOGIES._REACT,
+      TECHNOLOGIES._MONGODB,
     ],
+    gitHubURL: 'https://github.com/mloidi/contacts',
   },
   {
     id: 4,
@@ -580,28 +528,31 @@ const projects = [
       'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1554396432/mloidi/bricovidrio.png',
     location: null,
     description: 'Sample demo webpage for a glassware company.',
+    public: false,
     technologies: [
-      {
-        id: 'html',
-        description: 'HTML',
-        icon: 'faHtml5',
-      },
-      {
-        id: 'css',
-        description: 'CSS',
-        icon: 'faCss3',
-      },
-      {
-        id: 'js',
-        description: 'JavaScript',
-        icon: 'faJs',
-      },
-      {
-        id: 'react',
-        description: 'React',
-        icon: null,
-      },
+      TECHNOLOGIES._HTML,
+      TECHNOLOGIES._CSS,
+      TECHNOLOGIES._JAVASCRIPT,
+      TECHNOLOGIES._REACT,
     ],
+    gitHubURL: 'https://github.com/mloidi/mloidi.com',
+  },
+  {
+    id: 5,
+    title: 'Weather',
+    titleURL: 'https://weather.mloidi.com',
+    imageURL:
+      'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1594108642/mloidi/weather.png',
+    location: null,
+    description: 'Weather web',
+    public: true,
+    technologies: [
+      TECHNOLOGIES._HTML,
+      TECHNOLOGIES._CSS,
+      TECHNOLOGIES._JAVASCRIPT,
+      TECHNOLOGIES._REACT,
+    ],
+    gitHubURL: 'https://github.com/mloidi/weather',
   },
 ];
 
@@ -617,8 +568,10 @@ export const getCourses = () => {
   return courses;
 };
 
-export const getProjects = () => {
-  return projects;
+export const getPortfolios = () => {
+  return portfolios.filter((portfolio) => {
+    return portfolio.public;
+  });
 };
 
 // export const getWorks = async () => {

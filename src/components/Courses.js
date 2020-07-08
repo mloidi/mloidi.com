@@ -14,12 +14,6 @@ import {
   CardTitle,
   CardTitleLink,
   CardTitleNoLink,
-  // CardItem,
-  // CardItemTitle,
-  // CardItemRoleName,
-  // CardItemRoleDates,
-  // Description,
-  // Text,
   Img,
 } from './Elements';
 

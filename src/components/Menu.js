@@ -57,10 +57,10 @@ export const Menu = () => {
       name: 'Courses',
       path: '/courses',
     },
-    // {
-    //   name: 'Portfolio',
-    //   path: '/portfolio',
-    // },
+    {
+      name: 'Portfolio',
+      path: '/portfolio',
+    },
   ];
   return (
     <>
