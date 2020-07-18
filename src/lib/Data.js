@@ -474,7 +474,8 @@ const portfolios = [
     imageURL:
       'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1594108321/mloidi/mloidi.png',
     location: null,
-    description: 'My personal webpage.',
+    description:
+      'Make sure to check out my personal profile. Here you´ll get to know me through my work and interests.',
     public: true,
     technologies: [
       TECHNOLOGIES._HTML,
@@ -491,7 +492,8 @@ const portfolios = [
     imageURL:
       'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1554396432/mloidi/news.png',
     location: null,
-    description: 'Some randoms news.',
+    description:
+      'It’s always been my belief that you need to check out all the different news outlets to really get a deeper understanding of what is going on in the world. So out of that personal passion, I created a platform to be able to get all the most relevant information from various resources. This is my go-to every morning with my coffee.',
     public: true,
     technologies: [
       TECHNOLOGIES._HTML,
@@ -509,7 +511,7 @@ const portfolios = [
       'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1554396432/mloidi/contacts.png',
     location: null,
     description:
-      'Simple contacts web, you can add contacts and groups. To login use "demo@mloidi.com" user name and "demo" like a password',
+      'If you´re like me and have lots of contacts saved in your phone, you might get lost when you are looking for that one particular person. I created this visual layout by keeping in mind that this could also help others in a company setting too. To login use "demo@mloidi.com" user name and "demo" like a password',
     public: true,
     technologies: [
       TECHNOLOGIES._HTML,
@@ -544,7 +546,7 @@ const portfolios = [
     imageURL:
       'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1594108642/mloidi/weather.png',
     location: null,
-    description: 'Weather web',
+    description: 'Because I live in a city that can have all seasons in one day, I really needed to try my hand at creating a weather website. Even with this, I will always have on me an umbrella, sunglasses and a windbreaker.',
     public: true,
     technologies: [
       TECHNOLOGIES._HTML,

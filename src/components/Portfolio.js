@@ -19,7 +19,7 @@ import {
 const Container = styled.div`
   padding: 10px 20px;
   font-family: 'Cutive Mono', monospace;
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     padding: 10px 200px;
   }
 `;
@@ -42,6 +42,17 @@ const Github = styled.a`
   font-size: 1.4rem;
   :hover {
     color: ${(props) => props.color};
+  }
+`;
+
+const Description = styled.div`
+  display: grid;
+  grid-gap: 40px;
+  grid-template-rows: auto auto;
+  @media ${device.tablet} {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: auto auto;
   }
 `;
 
@@ -72,7 +83,7 @@ export const Portfolio = () => {
                 <CardTitleNoLink>{portfolio.title}</CardTitleNoLink>
               )}
             </CardTitle>
-            <div>
+            <Description>
               <a
                 target='_blank'
                 rel='noopener noreferrer'
@@ -84,10 +95,10 @@ export const Portfolio = () => {
                   alt={portfolio.title}
                 />
               </a>
-            </div>
+              {portfolio.description}
+            </Description>
             <br />
             <div>
-              {portfolio.description}
               <Technologies>
                 {portfolio.technologies.map((technology) => (
                   <Technology key={technology.id} color={selectedColor}>
