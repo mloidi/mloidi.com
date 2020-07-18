@@ -31,7 +31,7 @@ const Content = styled.div`
   padding: 10px 20px;
   font-family: 'Cutive Mono', monospace;
 color: ${(props) => props.color};
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     padding: 10px 200px;
   }
   /* animation: ${scale} 1s ease-in-out; */

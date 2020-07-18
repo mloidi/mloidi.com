@@ -70,7 +70,7 @@ export const MenuNav = styled.div`
   padding: 0.5rem 2rem;
   align-content: center;
   background-color: white;
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     display: grid;
   }
 `;
@@ -82,7 +82,7 @@ export const MenuNavSmall = styled.div`
   padding: 0.5rem 2rem;
   align-content: center;
   background-color: white;
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     display: none;
   }
 `;
@@ -201,7 +201,7 @@ export const AboutContainer = styled.div`
   padding: 10px 40px;
   font-family: 'Cutive Mono', monospace;
 
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     padding: 10px 200px;
   }
 `;
@@ -211,7 +211,7 @@ export const Container = styled.div`
   font-family: 'Cutive Mono', monospace;
   display: grid;
     grid-template-columns: 100%;
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     padding: 10px 200px;
     grid-template-columns: 80% 20%;
   }
@@ -227,7 +227,7 @@ export const SectionTitle = styled.div`
 
 export const SkillsSection = styled.div`
   cursor: default;
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     position: fixed;
   }
 `;
@@ -313,7 +313,7 @@ export const CardItemTitle = styled.div`
     position: absolute;
     z-index: -1;
   }
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     display: inline-grid;
     grid-template-columns: auto auto;
     grid-gap: 10px;
@@ -328,7 +328,7 @@ export const CardItemRoleName = styled.div`
 export const CardItemRoleDates = styled.div`
   color: darkgrey;
   font-size: 0.8rem;
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     font-size: 1rem;
     ::before {
       content: '';

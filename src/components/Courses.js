@@ -20,7 +20,7 @@ import {
 const Container = styled.div`
   padding: 10px 20px;
   font-family: 'Cutive Mono', monospace;
-  @media ${device.laptop} {
+  @media ${device.tablet} {
     padding: 10px 200px;
   }
 `;
