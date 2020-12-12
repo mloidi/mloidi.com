@@ -63,7 +63,6 @@ export const ToolTip = styled.div`
 export const MenuNav = styled.div`
   position: sticky;
   top: 0;
-  font-family: 'Cutive Mono', monospace;
   display: none;
   grid-template-columns: auto auto auto;
   justify-content: space-between;
@@ -78,7 +77,6 @@ export const MenuNav = styled.div`
 export const MenuNavSmall = styled.div`
   position: sticky;
   top: 0;
-  font-family: 'Cutive Mono', monospace;
   padding: 0.5rem 2rem;
   align-content: center;
   background-color: white;
@@ -199,7 +197,6 @@ export const ProfileList = styled.div`
 
 export const AboutContainer = styled.div`
   padding: 10px 40px;
-  font-family: 'Cutive Mono', monospace;
 
   @media ${device.tablet} {
     padding: 10px 200px;
@@ -208,7 +205,6 @@ export const AboutContainer = styled.div`
 
 export const Container = styled.div`
   padding: 10px 40px;
-  font-family: 'Cutive Mono', monospace;
   display: grid;
     grid-template-columns: 100%;
   @media ${device.tablet} {

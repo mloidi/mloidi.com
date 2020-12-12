@@ -7,9 +7,10 @@ import { Resume } from './components/Resume';
 import { Courses } from './components/Courses';
 import { Portfolio } from './components/Portfolio';
 import { NotFound } from './components/NotFound';
-import { Banner } from './components/common/Banner';
 import { Cookies } from './components/Cookies';
 import { ContextProvider } from './globalState/state';
+import { Footer } from './components/Footer';
+import { Skills } from './components/Skills';
 
 class App extends Component {
   render() {
@@ -25,7 +26,8 @@ class App extends Component {
             <Route exact path='/cookies' component={Cookies} />
             <Route component={NotFound} />
           </Switch>
-          <Banner />
+          <Skills/>
+          <Footer />
         </Router>
       </ContextProvider>
     );

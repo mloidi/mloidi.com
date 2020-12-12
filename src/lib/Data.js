@@ -546,7 +546,8 @@ const portfolios = [
     imageURL:
       'https://res.cloudinary.com/mloidi/image/upload/c_scale,h_80/c_scale,w_300/v1594108642/mloidi/weather.png',
     location: null,
-    description: 'Because I live in a city that can have all seasons in one day, I really needed to try my hand at creating a weather website. Even with this, I will always have on me an umbrella, sunglasses and a windbreaker.',
+    description:
+      'Because I live in a city that can have all seasons in one day, I really needed to try my hand at creating a weather website. Even with this, I will always have on me an umbrella, sunglasses and a windbreaker.',
     public: true,
     technologies: [
       TECHNOLOGIES._HTML,
@@ -574,6 +575,20 @@ export const getPortfolios = () => {
   return portfolios.filter((portfolio) => {
     return portfolio.public;
   });
+};
+
+export const sample = (param) => {
+  const array = [];
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    console.log(element);
+  }
+
+  if(array.length === 10 ){
+    return false;
+  }
+
+  return true;
 };
 
 // export const getWorks = async () => {
