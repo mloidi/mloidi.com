@@ -20,9 +20,9 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={About} />
             <Route exact path='/resume' component={Resume} />
-            <Route exact path='/courses' component={Courses} />
+            {/* <Route exact path='/courses' component={Courses} /> */}
             <Route exact path='/portfolio' component={Portfolio} />
-            <Route exact path='/cookies' component={Cookies} />
+            {/* <Route exact path='/cookies' component={Cookies} /> */}
             <Route component={NotFound} />
           </Switch>
           <Banner />
