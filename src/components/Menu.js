@@ -49,10 +49,10 @@ export const Menu = () => {
       name: 'About me',
       path: '/',
     },
-    {
-      name: 'Resume',
-      path: '/resume',
-    },
+    // {
+    //   name: 'Resume',
+    //   path: '/resume',
+    // },
     // {
     //   name: 'Courses',
     //   path: '/courses',
