@@ -8,17 +8,9 @@ import {
   ProfileList,
   Description,
   Icon,
-  Text,
-  device
+  Text
 } from './Elements';
-
-const Container = styled.div`
-  padding: 10px 40px;
-
-  @media ${device.tablet} {
-    padding: 10px 200px;
-  }
-`;
+import { Layout } from './Layout';
 
 const Title = styled.h1`
   cursor: default;
@@ -49,67 +41,69 @@ const Paragraph = styled.p`
 `;
 
 export const About = () => {
-
   return (
-    <Container>
-      <Helmet>
-        <title>About me</title>
-      </Helmet>
-      <Title>
-        Hi, my name is <CardTitle>Mikel Loidi</CardTitle>.
-      </Title>
-      <Paragraph>
-        I am a web developer currently located in Pamplona Spain. You know, the
-        running of the bulls. When I’m not running with them, my main focus is
-        to developing new web technologies. In my free time, I am constantly
-        experimenting with new projects, pushing my skills to adapt the latest
-        web tech to build new web designs.
-      </Paragraph>
-      <Paragraph>
-        I am passionate about development and design. On the frontend, I work
-        mainly with React while on the backend I work with Node and Express. As
-        for a data base I prefer to use MongoDB.
-      </Paragraph>
-      <Paragraph>
-        As a growing community, the web industry is one that I have learned so
-        much from and hope to give back just as much. I am mostly excited about
-        the future of this industry. There is so much we have yet to discover,
-        and I cannot wait to see what is coming next.
-      </Paragraph>
-      <Profile>
-        <h2>Profile</h2>
+    <Layout>
+      <div>
+        <Helmet>
+          <title>About me</title>
+        </Helmet>
+        <Title>
+          Hi, my name is <CardTitle>Mikel Loidi</CardTitle>.
+        </Title>
         <Paragraph>
-          Advanced developer with 15 years of experience in structuring,
-          developing and implementing applications and innovative use of
-          technology. Able to complete projects efficiently and satisfy clients.
+          I am a web developer currently located in Pamplona Spain. You know,
+          the running of the bulls. When I’m not running with them, my main
+          focus is to developing new web technologies. In my free time, I am
+          constantly experimenting with new projects, pushing my skills to adapt
+          the latest web tech to build new web designs.
         </Paragraph>
-        <ProfileList>
-          <Description>
-            <Icon>
-              <FiChevronRight />
-            </Icon>
-            <Text>Advanced programming and design skills</Text>
-          </Description>
-          <Description>
-            <Icon>
-              <FiChevronRight />
-            </Icon>
-            <Text>Excellent problem solving skills</Text>
-          </Description>
-          <Description>
-            <Icon>
-              <FiChevronRight />
-            </Icon>
-            <Text>Strong collaborative skills</Text>
-          </Description>
-          <Description>
-            <Icon>
-              <FiChevronRight />
-            </Icon>
-            <Text>Project Management</Text>
-          </Description>
-        </ProfileList>
-      </Profile>
-    </Container>
+        <Paragraph>
+          I am passionate about development and design. On the frontend, I work
+          mainly with React while on the backend I work with Node and Express.
+          As for a data base I prefer to use MongoDB.
+        </Paragraph>
+        <Paragraph>
+          As a growing community, the web industry is one that I have learned so
+          much from and hope to give back just as much. I am mostly excited
+          about the future of this industry. There is so much we have yet to
+          discover, and I cannot wait to see what is coming next.
+        </Paragraph>
+        <Profile>
+          <h2>Profile</h2>
+          <Paragraph>
+            Advanced developer with 15 years of experience in structuring,
+            developing and implementing applications and innovative use of
+            technology. Able to complete projects efficiently and satisfy
+            clients.
+          </Paragraph>
+          <ProfileList>
+            <Description>
+              <Icon>
+                <FiChevronRight />
+              </Icon>
+              <Text>Advanced programming and design skills</Text>
+            </Description>
+            <Description>
+              <Icon>
+                <FiChevronRight />
+              </Icon>
+              <Text>Excellent problem solving skills</Text>
+            </Description>
+            <Description>
+              <Icon>
+                <FiChevronRight />
+              </Icon>
+              <Text>Strong collaborative skills</Text>
+            </Description>
+            <Description>
+              <Icon>
+                <FiChevronRight />
+              </Icon>
+              <Text>Project Management</Text>
+            </Description>
+          </ProfileList>
+        </Profile>
+      </div>
+    </Layout>
   );
 };

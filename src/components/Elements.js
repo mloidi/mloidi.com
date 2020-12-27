@@ -100,8 +100,8 @@ export const MenuShowButton = styled.button`
   &:active {
     outline: none;
   }
-  &:focus{
-    outline:none;
+  &:focus {
+    outline: none;
   }
 `;
 
@@ -206,7 +206,7 @@ export const AboutContainer = styled.div`
 export const Container = styled.div`
   padding: 10px 40px;
   display: grid;
-    grid-template-columns: 100%;
+  grid-template-columns: 100%;
   @media ${device.tablet} {
     padding: 10px 200px;
     grid-template-columns: 80% 20%;
@@ -222,10 +222,12 @@ export const SectionTitle = styled.div`
 `;
 
 export const SkillsSection = styled.div`
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 200px;
   cursor: default;
-  @media ${device.tablet} {
-    position: fixed;
-  }
+  background-color: var(--background-color);
 `;
 
 export const SkillsGrid = styled.div`
