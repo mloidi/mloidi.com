@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GrLinkedin, GrTwitter, GrMail, GrGithub } from 'react-icons/gr';
+import { IoIosArrowUp, IoIosArrowDown } from 'react-icons/io';
 import styled from 'styled-components';
 
 import { Logo } from './Logo';
+import { Skills } from './Skills';
 
-const MenuStyle = styled.div`
+const MenuS = styled.div`
   position: sticky;
   top: 0;
-  padding: 0.5rem 2rem 0 2rem;
+  padding: 0.5rem 0 1rem 0;
+  background-color: var(--background-color);
+  border-bottom: solid 1px var(--secondary-color);
+`;
+
+const MenuStyle = styled.nav`
   display: inline-grid;
   gap: 20px;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   align-items: center;
 `;
 
@@ -32,7 +39,22 @@ const LinkStyle = styled.a`
   }
 `;
 
+const ButtonStyle = styled.button`
+  background-color: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  /* color: var(--secondary-color); */
+`;
+
+const showMySkills = { text: 'Skills', icon: <IoIosArrowDown /> };
+const hideMySkills = { text: 'Skills', icon: <IoIosArrowUp /> };
+
 export const Menu = () => {
+  const [skillsText, setSkillsText] = useState(showMySkills);
+  const [showSkills, setShowSkills] = useState(false);
   const social = [
     {
       name: 'github',
@@ -56,20 +78,37 @@ export const Menu = () => {
     },
   ];
   return (
-    <MenuStyle>
-      <Logo />
-      <SocialArea>
-        {social.map((social) => (
-          <LinkStyle
-            key={social.name}
-            target='_blank'
-            rel='noopener noreferrer'
-            href={social.url}
-          >
-            {social.icon}
-          </LinkStyle>
-        ))}
-      </SocialArea>
-    </MenuStyle>
+    <MenuS>
+      <MenuStyle>
+        <Logo />
+        <SocialArea>
+          {social.map((social) => (
+            <LinkStyle
+              key={social.name}
+              target='_blank'
+              rel='noopener noreferrer'
+              href={social.url}
+            >
+              {social.icon}
+            </LinkStyle>
+          ))}
+        </SocialArea>
+        <ButtonStyle
+          onClick={() => {
+            if (showSkills) {
+              setSkillsText(showMySkills);
+              setShowSkills(false);
+            } else {
+              setSkillsText(hideMySkills);
+              setShowSkills(true);
+            }
+          }}
+        >
+          {skillsText.text}
+          {skillsText.icon}
+        </ButtonStyle>
+      </MenuStyle>
+      {showSkills && <Skills />}
+    </MenuS>
   );
 };

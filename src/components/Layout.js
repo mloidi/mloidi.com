@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import { device } from './Elements';
 import { Menu } from './Menu';
-import { Skills } from './Skills';
 
 const Container = styled.div`
   padding: 10px 40px;
@@ -18,7 +17,6 @@ export const Layout = ({ children }) => {
     <>
       <Menu />
       <Container>{children}</Container>
-      <Skills />
     </>
   );
 };

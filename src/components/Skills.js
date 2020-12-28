@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   DiReact,
   DiJava,
@@ -12,45 +12,45 @@ import {
   DiGit,
   DiMongodb,
 } from 'react-icons/di';
-import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 import styled from 'styled-components';
 
-import { ToolTip } from './Elements';
-
-const SkillsSection = styled.div`
+const DivStyles = styled.div`
   display: block;
   position: absolute;
-  top: 100px;
-  left: 0;
+  /* top: 100px; */
   cursor: default;
+  /* left: 50%; */
+`;
+
+const Styles = styled.div`
   background-color: var(--background-color);
+  border: 1px solid var(--secondary-color);
+  box-shadow: 5px 5px var(--secondary-color);
+  padding: 5px 40px;
+  position: relative;
+  /* left: -50%; */
+`;
+
+const TitleStyles = styled.h1`
+  font-size: 1.4rem;
+  font-weight: bold;
+`;
+
+const GridStyles = styled.div`
   display: grid;
-  gap: 20px;
-  grid-template-columns: 40px auto;
-  padding-right: 10px;
+  gap: 5px;
 `;
 
-const SectionTitle = styled.h1`
-  cursor: default;
-  font-size: 2rem;
-  margin-bottom: 20px;
-`;
-
-const SkillsGrid = styled.div`
-  display: grid;
-  grid-gap: 5px;
-`;
-
-const Skill = styled.div`
+const SkillStyles = styled.div`
   font-size: 2rem;
   display: inline-grid;
   grid-template-columns: auto auto;
-  grid-gap: 10px;
+  gap: 10px;
   align-content: center;
   justify-content: start;
 `;
 
-const SkillScore = styled.div`
+const SkillScoreStyles = styled.div`
   font-size: 1.5rem;
   display: grid;
   grid-template-columns: repeat(10, 20px);
@@ -64,20 +64,29 @@ const Score = styled.div`
   width: 19px;
 `;
 
-const ButtonStyle = styled.button`
-  background-color: transparent;
-  height: 536px;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
+export const ToolTipStyles = styled.div`
+  position: relative;
+  display: inline-block;
+
+  .tooltiptext {
+    visibility: hidden;
+    background-color: white;
+    border: 0.1px solid black;
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    font-size: 0.8rem;
+  }
+
+  :hover .tooltiptext {
+    visibility: visible;
+  }
 `;
-
-const showMySkills = { text: 'Show my Skills', icon: <IoIosArrowForward /> };
-const hideMySkills = { text: 'Hide my Skills', icon: <IoIosArrowBack /> };
-
 export const Skills = () => {
-  const [skillsText, setSkillsText] = useState(showMySkills);
-  const [showSkills, setShowSkills] = useState(false);
   const skills = [
     {
       id: 'html',
@@ -150,47 +159,31 @@ export const Skills = () => {
   const scores = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   return (
-    <SkillsSection>
-      <ButtonStyle
-        onClick={() => {
-          if (showSkills) {
-            setSkillsText(showMySkills);
-            setShowSkills(false);
-          } else {
-            setSkillsText(hideMySkills);
-            setShowSkills(true);
-          }
-        }}
-      >
-        {skillsText.icon}
-      </ButtonStyle>
-
-      {showSkills && (
-        <div>
-          <SectionTitle>Skills</SectionTitle>
-          <SkillsGrid>
-            {skills.map((skill) => (
-              <ToolTip key={skill.id}>
-                <Skill>
-                  {skill.icon}
-                  <SkillScore>
-                    {scores.map((score) => (
-                      <div key={score}>
-                        {score <= skill.level ? (
-                          <Score>{skill.level}</Score>
-                        ) : (
-                          <div></div>
-                        )}
-                      </div>
-                    ))}
-                  </SkillScore>
-                </Skill>
-                <span className='tooltiptext'>{skill.description}</span>
-              </ToolTip>
-            ))}
-          </SkillsGrid>
-        </div>
-      )}
-    </SkillsSection>
+    <DivStyles>
+      <Styles>
+        <TitleStyles>Skills</TitleStyles>
+        <GridStyles>
+          {skills.map((skill) => (
+            <ToolTipStyles key={skill.id}>
+              <SkillStyles>
+                {skill.icon}
+                <SkillScoreStyles>
+                  {scores.map((score) => (
+                    <div key={score}>
+                      {score <= skill.level ? (
+                        <Score>{skill.level}</Score>
+                      ) : (
+                        <div></div>
+                      )}
+                    </div>
+                  ))}
+                </SkillScoreStyles>
+              </SkillStyles>
+              <span className='tooltiptext'>{skill.description}</span>
+            </ToolTipStyles>
+          ))}
+        </GridStyles>
+      </Styles>
+    </DivStyles>
   );
 };
