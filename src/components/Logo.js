@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 const Layout = styled.div`
   cursor: default;
@@ -16,18 +17,27 @@ export const LogoTopText = styled.h1`
   font-size: 2rem;
   margin: 0;
   padding: 0;
+  text-shadow: 5px 3px var(--secondary-color);
 `;
 export const LogoBottomText = styled.h3`
   font-size: 0.7rem;
   margin: 0;
   padding: 0;
 `;
+const Link = styled(NavLink)`
+  text-decoration: none;
+  :hover {
+    text-shadow: 5px 3px var(--secondary-color);
+  }
+`;
 
 export const Logo = () => {
   return (
     <Layout>
-      <LogoTopText>ML</LogoTopText>
-      <LogoBottomText>developer</LogoBottomText>
+      <Link exact to='/'>
+        <LogoTopText>ML</LogoTopText>
+        <LogoBottomText>developer</LogoBottomText>
+      </Link>
     </Layout>
   );
 };
