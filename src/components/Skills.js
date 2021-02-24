@@ -70,16 +70,16 @@ export const ToolTipStyles = styled.div`
 
   .tooltiptext {
     visibility: hidden;
-    background-color: white;
-    border: 0.1px solid black;
-    color: var(--secondary-color);
+    background-color: var(--background-color);
+    border: 0.1px solid var(--secondary-color);
+    color: black;
     text-align: center;
-    padding: 5px 10px;
+    padding: 5px;
     position: absolute;
     z-index: 1;
     top: 100%;
     left: 0;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
   }
 
   :hover .tooltiptext {
