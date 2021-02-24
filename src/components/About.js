@@ -51,8 +51,7 @@ export const About = () => {
           Hi, my name is <CardTitle>Mikel Loidi</CardTitle>.
         </Title>
         <Paragraph>
-          I am a web developer currently located in Pamplona Spain. You know,
-          the running of the bulls. When I’m not running with them, my main
+          I am a Software Engineer currently located in Murrieta, California. My main
           focus is to developing new web technologies. In my free time, I am
           constantly experimenting with new projects, pushing my skills to adapt
           the latest web tech to build new web designs.
